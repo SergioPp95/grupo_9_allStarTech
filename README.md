@@ -6,4 +6,5 @@ El publico objetivo de la pagina va a ser toda aquella persona que quiera compra
 <ul>
    <li>Sergio: estudiante de desarrollador</li>
    <li>Alberto: colombiano transicionando al mundo de la tecnología. Actualmente consultor de negocios en BCG.</li>
+   <li>Juan Manuel: estudiante de Desarrollo Web Full Stack.</li>
 </ul>
