@@ -1,0 +1,23 @@
+{
+  "name": "grupo_9_allstartech",
+  "version": "1.0.0",
+  "description": "<P>E-Commerce de venta de informática y entretenimiento\r Se priorizara la venta de celulars y computadores.\r El publico objetivo de la pagina va a ser toda aquella persona que quiera comprar o actualizar sus equipos.</p>\r <p>Integrantes:</p>\r <ul>\r    <li>Sergio: estudiante de desarrollador</li>\r    <li>Alberto: colombiano transicionando al mundo de la tecnología. Actualmente consultor de negocios en BCG.</li>\r </ul>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergioPp95/grupo_9_allStarTech.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SergioPp95/grupo_9_allStarTech/issues"
+  },
+  "homepage": "https://github.com/SergioPp95/grupo_9_allStarTech#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
