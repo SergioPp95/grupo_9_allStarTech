@@ -11,11 +11,12 @@ El publico objetivo de la pagina va a ser toda aquella persona que quiera compra
    <li>Nicolas Lanzilotta</li>
 </ul>
 <p>Paginas de referencia:<p>
-<li>https://www.apple.com/</li>
-<li>https://www.amazon.com/</li>
-<li>https://www.garbarino.com/</li>
-<li>https://www.mercadolibre.com.ar/</li>
-<li>https://www.ktronix.com/</li>
-
+<ul>
+   <li>https://www.apple.com/</li>
+   <li>https://www.amazon.com/</li>
+   <li>https://www.garbarino.com/</li>
+   <li>https://www.mercadolibre.com.ar/</li>
+   <li>https://www.ktronix.com/</li>
+</ul>
 <p>Tipografia del sitio: Noto Sans</p>
 <p>https://fonts.google.com/noto/specimen/Noto+Sans</p> 
