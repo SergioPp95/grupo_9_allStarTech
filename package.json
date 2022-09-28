@@ -1,11 +1,7 @@
 {
   "name": "grupo_9_allstartech",
   "version": "1.0.0",
-<<<<<<< HEAD
-  "description": "<P>E-Commerce de venta de informática y entretenimiento\r Se priorizara la venta de celulars y computadores.\r El publico objetivo de la pagina va a ser toda aquella persona que quiera comprar o actualizar sus equipos sin querer comprar desde la página principal.</p>\r <p>Integrantes:</p>\r <ul>\r    <li>Sergio Pepe</li>\r    <li>Alberto Ortiz</li>\r    <li>Juan Manuel Zimmermann</li>\r    <li>Edgar Sanchez</li>\r    <li>Nicolas Lanzilotta</li>\r </ul>\r <p>Paginas de referencia:<p>\r <li>https://www.apple.com/</li>\r <li>https://www.amazon.com/</li>\r <li>https://www.garbarino.com/</li>\r <li>https://www.mercadolibre.com.ar/</li>\r <li>https://www.ktronix.com/</li>",
-=======
   "description": "<P>E-Commerce de venta de informática y entretenimiento\r Se priorizara la venta de celulars y computadores.\r El publico objetivo de la pagina va a ser toda aquella persona que quiera comprar o actualizar sus equipos.</p>\r <p>Integrantes:</p>\r <ul>\r    <li>Sergio: estudiante de desarrollador</li>\r    <li>Alberto: colombiano transicionando al mundo de la tecnología. Actualmente consultor de negocios en BCG.</li>\r </ul>",
->>>>>>> 90332ddbf338ae00816bd20e941f8510cbf5acf6
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,12 +16,8 @@
   "bugs": {
     "url": "https://github.com/SergioPp95/grupo_9_allStarTech/issues"
   },
-<<<<<<< HEAD
-  "homepage": "https://github.com/SergioPp95/grupo_9_allStarTech#readme"
-=======
   "homepage": "https://github.com/SergioPp95/grupo_9_allStarTech#readme",
   "dependencies": {
     "express": "^4.18.1"
   }
->>>>>>> 90332ddbf338ae00816bd20e941f8510cbf5acf6
 }
