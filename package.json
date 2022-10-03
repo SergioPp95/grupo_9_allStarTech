@@ -4,7 +4,7 @@
   "description": "<P>E-Commerce de venta de informática y entretenimiento\r Se priorizara la venta de celulars y computadores.\r El publico objetivo de la pagina va a ser toda aquella persona que quiera comprar o actualizar sus equipos.</p>\r <p>Integrantes:</p>\r <ul>\r    <li>Sergio: estudiante de desarrollador</li>\r    <li>Alberto: colombiano transicionando al mundo de la tecnología. Actualmente consultor de negocios en BCG.</li>\r </ul>",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
