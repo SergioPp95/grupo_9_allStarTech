@@ -8,13 +8,14 @@ html{
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: #919191;
+    background-color: #e9e6e6;
     display: flex;
     flex-direction: column;
     color:black;
     /*border: 2px red solid;*/
 }
 /* SECCION Foto principal y Fotos Secundarias */
+
 .img-air{
     /*border: 3px green solid;*/
     display: flex;
@@ -22,11 +23,12 @@ body{
     justify-content: center;
 }
 
+
 .featured{
     display: flex;
     justify-content: center;
     background-color: white;
-    margin: 0 0 5px;
+    padding: 5px;
     /*border: 2px red solid;*/
 }
 
@@ -39,6 +41,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: white;
 }
 
 .more{
@@ -66,6 +69,10 @@ body{
 
 /* Seccion  */
 
+.meta{
+    background-color: white;
+    margin: 1px 0;
+}
 
 h1{
     color: #000;
@@ -79,8 +86,8 @@ h1{
     justify-content: left;
     align-items: flex-start;
     width: 100px;
-    color: white;
-    border: black 1px solid;
+    color: black;
+    /*border: black 1px solid;*/
     margin:10px 0;
 }
 
@@ -117,9 +124,29 @@ h1{
     margin: 0 0 20px;
 }
 
+.qty{
+    display: block;
+    width: 50%;
+}
+.qty-item{
+    display: block;
+    width: 30%;
+}
+
 .final-buy{
-    display: flex;
+    /*display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 30px 0 0;
+    margin: 30px 0 0;*/
+    display: block;
+    margin: 0px 0;
+}
+
+.descripcion-producto{
+    background-color: white;
+    margin: 1px 0;
+}
+
+.product{
+    margin-bottom: 0px;
 }
