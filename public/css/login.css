@@ -1,0 +1,57 @@
+body{
+    background-image: url(https://img.freepik.com/vector-premium/fondo-borroso-gris-claro-blanco-degradado-radial_53562-6788.jpg?w=2000);
+}
+
+.login {
+    width: 400px;
+    height: 340px;
+    background: #919191;
+    margin: auto;
+    margin-top: 180px;
+    box-shadow: 7px 13px 37px #000;
+    padding: 20px 30px;
+    border-top: 4px solid #565050;
+    color: white;
+    font-family: 'calibri'
+}
+h5 {
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    font-family: 'calibri';
+    font-size: 20px;
+}
+.CampoTexto {
+    width: 100%;
+    border:1px solid #565050;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: #c6c6c6 ;
+    font-size: 14px;
+    font-weight: bold;
+}
+.Boton{
+    width: 105%;
+    height: 40px;
+    background:#565050;
+    border: none;
+    color: white;
+    margin-bottom: 16px;
+}
+p{
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+ };
+a:hover{
+    color: white;
+    text-decoration: underline;
+    font-size: 14px;
+}
