@@ -5,28 +5,28 @@
 header {
    display: flex;
    flex-wrap: wrap;
-   justify-content: space-between;
+   justify-content: center;
    align-items: center;
    background-color: black;
-   margin: 0 auto;
    color: #FFFFFF;
-   max-height: 20vh;
-   padding-left: 10px;
-   padding-right: 10px;
+   padding: 10px;
 }
 nav {
-   width: 40%;
+   width: 80%;
 }
 header a {
    color: #FFFFFF;
+   margin-left: 10px;
+   margin-right: 10%;
 }
 
 .nav-bar {
    display: flex;
    flex-wrap: wrap;
-   justify-content: space-between;
+   justify-content: space-around;
    align-items: center;
    font-size: 1rem;
+   width: 100%;
 }
 .logo {
    max-width: 15%;
@@ -34,10 +34,10 @@ header a {
 .form {
    max-width: 48%;
    position: relative;
-   text-align: center;
-   height: 1.5rem;
+   margin-left: 5%;
 }
 .botton {
+   position: absolute;
    margin: auto;
    background-color: #FFFFFF;
    color: #919191;
@@ -47,12 +47,17 @@ header a {
    color: black;
 }
 
+#shoping-car {
+   margin-left: auto;
+   margin-right: 20px;
+}
+
 footer {
    background-color: black;
    margin: 0;
    color: #FFFFFF;
    padding: 10px;   
-   font-size: 1rem;
+   font-size: .9rem;
    text-align: center;
 }
 footer article {
@@ -60,4 +65,42 @@ footer article {
 }
 footer article div {
    font-size: 0.4rem;
+}
+
+@media (min-width:779px) {
+   nav {
+      width: auto;
+   }
+   nav ul li {
+      padding: 10px;
+   }
+   footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+   }
+   footer article {
+      width: 32%;
+   }
+   header a {
+      margin-right: 25px;
+   }
+   .form {
+      margin-left: auto;
+      margin-right: 25px;
+   }
+   #shoping-car {
+      margin-left: 25px;
+   }
+}
+
+@media (min-width:1200px) {
+   .logo {
+      max-width: 140px;
+      margin-left: 20%;
+   }
+   #shoping-car2 {
+      margin-right: 20%;
+   }
 }
