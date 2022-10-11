@@ -2,49 +2,62 @@
    margin: 0;
    box-sizing: border-box;
 }
+
 header {
    display: flex;
    flex-wrap: wrap;
-   justify-content: center;
+   justify-content: space-between;
    align-items: center;
    background-color: black;
    color: #FFFFFF;
    padding: 10px;
 }
-nav {
-   width: 80%;
-}
-header a {
+
+.links {
    color: #FFFFFF;
-   margin-left: 10px;
-   margin-right: 10%;
+   margin-right: 10px;
 }
 
 .nav-bar {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-around;
-   align-items: center;
-   font-size: 1rem;
-   width: 100%;
+   display: none;
 }
+
 .logo {
-   max-width: 15%;
+   max-width: 100%;
 }
+
+.logo-link {
+   max-width: 25%;
+}
+
 .form {
    max-width: 48%;
    position: relative;
    margin-left: 5%;
 }
+
 .botton {
    position: absolute;
+   height: 100%;
+   top: 0px;
+   right: 0px;
    margin: auto;
    background-color: #FFFFFF;
    color: #919191;
 }
+
 .botton:hover {
    background-color: #c6c6c6;
    color: black;
+}
+
+.burguer-menu {
+   background-color: white;
+   width: 25px;
+   height: 25px;
+   border-radius: 5px;
+   font-size: 15px;
+   color: #303030;
 }
 
 #shoping-car {
@@ -60,47 +73,77 @@ footer {
    font-size: .9rem;
    text-align: center;
 }
+
 footer article {
    margin-top: 20px;
 }
+
 footer article div {
    font-size: 0.4rem;
 }
 
 @media (min-width:779px) {
+   
    nav {
       width: auto;
    }
+
    nav ul li {
       padding: 10px;
    }
+
    footer {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
    }
+
    footer article {
       width: 32%;
    }
+
    header a {
       margin-right: 25px;
    }
+
+   .nav-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 1rem;
+      width: 100%;
+   }
+
+   .burguer-menu {
+      display: none;
+   }
+
    .form {
       margin-left: auto;
       margin-right: 25px;
    }
+
+   .logo-link {
+      max-width: 15%;
+   }
+
    #shoping-car {
       margin-left: 25px;
    }
+
 }
 
 @media (min-width:1200px) {
-   .logo {
+   
+   .logo-link {
       max-width: 140px;
       margin-left: 20%;
    }
+
    #shoping-car2 {
       margin-right: 20%;
    }
+
 }
