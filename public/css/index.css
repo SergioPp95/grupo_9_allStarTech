@@ -36,16 +36,20 @@ img {
 
 .carrousel div button {
     display: none;
-    width: 100px;
-    height: 50px;
+    width: 150px;
+    height: 3rem;
     position: absolute;
     top: 50%;
     right: 20%;
-    margin-left: -50px;
-    margin-top: -25px;
-    padding: 1rem;
-    border: 1px solid black;
-    border-radius: 25%;
+    margin-left: -75px;
+    margin-top: -1.5rem;
+    padding: auto;
+    font-size: 1rem;
+    text-align: center;
+    background-color: #2f2f2f;
+    color: #D9D9D9;
+    border: 1px solid #2f2f2f;
+    border-radius: 1rem;
 }
 
 .ads {
@@ -91,6 +95,7 @@ img {
     font-size: 1.5rem;
     font-weight: 400;
     margin: 1rem;
+    text-align: center;
 }
 
 .categories {
@@ -136,9 +141,56 @@ img {
     text-align: center;
 }
 
+.suscribe{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.suscribe h3{
+    color: #D9D9D9;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 1rem;
+    text-align: center;
+}
+
+.suscribe form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+.suscribe form input{
+    width: 100%;
+    background-color: #D9D9D9;
+    border: #2f2f2f 1px solid;
+    padding: 0.5rem;
+}
+
+.suscribe form button{
+    text-align: center;
+    width: 100%;
+    background-color: #FAF34C;
+    border: solid 1px #2f2f2f;
+    padding: 0.5rem;
+}
+
 @media (min-width:481px) {
     .explore .categories .category{
         width: 45%;
+    }
+
+    .suscribe form input{
+        width: 70%;
+    }
+
+    .suscribe form button{
+        width: 30%;
     }
 }
 
@@ -160,5 +212,13 @@ img {
 
     .explore {
         width: 75%;
+    }
+
+    .suscribe form input{
+        width: 50%;
+    }
+
+    .suscribe form button{
+        width: 20%;
     }
 }
