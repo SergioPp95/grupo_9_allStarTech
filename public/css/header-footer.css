@@ -1,3 +1,10 @@
+:root {
+   --white-color: #FFFFFF;
+   --gray3-color: #303030;
+   --gray2-color: #919191;
+   --gray1-color: #c6c6c6;
+}
+
 * {
    margin: 0;
    box-sizing: border-box;
@@ -9,12 +16,12 @@ header {
    justify-content: space-between;
    align-items: center;
    background-color: black;
-   color: #FFFFFF;
+   color: var(--white-color);
    padding: 10px;
 }
 
 .links {
-   color: #FFFFFF;
+   color: var(--white-color);
    margin-right: 10px;
 }
 
@@ -42,12 +49,12 @@ header {
    top: 0px;
    right: 0px;
    margin: auto;
-   background-color: #FFFFFF;
-   color: #919191;
+   background-color: var(--white-color);
+   color: var(--gray2-color);
 }
 
 .botton:hover {
-   background-color: #c6c6c6;
+   background-color: var(--gray1-color);
    color: black;
 }
 
@@ -57,7 +64,7 @@ header {
    height: 25px;
    border-radius: 5px;
    font-size: 15px;
-   color: #303030;
+   color: var(--gray3-color);
    margin-right: 20px;
 }
 
@@ -73,7 +80,7 @@ header {
 footer {
    background-color: black;
    margin: 0;
-   color: #FFFFFF;
+   color: var(--white-color);
    padding: 10px;   
    text-align: center;
    font-size: 12px;
