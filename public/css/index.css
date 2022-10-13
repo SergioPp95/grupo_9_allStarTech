@@ -50,6 +50,12 @@ img {
     color: #D9D9D9;
     border: 1px solid #2f2f2f;
     border-radius: 1rem;
+    transition: all 250ms;
+}
+
+.carrousel div button:hover{
+    background-color: #FAF34C;
+    color: #2f2f2f;
 }
 
 .ads {
