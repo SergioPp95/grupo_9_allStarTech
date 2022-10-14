@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+/*---------Version Mobile---------*/
+.main-cart{
+    border: solid 2px red;
+}
+.product-container{
+    border: solid 2px blue;
+}
+h1{
+    text-align: center;
+}
+.sell-detail{
+    border: solid 2px green;
+}
+
+.product-detail{
+    
+    display: flex;
+}
+/*-------Detalle del Producto--------*/
+.product-img{
+    width: 90px;
+    height: 70px;
+    margin: 15px;
+}
+.product-name{
+    font-size: 18px;
+    margin: auto;
+}
+/*-------Detalle del precio----------*/
+.price-detail{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.amount{
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 150px;
+    color: blue;
+    text-align: center;
+    border: solid 1px grey;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)
+}
+.price-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.price{
+    font-size: 20px;
+    margin: 0px;
+}
+.discount{
+    margin: 0px;
+}
+/*-----links del producto-----*/
+.product-buttons{
+    border-top: solid 1px #ebebeb;
+    display: flex;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+}
+.delete{
+    margin-left: 25px;
+}
+.seller-profile{
+    margin-right: 25px;
+}
+/*---------Consolidacion de Venta-------*/
+.sell-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 25px;
+    margin-right: 15px;
+}
+.sale-ship{
+    display: flex;
+    justify-content: space-between;
+}
+.sell-container button{
+    margin: auto;
+}

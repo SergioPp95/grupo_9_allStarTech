@@ -1,38 +1,56 @@
-g<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/productCart.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&family=Roboto:wght@300;400;900&display=swap" rel="stylesheet"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" /> 
+    <title>Mi Carrito</title>
 </head>
 <body>
-    <h1>Mi Carrito</h1>
-    <section>
-        <div>
-            <img src="/img/descarga.jfif" alt="">
-            <h2>nombre descriptivo del producto</h2>
-            <p>descuento</p>
-            <label for="cantidad">cantidad</label>
-            <select name="" id="cantidad">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-        <p>PRECIO</p>
-        <a href="">eliminar</a>
-        <a href="">ver otros productos del mismo vendedor</a>
-        </div>
-    </section>
+    <main class="main-cart">
+        <section class="product-container">
+            <h1>Mi Carrito</h1>
+            <div class="sell-detail">
+                <div class="product-detail">
+                    <a href="#"><img class="product-img" src="/img/descarga.jfif" alt=""></a>                    
+                    <h2 class="product-name">nombre descriptivo del producto</h2>
+                </div>
+                <div class="price-detail">
+                    <div class="amount-container" >
+                        <select class="amount" name="amount" id="amount">
+                            <option value="1">1 u.</option>
+                            <option value="2">2 u.</option>
+                            <option value="3">3 u.</option>
+                            <option value="4">4 u.</option>
+                            <option value="5">5 u.</option>
+                        </select>
+                    </div>
+                    <div class="price-container">
+                        <p class="discount">descuento</p>
+                        <p class="price">PRECIO</p>
+                    </div>
+                    
+                </div>
+                <div class="product-buttons">
+                    <a class="delete" href="#">eliminar</a>
+                    <a class="seller-profile" href="#">ver otros productos del mismo vendedor</a>
+                </div>
+            </div>
+        </section>
     
-    <section>
-        <p>envio a la direccion correspondiente</p>
-        <p>costo del envio</p>
-        <h4>total con envio</h4>
-        <p>PRECIO ACUMULADO DEL Carrito</p>
-        <button>CONTINUAR COMPRA</button>
-    </section>
+        <section class="sell-container">
+            <div class="sale-ship">
+                <p>envio a la direccion correspondiente</p>
+                <p>costo del envio</p>
+            </div>
+            <div>
+                <h4>total con envio</h4>
+            </div>
+            <button>CONTINUAR COMPRA</button>
+        </section>
+    </main>
 </body>
 </html>
