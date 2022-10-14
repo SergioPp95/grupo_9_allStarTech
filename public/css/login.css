@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url(https://img.freepik.com/vector-premium/fondo-borroso-gris-claro-blanco-degradado-radial_53562-6788.jpg?w=2000);
+    background:#02354F;
 }
 
 .login {
@@ -12,11 +12,15 @@ body {
     background: #34495E;
     margin: auto;
     margin-top: 180px;
-    box-shadow: 7px 13px 37px #000;
     padding: 20px 30px;
     color: white;
     font-family: 'calibri';
-    border-radius: 20px;
+    transition: all 0.5s;
+}
+
+.login:hover {
+    box-shadow: 7px 13px 37px #000;
+    border-radius: 50px;
 }
 
 h5 {
