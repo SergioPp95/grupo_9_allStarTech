@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,21 @@
     <link rel="stylesheet" href="/css/login.css">
     <title>Formulario Login</title>
 </head>
+
 <body>
     <form class="login">
         <h5>INICIAR SESION</h5>
+        <label>Correo:</label>
         <input class="CampoTexto" type="text" name="usuario" value="" placeholder="Ingresa tu correo">
+        <label>Contraseña</label>
         <input class="CampoTexto" type="password" name="contraseña" value="" placeholder="Ingresa tu contraseña">
         <input class="Boton" type="submit" name="" value="Ingresar">
-        <p>
-            <a href="#">¿Olvidaste tu contraseña?</a>
+        <p class="Olvido">
+            <a href="#">Olvidaste tu contraseña?</a>
+        </p>
+        <p class="Registro">
+            <a href="register">Aun no tienes cuenta?</a>
         </p>
     </form>
-    
 </body>
 </html>

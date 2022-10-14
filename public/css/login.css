@@ -1,19 +1,24 @@
-body{
+* {
+    box-sizing: border-box;
+}
+
+body {
     background-image: url(https://img.freepik.com/vector-premium/fondo-borroso-gris-claro-blanco-degradado-radial_53562-6788.jpg?w=2000);
 }
 
 .login {
     width: 400px;
-    height: 340px;
-    background: #919191;
+    height: 405px;
+    background: #34495E;
     margin: auto;
     margin-top: 180px;
     box-shadow: 7px 13px 37px #000;
     padding: 20px 30px;
-    border-top: 4px solid #565050;
     color: white;
-    font-family: 'calibri'
+    font-family: 'calibri';
+    border-radius: 20px;
 }
+
 h5 {
     margin: 0;
     text-align: center;
@@ -23,35 +28,54 @@ h5 {
     font-family: 'calibri';
     font-size: 20px;
 }
+
 .CampoTexto {
     width: 100%;
-    border:1px solid #565050;
-    margin-bottom: 15px;
-    padding: 11px 10px;
-    background: #c6c6c6 ;
-    font-size: 14px;
-    font-weight: bold;
-}
-.Boton{
-    width: 105%;
-    height: 40px;
-    background:#565050;
-    border: none;
-    color: white;
-    margin-bottom: 16px;
-}
-p{
-    height: 40px;
+    background: #c6c6c6;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 6px;
+    border: 1px solid #ffffff;
+    font-family: 'calibri';
+    font-size: 15px;
     text-align: center;
-    border-bottom: 1px solid;
+    color: white;
 }
-a{
+
+.Boton {
+    width: 100%;
+    background: #5e5e5e;
+    font-family: 'calibri';
+    font-size: 15px;
+    color: white;
+    padding: 8px;
+    margin: 16px 0;
+}
+
+.Olvido {
+    text-align: center;
+    border-top: 1px solid;
+}
+
+.Registro {
+    text-align: center;
+}
+
+a {
     color: white;
     text-decoration: none;
     font-size: 14px;
- };
-a:hover{
+}
+
+a:hover {
     color: white;
     text-decoration: underline;
     font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    form {
+        width: 70%;
+        margin-bottom: 10px;
+    }
 }

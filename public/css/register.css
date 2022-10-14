@@ -1,14 +1,19 @@
-body{
+* {
+    box-sizing: border-box;
+}
+
+body {
     background-image: url(https://img.freepik.com/vector-premium/fondo-borroso-gris-claro-blanco-degradado-radial_53562-6788.jpg?w=2000);
 }
-form { 
-    width: 50%;
-    background-color: #919191;
+
+form {
+    width: 400px;
+    background-color: #34495E ;
     padding: 30px;
     margin: auto;
-    margin-top:100px;
+    margin-top: 50px;
     border-radius: 20px;
-    font-family:'calibri';
+    font-family: 'calibri';
     color: white;
     box-shadow: 7px 13px 37px #000;
 }
@@ -18,9 +23,10 @@ h4 {
     margin-bottom: 20px;
     text-align: center;
 }
-.CampoTexto{
+
+.CampoTexto {
     width: 100%;
-    background: #c6c6c6;
+    background: #D7DBDD;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 6px;
@@ -30,22 +36,25 @@ h4 {
     text-align: center;
     color: white;
 }
+
 p {
-    height: 50px;
+    height: 10px;
     text-align: center;
     font-size: 15px;
     line-height: 50px;
 }
-a{
+
+a {
     color: white;
     text-decoration: none;
 }
-a:hover{
-    color: white;
+
+a:hover {
     text-decoration: underline;
 }
+
 .Boton {
-    width: 102.5%;
+    width: 100%;
     background: #5e5e5e;
     font-family: 'calibri';
     font-size: 15px;
@@ -53,4 +62,18 @@ a:hover{
     padding: 8px;
     margin: 16px 0;
 }
+.Terminos {
+    height: 50px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 50px;
+    justify-self: center;
+}
 
+@media (max-width: 480px) {
+    form {
+        width: 75%;
+        margin-top: 35px;
+        box-shadow: none
+    }
+}
