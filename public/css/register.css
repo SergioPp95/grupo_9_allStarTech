@@ -15,6 +15,10 @@ form {
     border-radius: 20px;
     font-family: 'calibri';
     color: white;
+    transition: all 0,5s;
+
+}
+form:hover {
     box-shadow: 7px 13px 37px #000;
 }
 
@@ -34,7 +38,7 @@ h4 {
     font-family: 'calibri';
     font-size: 15px;
     text-align: center;
-    color: white;
+    color: black;
 }
 
 p {
