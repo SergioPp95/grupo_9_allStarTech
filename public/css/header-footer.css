@@ -127,6 +127,10 @@ footer article ul {
    color: #1DA1F2;
 }
 
+#title-social {
+   text-align: center;
+}
+
 @media (min-width:779px) {
    
    nav {
