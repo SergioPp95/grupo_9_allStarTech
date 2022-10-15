@@ -78,6 +78,7 @@ a:hover {
     form {
         width: 75%;
         margin-top: 35px;
-        box-shadow: none
+        box-shadow: none;
+        border-radius: 50px;
     }
 }

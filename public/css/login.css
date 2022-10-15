@@ -81,5 +81,7 @@ a:hover {
     form {
         width: 70%;
         margin-bottom: 10px;
+        box-shadow: none;
+        border-radius: 50px;        
     }
 }
