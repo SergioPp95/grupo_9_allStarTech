@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #02354F
+}
+
+form {
+    width: 400px;
+    background-color: #34495E ;
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    font-family: 'calibri';
+    color: white;
+    transition: all 0.5s;
+
+}
+form:hover {
+    box-shadow: 7px 13px 37px #000;
+    border-radius: 50px;
+}
+
+h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.CampoTexto {
+    width: 100%;
+    background: #D7DBDD;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 6px;
+    border: 1px solid #ffffff;
+    font-family: 'calibri';
+    font-size: 15px;
+    text-align: center;
+    color: black;
+}
+
+p {
+    height: 10px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 50px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.Boton {
+    width: 100%;
+    background: #5e5e5e;
+    font-family: 'calibri';
+    font-size: 15px;
+    color: white;
+    padding: 8px;
+    margin: 16px 0;
+}
+.Terminos {
+    height: 50px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 50px;
+    justify-self: center;
+}
+
+@media (max-width: 480px) {
+    form {
+        width: 75%;
+        margin-top: 35px;
+        box-shadow: none;
+        border-radius: 50px;
+    }
+}

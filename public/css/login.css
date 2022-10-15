@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background:#02354F;
+}
+
+.login {
+    width: 400px;
+    height: 405px;
+    background: #34495E;
+    margin: auto;
+    margin-top: 180px;
+    padding: 20px 30px;
+    color: white;
+    font-family: 'calibri';
+    transition: all 0.5s;
+}
+
+.login:hover {
+    box-shadow: 7px 13px 37px #000;
+    border-radius: 50px;
+}
+
+h5 {
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    font-family: 'calibri';
+    font-size: 20px;
+}
+
+.CampoTexto {
+    width: 100%;
+    background: #c6c6c6;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 6px;
+    border: 1px solid #ffffff;
+    font-family: 'calibri';
+    font-size: 15px;
+    text-align: center;
+    color: black;
+}
+
+.Boton {
+    width: 100%;
+    background: #5e5e5e;
+    font-family: 'calibri';
+    font-size: 15px;
+    color: white;
+    padding: 8px;
+    margin: 16px 0;
+}
+
+.Olvido {
+    text-align: center;
+    border-top: 1px solid;
+}
+
+.Registro {
+    text-align: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    form {
+        width: 70%;
+        margin-bottom: 10px;
+        box-shadow: none;
+        border-radius: 50px;
+        
+    }
+}
