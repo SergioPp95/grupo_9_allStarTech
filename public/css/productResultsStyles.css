@@ -6,7 +6,14 @@
 *{
     box-sizing: border-box;
 }
-
+.productList{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
 body{
     font-family: 'Noto Sans', sans-serif;
     width: 95%;
@@ -30,9 +37,9 @@ body{
 .ordenar{
     appearance: none;
     font-size: 20px;
-    color:white;
+    color:var(--grisFondo);
     border: none;
-    background-color: blue;
+    background-color: #FAF34C ;
     border-radius: 4px;
     text-align: center;
     height: 50px;
@@ -62,6 +69,7 @@ position: relative;
 background-color: #D9D9D9;
 margin-bottom: 2px;
 padding: 5px;
+width: 90%;
 }
 .product div{
     display:flex;
@@ -141,7 +149,7 @@ text-align: left;
 /*///////media queries//////////*/
 @media (min-width: 700px){
  .product{
-    width: 50%;
+    width: 45%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
