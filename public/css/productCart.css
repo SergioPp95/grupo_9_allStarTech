@@ -5,10 +5,11 @@
 }
 /*---------Version Mobile---------*/
 body{
-    background-color: #404040;
+    background-color: #222;
 }
 .main-cart{
-    height: 100vh;
+    width: 90%;
+    margin: 2rem auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -166,22 +167,21 @@ a{
     .main-cart{
         flex-direction: row;
         justify-content: space-around;
-        align-items: flex-start;
+        align-items: center;
     }
     .scroll{
         overflow-y: scroll;
         height: 100%;
     }
     .product-container{
-        
         height: 70%;
-        margin-top: 100px;
+        margin: 4rem 0px;
     }
     .sell-container{
+        width: 30%;
         min-width: 300px;
-        max-height: 300px; 
-        margin-top: 150px;
-        
+        max-width: 600px;
+        max-height: 300px;        
     }
     /* width */
 ::-webkit-scrollbar {
