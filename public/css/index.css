@@ -1,3 +1,9 @@
+:root {
+    --grisFondo: #2f2f2f;
+    --blanco:#D9D9D9;
+    --detail: #FAF34C;
+ }
+
 * {
     padding: 0px;
     margin: 0px;
@@ -6,17 +12,13 @@
 }
 
 main {
-    background-color: #2f2f2f;
+    background-color: var(--grisFondo);
     padding: 0px 0px 1rem;
 }
 
 a {
     text-decoration: none;
-    color: black;
-}
-
-img {
-    max-width: 100vw;
+    color: var(--grisFondo);
 }
 
 .carrousel {
@@ -34,45 +36,79 @@ img {
     position: relative;
 }
 
-.carrousel div button {
-    display: none;
-    width: 150px;
-    height: 3rem;
+.carrousel div .bannerDescription{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 2rem;
+    padding: 1rem;
+    width: 40%;
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: absolute;
-    top: 50%;
-    right: 20%;
+    top: 40%;
+    right: 0%;
     margin-left: -75px;
     margin-top: -1.5rem;
+    margin-right: 2rem;
+    text-align: end;
+}
+
+.carrousel div .bannerDescription h4{
+    font-weight: 500;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.carrousel div .bannerDescription p{
+    display: none;
+    font-size: 1rem;
+    margin: auto;
+}
+
+.carrousel div img{
+    max-width: 100vw;
+    box-shadow: inset -360px 0px 250px 70px rgba(0, 0, 0, 1);
+}
+
+.carrousel div button {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    width: 150px;
+    height: 3rem;
     padding: auto;
     font-size: 1rem;
     text-align: center;
-    background-color: #2f2f2f;
-    color: #D9D9D9;
+    background-color: var(--grisFondo);
+    color: var(--blanco);
     border: 1px solid #2f2f2f;
     border-radius: 1rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
     transition: all 250ms;
 }
 
 .carrousel div button:hover{
-    background-color: #FAF34C;
-    color: #2f2f2f;
+    background-color: var(--detail);
+    color: var(--grisFondo);
+    transform: scale(1.3);
 }
-
 .ads {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .ads .ad {
-    background-color: #D9D9D9;
+    background-color: var(--blanco);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 90%;
     margin: 0.5rem auto;
-    border: 1px solid #D9D9D9;
     border-radius: 20px;
     overflow: hidden;
 }
@@ -97,7 +133,7 @@ img {
 }
 
 .explore h3 {
-    color: #D9D9D9;
+    color: var(--blanco);
     font-size: 1.5rem;
     font-weight: 400;
     margin: 1rem;
@@ -106,14 +142,14 @@ img {
 
 .categories {
     width: 100%;
-    background-color: #D9D9D9;
+    background-color: var(--blanco);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
     box-shadow: 0px 4px 50px rgba(255, 255, 255, 0.25);
-    border: 1px solid #D9D9D9;
+    border: 1px solid var(--blanco);
     border-radius: 20px;
 }
 
@@ -124,8 +160,8 @@ img {
 
 .categories article a {
     margin: 1rem auto;
-    background-color: #2f2f2f;
-    border: 1px solid #2f2f2f;
+    background-color: var(--grisFondo);
+    border: 1px solid var(--grisFondo);
     width: 100%;
     max-width: 250px;
     height: 250px;
@@ -135,6 +171,12 @@ img {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    transition: all 250ms;
+}
+
+.categories article a:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 .explore article img {
@@ -142,7 +184,7 @@ img {
 }
 
 .explore article p {
-    color: #D9D9D9;
+    color: var(--blanco);
     width: 100px;
     text-align: center;
 }
@@ -156,7 +198,7 @@ img {
 }
 
 .suscribe h3{
-    color: #D9D9D9;
+    color: var(--blanco);
     font-size: 1rem;
     font-weight: 400;
     margin: 1rem;
@@ -173,17 +215,27 @@ img {
 
 .suscribe form input{
     width: 100%;
-    background-color: #D9D9D9;
+    background-color: var(--blanco);
     border: #2f2f2f 1px solid;
     padding: 0.5rem;
+}
+
+.suscribe form input:focus{
+    border: #2f2f2f 1px solid;
 }
 
 .suscribe form button{
     text-align: center;
     width: 100%;
-    background-color: #FAF34C;
-    border: solid 1px #2f2f2f;
+    background-color: var(--detail);
+    border: solid 1px var(--grisFondo);
     padding: 0.5rem;
+    transition: all 250ms;
+}
+
+.suscribe form button:hover{
+    background-color: green;
+    color: var(--blanco);
 }
 
 @media (min-width:481px) {
@@ -201,6 +253,14 @@ img {
 }
 
 @media (min-width:769px) {
+.carrousel div .bannerDescription{
+    top: 20%
+}
+
+    .carrousel div .bannerDescription p{
+        display: block;
+    }
+
     .carrousel div button {
         display: block;
     }
