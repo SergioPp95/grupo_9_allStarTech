@@ -12,7 +12,7 @@ body {
     background: var(--grisFondo)
 }
 
-form {
+.form-register {
     width: 400px;
     background-color: var(--blanco);
     padding: 30px;
@@ -24,7 +24,7 @@ form {
 
 }
 
-form:hover {
+.form-register:hover {
     box-shadow: 7px 13px 37px black ;
     border-radius: 50px;
 }
