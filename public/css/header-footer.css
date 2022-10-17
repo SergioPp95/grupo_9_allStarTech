@@ -1,4 +1,10 @@
 :root {
+   --grisFondo: #2f2f2f;
+   --blanco:#D9D9D9;
+   --detail: #FAF34C;
+}
+
+:root {
    --white-color: #FFFFFF;
    --gray3-color: #303030;
    --gray2-color: #919191;
@@ -45,8 +51,8 @@ header {
 
 .botton {
    position: absolute;
-   height: 100%;
-   top: 0px;
+   height: 90%;
+   top: 1px;
    right: 0px;
    margin: auto;
    background-color: var(--white-color);

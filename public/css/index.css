@@ -1,3 +1,9 @@
+:root {
+    --grisFondo: #2f2f2f;
+    --blanco:#D9D9D9;
+    --detail: #FAF34C;
+ }
+
 * {
     padding: 0px;
     margin: 0px;
@@ -6,13 +12,13 @@
 }
 
 main {
-    background-color: #2f2f2f;
+    background-color: var(--grisFondo);
     padding: 0px 0px 1rem;
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: var(--grisFondo);
 }
 
 .carrousel {
@@ -35,7 +41,7 @@ a {
     border-radius: 2rem;
     padding: 1rem;
     width: 40%;
-    color: #D9D9D9;
+    color: var(--blanco);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -75,8 +81,8 @@ a {
     padding: auto;
     font-size: 1rem;
     text-align: center;
-    background-color: #2f2f2f;
-    color: #D9D9D9;
+    background-color: var(--grisFondo);
+    color: var(--blanco);
     border: 1px solid #2f2f2f;
     border-radius: 1rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
@@ -84,8 +90,8 @@ a {
 }
 
 .carrousel div button:hover{
-    background-color: #FAF34C;
-    color: #2f2f2f;
+    background-color: var(--detail);
+    color: var(--grisFondo);
     transform: scale(1.3);
 }
 .ads {
@@ -96,7 +102,7 @@ a {
 }
 
 .ads .ad {
-    background-color: #D9D9D9;
+    background-color: var(--blanco);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -127,7 +133,7 @@ a {
 }
 
 .explore h3 {
-    color: #D9D9D9;
+    color: var(--blanco);
     font-size: 1.5rem;
     font-weight: 400;
     margin: 1rem;
@@ -136,14 +142,14 @@ a {
 
 .categories {
     width: 100%;
-    background-color: #D9D9D9;
+    background-color: var(--blanco);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
     box-shadow: 0px 4px 50px rgba(255, 255, 255, 0.25);
-    border: 1px solid #D9D9D9;
+    border: 1px solid var(--blanco);
     border-radius: 20px;
 }
 
@@ -154,8 +160,8 @@ a {
 
 .categories article a {
     margin: 1rem auto;
-    background-color: #2f2f2f;
-    border: 1px solid #2f2f2f;
+    background-color: var(--grisFondo);
+    border: 1px solid var(--grisFondo);
     width: 100%;
     max-width: 250px;
     height: 250px;
@@ -178,7 +184,7 @@ a {
 }
 
 .explore article p {
-    color: #D9D9D9;
+    color: var(--blanco);
     width: 100px;
     text-align: center;
 }
@@ -192,7 +198,7 @@ a {
 }
 
 .suscribe h3{
-    color: #D9D9D9;
+    color: var(--blanco);
     font-size: 1rem;
     font-weight: 400;
     margin: 1rem;
@@ -209,7 +215,7 @@ a {
 
 .suscribe form input{
     width: 100%;
-    background-color: #D9D9D9;
+    background-color: var(--blanco);
     border: #2f2f2f 1px solid;
     padding: 0.5rem;
 }
@@ -221,15 +227,15 @@ a {
 .suscribe form button{
     text-align: center;
     width: 100%;
-    background-color: #FAF34C;
-    border: solid 1px #2f2f2f;
+    background-color: var(--detail);
+    border: solid 1px var(--grisFondo);
     padding: 0.5rem;
     transition: all 250ms;
 }
 
 .suscribe form button:hover{
     background-color: green;
-    color: #D9D9D9;
+    color: var(--blanco);
 }
 
 @media (min-width:481px) {
