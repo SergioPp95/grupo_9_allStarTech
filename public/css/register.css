@@ -56,7 +56,7 @@ p {
 }
 
 a {
-    color: white;
+    color: var(--grisFondo);
     text-decoration: none;
 }
 

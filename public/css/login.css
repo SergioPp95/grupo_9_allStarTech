@@ -72,7 +72,7 @@ h5 {
 }
 
 a {
-    color: white;
+    color: var(--grisFondo);
     text-decoration: none;
     font-size: 14px;
 }
