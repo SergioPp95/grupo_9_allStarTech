@@ -6,72 +6,199 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>All Star Tech</title>
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
-   <link rel="stylesheet" href="css/header-footer.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet" href="/css/index.css">
+   <link rel="stylesheet" href="/css/styles.css">
+   <link rel="stylesheet" href="/css/header-footer.css">
 </head>
 
 <body>
    <header id="myheader">
+      <a href="/" class="logo-link">
+         <img src="design/logo.png" alt="Logo AllTech" class="logo">
+      </a>
+         
+      <nav>
+         <ul class="nav-bar" style="list-style-type:none">
+            <li>PC</li>
+            <li>Celulares</li>
+            <li>Audio</li>
+            <li>Periféricos</li>
+         </ul>  
+      </nav>
+         
+      <form action="/" method="get" class="form">
+         <input type="text" placeholder="Search.." id="search">
+         <button class="botton" type="submit"><i class="fa fa-search"></i></button>
+      </form>
+         
+      <a href="/productCart" id="shoping-car" class="links"><i class="fas fa-shopping-cart"></i></a>
+      <a href="/login" id="shoping-car2" class="links"><i class="fas fa-user-circle"></i></a>
+      <button class="burguer-menu" type="button">
+         <i class="fas fa-bars"></i>
+      </button>  
    </header>
    <main>
       <section class="carrousel">
          <div class="carrousel1">
-            <img src="images/placeholder-image.png" alt="imagen">
+            <img src="images/notebook-banner.jpg" alt="imagen">
+            <div class="bannerDescription">
+               <h4>MacBook Air</h4>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores in tempora nihil voluptas sapiente
+                  veniam consectetur ea quaerat laboriosam dolores atque aut cupiditate, reiciendis magni praesentium
+                  necessitatibus earum blanditiis nulla?</p>
+            </div>
             <button>Ver más</button>
          </div>
          <div class="carrousel2">
-            <img src="images/placeholder-image.png" alt="imagen">
+            <img src="images/notebook-banner.jpg" alt="imagen">
+            <div class="bannerDescription">
+               <h4>MacBook Air</h4>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores in tempora nihil voluptas sapiente
+                  veniam consectetur ea quaerat laboriosam dolores atque aut cupiditate, reiciendis magni praesentium
+                  necessitatibus earum blanditiis nulla?</p>
+            </div>
             <button>Ver más</button>
          </div>
          <div class="carrousel3">
-            <img src="images/placeholder-image.png" alt="imagen">
+            <img src="images/notebook-banner.jpg" alt="imagen">
+            <div class="bannerDescription">
+               <h4>MacBook Air</h4>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores in tempora nihil voluptas sapiente
+                  veniam consectetur ea quaerat laboriosam dolores atque aut cupiditate, reiciendis magni praesentium
+                  necessitatibus earum blanditiis nulla?</p>
+            </div>
             <button>Ver más</button>
          </div>
       </section>
       <section class="ads">
          <div class="ad">
-            <p>DESCUENTOS EN CELULARES CON TU TARJETA</p>
-            <p>¡HASTA 50% DE DECUENTO!</p>
-            <img src="images/placeholder-image.png" alt="imagen">
+            <p>DESCUENTOS EN CELULARES CON TU TARJETA ¡HASTA 50% DE DECUENTO!</p>
+            <img src="images/advertisement.jpg" alt="imagen">
          </div>
          <div class="ad">
+            <img src="images/advertisement.jpg" alt="imagen">
             <p>SI SOS MIEMBRO TENÉS ENVÍO GRATIS A TODO EL PAÍS</p>
-            <img src="images/placeholder-image.png" alt="imagen">
          </div>
       </section>
       <section class="explore">
-         <article class="category">
-            <a href="#">
-               <p>PC's</p>
-            </a>
-         </article>
-         <article class="category">
-            <a href="#">
-               <p>Celulares</p>
-            </a>
-         </article>
-         <article class="category">
-            <a href="#">
-               <p>Auriculares</p>
-            </a>
-         </article>
-         <article class="category">
-            <a href="#">
-               <p>Pantallas</p>
-            </a>
-         </article>
-         <article class="category">
-            <a href="#">
-               <p>Ver Todo</p>
-            </a>
-         </article>
+         <h3>EXPLORA NUESTROS PRODUCTOS</h3>
+         <div class="categories">
+            <article class="category">
+               <a href="#">
+                  <img src="images/placeholder-image.png" alt="imagen">
+                  <p>PC's</p>
+               </a>
+            </article>
+            <article class="category">
+               <a href="#">
+                  <img src="images/placeholder-image.png" alt="imagen">
+                  <p>Celulares</p>
+               </a>
+            </article>
+            <article class="category">
+               <a href="#">
+                  <img src="images/placeholder-image.png" alt="imagen">
+                  <p>Auriculares</p>
+               </a>
+            </article>
+            <article class="category">
+               <a href="#">
+                  <img src="images/placeholder-image.png" alt="imagen">
+                  <p>Pantallas</p>
+               </a>
+            </article>
+            <article class="category">
+               <a href="#">
+                  <img src="images/placeholder-image.png" alt="imagen">
+                  <p>Ver Todo</p>
+               </a>
+            </article>
+         </div>
+      </section>
+      <section class="suscribe">
+         <h3>Suscribete a nuestro Newsletter para tener los últimos y mejores descuentos</h3>
+         <form action="#" method="get">
+            <input type="text" placeholder="example@mail.com">
+            <button type="submit">Suscribirme</button>
+         </form>
       </section>
    </main>
+
    <footer id="myfooter">
+      <article>
+         <h3>Sobre nosotros</h3>
+      
+         <ul>
+            <li>Nuestra compañia</li>
+            <li>Historia</li>
+            <li>Ubicaciones</li>
+            <li>Resultados financieros</li>
+         </ul>
+      </article>
+         
+      <article>
+         <h3>Contacto</h3>
+      
+         <ul>
+            <li>Trabaja con nosotros</li>
+            <li>Sugerencias</li>
+            <li>Quejas y reclamos</li>
+         </ul>
+      </article>
+         
+      <article>
+         <h3>FAQs</h3>
+      
+         <ul>
+            <li>Opciones de pago</li>
+            <li>¿Qué pasa si no me llega un envío?</li>
+            <li>¿Cómo funcionan las promociones?</li>
+         </ul>
+      </article>
+         
+      <article>
+         <h3>Terminos y condiciones</h3>
+      
+         <ul>
+            <li>¿Cómo cuidamos tu privacidad?</li>
+            <li>Accesibilidad</li>
+            <li>Documentos legales</li>
+         </ul>
+      </article>
+      
+      <article>
+         <h3 id="title-social">Conecta con nosotros</h3>
+         
+         <ul class="social-contacts">
+            <li>
+               <a href="https://www.linkedin.com" class="linkedin">
+                  <i class="fa-brands fa-linkedin"></i>
+               </a>
+            </li>
+            <li>
+               <a href="https://twitter.com" class="twitter">
+                  <i class="fa-brands fa-twitter"></i>
+               </a>
+            </li>
+            <li>
+               <a href="https://www.instagram.com/" class="instagram">
+                  <i class="fa-brands fa-instagram"></i>
+               </a>
+            </li>
+            <li>
+               <a href="https://www.facebook.com/" class="facebook">
+                  <i class="fa-brands fa-facebook"></i>
+               </a>
+            </li>
+         </ul>
+      </article>
    </footer>
 
-   <script src="js/headerFooter.js"></script>
 </body>
 
 </html>
