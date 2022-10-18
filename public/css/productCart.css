@@ -157,9 +157,6 @@ a{
     }
 }
 @media (min-width: 769px) {
-    body{
-        overflow: hidden;
-    }
     h1{
         text-align: center;
 

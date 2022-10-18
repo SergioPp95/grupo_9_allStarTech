@@ -2,14 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
    <link rel="stylesheet" href="/css/header-footer.css">
-    <link rel="stylesheet" href="/css/login.css">
-    <title>Formulario Login</title>
+   <link rel="stylesheet" href="/css/login.css">
+   <link rel="stylesheet" href="/css/style.css">
+   <title>Formulario Login</title>
 </head>
 
 <body>
@@ -20,10 +21,10 @@
          
       <nav>
          <ul class="nav-bar" style="list-style-type:none">
-            <li>PC</li>
-            <li>Celulares</li>
-            <li>Audio</li>
-            <li>Periféricos</li>
+            <li><a href="/productResults">PC</a></li>
+            <li><a href="/productResults">Celulares</a></li>
+            <li><a href="/productResults">Audio</a></li>
+            <li><a href="/productResults">Periféricos</a></li>
          </ul>  
       </nav>
          
@@ -39,25 +40,27 @@
       </button> 
    </header>
 
-    <form class="login">
-        <h5>INICIAR SESION</h5>
-        <label>Correo:</label>
-        <input class="CampoTexto" type="text" name="usuario" value="" placeholder="Ingresa tu correo">
-        <label>Contraseña</label>
-        <input class="CampoTexto" type="password" name="contraseña" value="" placeholder="Ingresa tu contraseña">
-        <input class="Boton" type="submit" name="" value="Ingresar">
-        <p class="Olvido">
+   <main>
+      <form class="login">
+         <h5>INICIAR SESION</h5>
+         <label>Correo:</label>
+         <input class="CampoTexto" type="text" name="usuario" value="" placeholder="Ingresa tu correo">
+         <label>Contraseña</label>
+         <input class="CampoTexto" type="password" name="contraseña" value="" placeholder="Ingresa tu contraseña">
+         <input class="Boton" type="submit" name="" value="Ingresar">
+         <p class="Olvido">
             <a href="#">Olvidaste tu contraseña?</a>
-        </p>
-        <p class="Registro">
+         </p>
+         <p class="Registro">
             <a href="register">Aun no tienes cuenta?</a>
-        </p>
-    </form>
+         </p>
+      </form>
+   </main>
 
-    <footer id="myfooter">
+   <footer id="myfooter">
       <article>
          <h3>Sobre nosotros</h3>
-      
+
          <ul>
             <li>Nuestra compañia</li>
             <li>Historia</li>
@@ -65,40 +68,40 @@
             <li>Resultados financieros</li>
          </ul>
       </article>
-         
+
       <article>
          <h3>Contacto</h3>
-      
+
          <ul>
             <li>Trabaja con nosotros</li>
             <li>Sugerencias</li>
             <li>Quejas y reclamos</li>
          </ul>
       </article>
-         
+
       <article>
          <h3>FAQs</h3>
-      
+
          <ul>
             <li>Opciones de pago</li>
             <li>¿Qué pasa si no me llega un envío?</li>
             <li>¿Cómo funcionan las promociones?</li>
          </ul>
       </article>
-         
+
       <article>
          <h3>Terminos y condiciones</h3>
-      
+
          <ul>
             <li>¿Cómo cuidamos tu privacidad?</li>
             <li>Accesibilidad</li>
             <li>Documentos legales</li>
          </ul>
       </article>
-      
+
       <article>
          <h3 id="title-social">Conecta con nosotros</h3>
-         
+
          <ul class="social-contacts">
             <li>
                <a href="https://www.linkedin.com" class="linkedin">
@@ -123,7 +126,7 @@
          </ul>
       </article>
    </footer>
-   
+
 </body>
 
 </html>

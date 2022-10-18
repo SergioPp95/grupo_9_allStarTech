@@ -16,8 +16,7 @@ body {
     width: 400px;
     height: 405px;
     background: var(--blanco);
-    margin: auto;
-    margin-top: 180px;
+    margin: 2rem auto;
     padding: 20px 30px;
     color: var(--grisFondo);
     font-family: 'calibri';
@@ -92,5 +91,11 @@ a:hover {
     }
     a{
         color: #000;
+    }
+}
+
+@media (min-width: 481px) {
+    .login{
+        margin: 180px auto;
     }
 }

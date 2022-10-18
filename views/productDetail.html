@@ -1,205 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&family=Roboto:wght@300;400;900&display=swap" rel="stylesheet"> 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&family=Roboto:wght@300;400;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/css/productDetail.css">
-    
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="/css/style.css">
 
     <title>Producto</title>
 </head>
 
 <body>
-   <header id="myheader">
-      <a href="/" class="logo-link">
-         <img src="design/logo.png" alt="Logo AllTech" class="logo">
-      </a>
-         
-      <nav>
-         <ul class="nav-bar" style="list-style-type:none">
-            <li>PC</li>
-            <li>Celulares</li>
-            <li>Audio</li>
-            <li>Periféricos</li>
-         </ul>  
-      </nav>
-         
-      <form action="/" method="get" class="form">
-         <input type="text" placeholder="Search.." id="search">
-         <button class="botton" type="submit"><i class="fa fa-search"></i></button>
-      </form>
-         
-      <a href="/productCart" id="shoping-car" class="links"><i class="fas fa-shopping-cart"></i></a>
-      <a href="/login" id="shoping-car2" class="links"><i class="fas fa-user-circle"></i></a>
-      <button class="burguer-menu" type="button">
-         <i class="fas fa-bars"></i>
-      </button> 
-   </header>
-   
-<section class="main-container">    
-    <div class="box-superior">    
-        <div class="product">
-            <div class="img-air">
-                <div class="featured">
-                    <img id="mainpic" src="https://www.digitarinformatica.com.ar/wp-content/uploads/2021/08/Placa-madre-Gigabyte-GA-H510M-H-1-1.jpg" alt="nombre-del-producto"> 
-                </div>
-                <div class="more">
-                    <div class="item">
-                        <img src="https://www.digitarinformatica.com.ar/wp-content/uploads/2021/08/Placa-madre-Gigabyte-GA-H510M-H-1-1.jpg" alt="nombre-del-producto">
-                    </div>    
-                    <div class="item">
-                        <img src="https://www.digitarinformatica.com.ar/wp-content/uploads/2021/08/Placa-madre-Gigabyte-GA-H510M-H-1-1.jpg" alt="nombre-del-producto">
-                    </div>
-                    <div class="item">
-                        <img src="https://www.digitarinformatica.com.ar/wp-content/uploads/2021/08/Placa-madre-Gigabyte-GA-H510M-H-1-1.jpg" alt="nombre-del-producto">
-                    </div>
-                    <div class="item">
-                        <img src="https://www.digitarinformatica.com.ar/wp-content/uploads/2021/08/Placa-madre-Gigabyte-GA-H510M-H-1-1.jpg" alt="nombre-del-producto">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="meta">
-            <h1>MOTHER GIGABYTE B660M AORUS PRO DDR4 S1700</h1>
-            <section class="puntuacion">
-                <a class="fa-sharp fa-solid fa-star b1"></a>
-                <a class="fa-sharp fa-solid fa-star b2"></a>
-                <a class="fa-sharp fa-solid fa-star b3"></a>
-                <a class="fa-sharp fa-solid fa-star b4"></a>
-                <a class="fa-sharp fa-solid fa-star b5"></a>
-            </section>
-                <div class="price-main">
-                    Precio en efectivo o transferencia $55.555,00
-                </div>
-                <div class="price-mp">
-                    Precio MecadoPago $56.555,00
-                    <img src="/img/mercadopago.png" alt="logo-mercadopago">
-                </div>
-                <div class="price-main-cuotas"> ¡12 cuotas de $6.208,77!</div>
-                <div class="shipping">
-                    Disponemos del producto para retiro por local o envio en las proximas 48hs
-                </div>
-                <div class="tag">
-                    <span class="tag tag-stock">En Stock</span>
-                </div>
-                <form>
-                    <div class="qty">
-                        <label form="qty" class="qty-text">Cantidad:</label>   
-                        <input type="number" id="qty" class="qty-item" value="1">
-                    </div>
-                </form> 
-                <div class="final-buy">
-                    <div class="item-final-1">
-                        <!--<button type="submit"><a class="btn-outline"><i class="fas fa-shopping-cart"></i> Agregar</a></button> -->
-                        <button class="button-buy" type="submit" role="button"><a class="btn-outline"><i class="fas fa-shopping-cart"></i> Agregar</a></button>
-                    </div>
-                    <div class="item-final-2">
-                        <button class="button-buy" type="submit" role="button"><a class="btn-outline"> Comprar Ahora</a></button>
-                        <!--<button type="submit"><a class="btn-outline"></i> </a></button>-->
-                    </div>
-                </div>
-            </div>
-        </div>    
-    </div>
+    <header id="myheader">
+        <a href="/" class="logo-link">
+           <img src="design/logo.png" alt="Logo AllTech" class="logo">
+        </a>
+           
+        <nav>
+           <ul class="nav-bar" style="list-style-type:none">
+              <li><a href="/productResults">PC</a></li>
+              <li><a href="/productResults">Celulares</a></li>
+              <li><a href="/productResults">Audio</a></li>
+              <li><a href="/productResults">Periféricos</a></li>
+           </ul>  
+        </nav>
+           
+        <form action="/" method="get" class="form">
+           <input type="text" placeholder="Search.." id="search">
+           <button class="botton" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+           
+        <a href="/productCart" id="shoping-car" class="links"><i class="fas fa-shopping-cart"></i></a>
+        <a href="/login" id="shoping-car2" class="links"><i class="fas fa-user-circle"></i></a>
+        <button class="burguer-menu" type="button">
+           <i class="fas fa-bars"></i>
+        </button> 
+     </header>
 
-    <div class="descripcion-producto">
-        <h2>Descripcion del producto:</h2>        
-        <div class="info air">
-            <div id="syndi_inline"><div id="syndi_powerpage"></div></div>
-                <p></p><div>Intel<sup>®</sup> B660 AORUS Motherboard with 12*+1+1 Twin Hybrid Phases Digital VRM Design, Fully Covered Thermal Design , 2 x PCIe 4.0 M.2 with Thermal Guard, Intel<sup>®</sup> 2.5GbE LAN, Rear USB 3.2 Gen 2x2 Type-C<sup>®</sup>, RGB FUSION 2.0, Q-Flash Plus</div><br>
-                <ul>
-                    <li>Supports 12th Gen Intel<sup>®</sup>&nbsp;Core™ Series Processors</li>
-                    <li>Dual Channel Non-ECC Unbuffered DDR4, 4 DIMMs</li>
-                    <li>12*+1+1 Twin Hybrid Digital VRM Design with 60A DrMOS</li>
-                    <li>Shielded Memory Routing for Better Memory Overclocking</li>
-                    <li>Fully Covered Thermal Design with High Coverage MOSFET Heatsinks</li>
-                    <li>Blazing Fast Intel<sup>®</sup> 2.5GbE LAN with Bandwidth Management</li>
-                    <li>Dual Ultra-Fast NVMe PCIe 4.0 x4 M.2 with Thermal Guard</li>
-                    <li>SuperSpeed USB 3.2 Gen 2x2 Type-C<sup>®</sup> delivers up to 20Gb/s transfer speeds</li>
-                    <li>Pre-installed IO Shield for easy and quick installation</li>
-                    <li>RGB FUSION 2.0 with Multi-Zone Addressable LED Light Show Design, Support Addressable LED &amp; RGB LED Strips</li>
-                    <li>Smart Fan 6 Features Multiple Temperature Sensors, Hybrid Fan Headers with FAN STOP</li>
-                    <li>Q-Flash Plus Update BIOS without Installing the CPU, Memory and Graphics Card</li>
-                </ul>
-                <p></p>
-                <p></p> 
+    <main>
+        <section class="main-container">
+            <div class="box-superior">
+                <div class="product">
+                    <div class="img-air">
+                        <div class="featured">
+                            <img id="mainpic"
+                                src="https://www.digitarinformatica.com.ar/wp-content/uploads/2021/08/Placa-madre-Gigabyte-GA-H510M-H-1-1.jpg"
+                                alt="nombre-del-producto">
+                        </div>
+                        <div class="more">
+                            <div class="item">
+                                <img src="https://www.digitarinformatica.com.ar/wp-content/uploads/2021/08/Placa-madre-Gigabyte-GA-H510M-H-1-1.jpg"
+                                    alt="nombre-del-producto">
+                            </div>
+                            <div class="item">
+                                <img src="https://www.digitarinformatica.com.ar/wp-content/uploads/2021/08/Placa-madre-Gigabyte-GA-H510M-H-1-1.jpg"
+                                    alt="nombre-del-producto">
+                            </div>
+                            <div class="item">
+                                <img src="https://www.digitarinformatica.com.ar/wp-content/uploads/2021/08/Placa-madre-Gigabyte-GA-H510M-H-1-1.jpg"
+                                    alt="nombre-del-producto">
+                            </div>
+                            <div class="item">
+                                <img src="https://www.digitarinformatica.com.ar/wp-content/uploads/2021/08/Placa-madre-Gigabyte-GA-H510M-H-1-1.jpg"
+                                    alt="nombre-del-producto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="meta">
+                    <h1>MOTHER GIGABYTE B660M AORUS PRO DDR4 S1700</h1>
+                    <section class="puntuacion">
+                        <a class="fa-sharp fa-solid fa-star b1"></a>
+                        <a class="fa-sharp fa-solid fa-star b2"></a>
+                        <a class="fa-sharp fa-solid fa-star b3"></a>
+                        <a class="fa-sharp fa-solid fa-star b4"></a>
+                        <a class="fa-sharp fa-solid fa-star b5"></a>
+                    </section>
+                    <div class="price-main">
+                        Precio en efectivo o transferencia $55.555,00
+                    </div>
+                    <div class="price-mp">
+                        Precio MecadoPago $56.555,00
+                        <img src="images/mercadopago.png" alt="logo-mercadopago">
+                    </div>
+                    <div class="price-main-cuotas"> ¡12 cuotas de $6.208,77!</div>
+                    <div class="shipping">
+                        Disponemos del producto para retiro por local o envio en las proximas 48hs
+                    </div>
+                    <div class="tag">
+                        <span class="tag tag-stock">En Stock</span>
+                    </div>
+                    <form>
+                        <div class="qty">
+                            <label form="qty" class="qty-text">Cantidad:</label>
+                            <input type="number" id="qty" class="qty-item" value="1">
+                        </div>
+                    </form>
+                    <div class="final-buy">
+                        <div class="item-final-1">
+                            <!--<button type="submit"><a class="btn-outline"><i class="fas fa-shopping-cart"></i> Agregar</a></button> -->
+                            <button class="button-buy" type="submit" role="button"><a class="btn-outline"><i
+                                        class="fas fa-shopping-cart"></i> Agregar</a></button>
+                        </div>
+                        <div class="item-final-2">
+                            <button class="button-buy" type="submit" role="button"><a class="btn-outline"> Comprar
+                                    Ahora</a></button>
+                            <!--<button type="submit"><a class="btn-outline"></i> </a></button>-->
+                        </div>
+                    </div>
+                </div>
             </div>
-    </div>
-</section>
+            </div>
 
-<footer id="myfooter">
-   <article>
-      <h3>Sobre nosotros</h3>
-   
-      <ul>
-         <li>Nuestra compañia</li>
-         <li>Historia</li>
-         <li>Ubicaciones</li>
-         <li>Resultados financieros</li>
-      </ul>
-   </article>
-      
-   <article>
-      <h3>Contacto</h3>
-   
-      <ul>
-         <li>Trabaja con nosotros</li>
-         <li>Sugerencias</li>
-         <li>Quejas y reclamos</li>
-      </ul>
-   </article>
-      
-   <article>
-      <h3>FAQs</h3>
-   
-      <ul>
-         <li>Opciones de pago</li>
-         <li>¿Qué pasa si no me llega un envío?</li>
-         <li>¿Cómo funcionan las promociones?</li>
-      </ul>
-   </article>
-      
-   <article>
-      <h3>Terminos y condiciones</h3>
-   
-      <ul>
-         <li>¿Cómo cuidamos tu privacidad?</li>
-         <li>Accesibilidad</li>
-         <li>Documentos legales</li>
-      </ul>
-   </article>
-   
-   <article>
-      <h3 id="title-social">Conecta con nosotros</h3>
-      
-      <ul class="social-contacts">
-         <li>
-            <a href="https://www.linkedin.com" class="linkedin">
-               <i class="fa-brands fa-linkedin"></i>
-            </a>
-         </li>
-         <li>
-            <a href="https://twitter.com" class="twitter">
-               <i class="fa-brands fa-twitter"></i>
-            </a>
-         </li>
-         <li>
-            <a href="https://www.instagram.com/" class="instagram">
-               <i class="fa-brands fa-instagram"></i>
-            </a>
-         </li>
-         <li>
-            <a href="https://www.facebook.com/" class="facebook">
-               <i class="fa-brands fa-facebook"></i>
-            </a>
-         </li>
-      </ul>
-   </article>
-</footer>
+            <div class="descripcion-producto">
+                <h2>Descripcion del producto:</h2>
+                <div class="info air">
+                    <div id="syndi_inline">
+                        <div id="syndi_powerpage"></div>
+                    </div>
+                    <p></p>
+                    <div>Intel<sup>®</sup> B660 AORUS Motherboard with 12*+1+1 Twin Hybrid Phases Digital VRM Design,
+                        Fully Covered Thermal Design , 2 x PCIe 4.0 M.2 with Thermal Guard, Intel<sup>®</sup> 2.5GbE
+                        LAN, Rear USB 3.2 Gen 2x2 Type-C<sup>®</sup>, RGB FUSION 2.0, Q-Flash Plus</div><br>
+                    <ul>
+                        <li>Supports 12th Gen Intel<sup>®</sup>&nbsp;Core™ Series Processors</li>
+                        <li>Dual Channel Non-ECC Unbuffered DDR4, 4 DIMMs</li>
+                        <li>12*+1+1 Twin Hybrid Digital VRM Design with 60A DrMOS</li>
+                        <li>Shielded Memory Routing for Better Memory Overclocking</li>
+                        <li>Fully Covered Thermal Design with High Coverage MOSFET Heatsinks</li>
+                        <li>Blazing Fast Intel<sup>®</sup> 2.5GbE LAN with Bandwidth Management</li>
+                        <li>Dual Ultra-Fast NVMe PCIe 4.0 x4 M.2 with Thermal Guard</li>
+                        <li>SuperSpeed USB 3.2 Gen 2x2 Type-C<sup>®</sup> delivers up to 20Gb/s transfer speeds</li>
+                        <li>Pre-installed IO Shield for easy and quick installation</li>
+                        <li>RGB FUSION 2.0 with Multi-Zone Addressable LED Light Show Design, Support Addressable LED
+                            &amp; RGB LED Strips</li>
+                        <li>Smart Fan 6 Features Multiple Temperature Sensors, Hybrid Fan Headers with FAN STOP</li>
+                        <li>Q-Flash Plus Update BIOS without Installing the CPU, Memory and Graphics Card</li>
+                    </ul>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="myfooter">
+        <article>
+            <h3>Sobre nosotros</h3>
+
+            <ul>
+                <li>Nuestra compañia</li>
+                <li>Historia</li>
+                <li>Ubicaciones</li>
+                <li>Resultados financieros</li>
+            </ul>
+        </article>
+
+        <article>
+            <h3>Contacto</h3>
+
+            <ul>
+                <li>Trabaja con nosotros</li>
+                <li>Sugerencias</li>
+                <li>Quejas y reclamos</li>
+            </ul>
+        </article>
+
+        <article>
+            <h3>FAQs</h3>
+
+            <ul>
+                <li>Opciones de pago</li>
+                <li>¿Qué pasa si no me llega un envío?</li>
+                <li>¿Cómo funcionan las promociones?</li>
+            </ul>
+        </article>
+
+        <article>
+            <h3>Terminos y condiciones</h3>
+
+            <ul>
+                <li>¿Cómo cuidamos tu privacidad?</li>
+                <li>Accesibilidad</li>
+                <li>Documentos legales</li>
+            </ul>
+        </article>
+
+        <article>
+            <h3 id="title-social">Conecta con nosotros</h3>
+
+            <ul class="social-contacts">
+                <li>
+                    <a href="https://www.linkedin.com" class="linkedin">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com" class="twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" class="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/" class="facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+            </ul>
+        </article>
+    </footer>
 </body>
+
 </html>

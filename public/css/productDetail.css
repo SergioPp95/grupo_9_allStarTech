@@ -5,14 +5,26 @@
 }
 
 * {
+  padding: 0px;
+  margin: 0px;
   box-sizing: border-box;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--grisFondo);
 }
 
 html {
   text-rendering: optimizeLegibility;
 }
 
-body {
+body{
+  background-color: #2f2f2f;
+}
+
+main {
   font-family: "Roboto", sans-serif;
   /*background-color: #222;*/
   background-color: var(--grisFondo);
@@ -165,10 +177,6 @@ h1 {
   text-align: center;
 }
 
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
 .final-buy {
   display: flex;
   flex-wrap: wrap;
@@ -182,6 +190,7 @@ input[type="number"] {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  color: var(--blanco);
 }
 
 .item-final-1 button,
@@ -258,7 +267,7 @@ input[type="number"] {
 
 @media (min-width: 769px) {
   /*----------------------- diseño pagina ---------------------------------------*/
-  body {
+  main {
     width: 80vw;
     margin: 20px auto;
     transition: 0.5s all;
@@ -441,7 +450,7 @@ input[type="number"] {
   }
 
   @media (min-width: 1280px) {
-    body {
+    main {
       width: 60vw;
       transition: 0.5s all;
     }

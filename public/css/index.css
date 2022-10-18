@@ -16,7 +16,7 @@ main {
     padding: 0px 0px 1rem;
 }
 
-a {
+main a {
     text-decoration: none;
     color: var(--grisFondo);
 }
