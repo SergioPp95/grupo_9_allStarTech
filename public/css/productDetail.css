@@ -190,7 +190,6 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  color: var(--blanco);
 }
 
 .item-final-1 button,
