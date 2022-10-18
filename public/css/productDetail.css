@@ -11,10 +11,10 @@
   font-family: 'Noto Sans', sans-serif;
 }
 
-a {
+/*a {
   text-decoration: none;
   color: var(--grisFondo);
-}
+}*/
 
 html {
   text-rendering: optimizeLegibility;
@@ -256,6 +256,11 @@ h1 {
 
 .descripcion-producto p {
   font-size: 15px;
+}
+
+.ul-description{
+  margin-left: 25px;
+  margin-bottom: 10px;
 }
 
 @media (min-width: 481px) {
