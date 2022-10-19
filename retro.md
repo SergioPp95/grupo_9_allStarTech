@@ -20,4 +20,4 @@ retro sprint 2:
 - 4: hacer menos - quedarse con dudas y no consultar al equipo
 - 5: dejar de hacer - presentar cosas al final del sprint sin mostrar al equipo
 
--juan alejando medina se reincorporo al grupo de forma proactiva.
+- juan alejando medina se reincorporo al grupo de forma proactiva.
