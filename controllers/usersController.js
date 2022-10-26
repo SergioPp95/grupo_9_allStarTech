@@ -1,7 +1,7 @@
 const controller = {
-    login: (req,res) => res.render('login'),
-    register: (req,res) => res.render('register'),
-    cart: (req,res) => res.render('prodcutCart')
+    login: (req,res) => res.render('./users/login'),
+    register: (req,res) => res.render('./users/register'),
+    cart: (req,res) => res.render('./users/productCart')
 }
 
 module.exports = controller;
