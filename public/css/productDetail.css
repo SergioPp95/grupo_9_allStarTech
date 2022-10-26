@@ -36,12 +36,6 @@ main {
   transition: 0.5s all;
 }
 
-/* -------------SECCION Foto principal y Fotos Secundarias---------------------- */
-
-.product {
-  margin-bottom: 1px;
-}
-
 .img-air {
   /*border: 3px green solid;*/
   display: flex;
