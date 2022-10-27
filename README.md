@@ -9,6 +9,7 @@ El publico objetivo de la pagina va a ser toda aquella persona que quiera compra
    <li>Juan Manuel Zimmermann</li>
    <li>Edgar Sanchez</li>
    <li>Nicolas Lanzilotta</li>
+   <li>Juan Alejandro Medina</i>
 </ul>
 <p>Paginas de referencia:<p>
 <ul>
