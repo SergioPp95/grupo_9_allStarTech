@@ -56,6 +56,7 @@ h5 {
     background: #faf34c;
     font-family: 'calibri';
     font-size: 15px;
+    border: 1px black solid;
     color: black;
     padding: 8px;
     margin: 16px 0;
