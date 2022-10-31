@@ -3,7 +3,8 @@
 
 <!-- Head -->
 <%- include("../partials/head") %>
-
+<link rel="stylesheet" href="/css/productResultsStyles.css">
+</head>
 <body>
 
     <!-- Header -->
@@ -37,15 +38,16 @@
 
             <h4 class="">Nuevo</h4>
             <div class="productList">
+                <% products.forEach(product => { %> 
                 <div class="product">
                     <div>
-                        <img class="img" src="images/galaxy-flip-3.jpg" />
+                        <img class="img" src="<%= product.imagenPrincipal %>" />
                         <div class="text">
-                            <p class="name">Samsung Galaxy Z Flip 3</p>
-                            <p class="price">$100.000</p>
+                            <p class="name"><%= product.name %> </p>
+                            <p class="price">$<%= product.price %></p>
                             <p class="discount">10%off</p>
                             <div class="options">
-                                <a class="ver-más" href="/productDetail">Ver más</a>
+                                <a class="ver-más" href="/product/detail/<%= product.id %>">Ver más</a>
                                 <button type="submit" id="carrito">Agregar
                                     <span><i class="fa-solid fa-cart-shopping"></i></span>
                                 </button>
@@ -53,130 +55,9 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="product">
-                    <div>
-                        <img class="img" src="images/galaxy-flip-3.jpg" />
-                        <div class="text">
-                            <p class="name">Samsung Galaxy Z Flip 3</p>
-                            <p class="price">$100.000</p>
-                            <p class="discount">10%off</p>
-                            <div class="options">
-                                <a class="ver-más" href="/productDetail">Ver más</a>
-                                <button type="submit" id="carrito">Agregar
-                                    <span><i class="fa-solid fa-cart-shopping"></i></span>
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div>
-                        <img class="img" src="images/galaxy-flip-3.jpg" />
-                        <div class="text">
-                            <p class="name">Samsung Galaxy Z Flip 3</p>
-                            <p class="price">$100.000</p>
-                            <p class="discount">10%off</p>
-                            <div class="options">
-                                <a class="ver-más" href="/productDetail">Ver más</a>
-                                <button type="submit" id="carrito">Agregar
-                                    <span><i class="fa-solid fa-cart-shopping"></i></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div>
-                        <img class="img" src="images/galaxy-flip-3.jpg" />
-                        <div class="text">
-                            <p class="name">Samsung Galaxy Z Flip 3</p>
-                            <p class="price">$100.000</p>
-                            <p class="discount">10%off</p>
-                            <div class="options">
-                                <a class="ver-más" href="/productDetail">Ver más</a>
-                                <button type="submit" id="carrito">Agregar
-                                    <span><i class="fa-solid fa-cart-shopping"></i></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <h4>OFERTAS</h4>
-            <div class="productList">
-                <div class="product">
-                    <div>
-                        <img class="img" src="images/galaxy-flip-3.jpg" />
-                        <div class="text">
-                            <p class="name">Samsung Galaxy Z Flip 3</p>
-                            <p class="price">$100.000</p>
-                            <p class="discount">10%off</p>
-                            <div class="options">
-                                <a class="ver-más" href="/productDetail">Ver más</a>
-                                <button type="submit" id="carrito">Agregar
-                                    <span><i class="fa-solid fa-cart-shopping"></i></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div>
-                        <img class="img" src="images/galaxy-flip-3.jpg" />
-                        <div class="text">
-                            <p class="name">Samsung Galaxy Z Flip 3</p>
-                            <p class="price">$100.000</p>
-                            <p class="discount">10%off</p>
-                            <div class="options">
-                                <a class="ver-más" href="/productDetail">Ver más</a>
-                                <button type="submit" id="carrito">Agregar
-                                    <span><i class="fa-solid fa-cart-shopping"></i></span>
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div>
-                        <img class="img" src="images/galaxy-flip-3.jpg" />
-                        <div class="text">
-                            <p class="name">Samsung Galaxy Z Flip 3</p>
-                            <p class="price">$100.000</p>
-                            <p class="discount">10%off</p>
-                            <div class="options">
-                                <a class="ver-más" href="/productDetail">Ver más</a>
-                                <button type="submit" id="carrito">Agregar
-                                    <span><i class="fa-solid fa-cart-shopping"></i></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div>
-                        <img class="img" src="images/galaxy-flip-3.jpg" />
-                        <div class="text">
-                            <p class="name">Samsung Galaxy Z Flip 3</p>
-                            <p class="price">$100.000</p>
-                            <p class="discount">10%off</p>
-                            <div class="options">
-                                <a class="ver-más" href="/productDetail">Ver más</a>
-                                <button type="submit" id="carrito">Agregar
-                                    <span><i class="fa-solid fa-cart-shopping"></i></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <% }) %> 
+               
+                
 
             </div>
 

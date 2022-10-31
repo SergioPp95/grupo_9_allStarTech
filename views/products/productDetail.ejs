@@ -3,7 +3,8 @@
 
 <!-- Head -->
 <%- include("../partials/head") %>
-
+<link rel="stylesheet" href="/css/productDetail.css">
+</head>
 <body>
 
    <!-- Header -->
@@ -15,32 +16,32 @@
                 <div class="product">
                     <div class="img-air">
                         <div class="featured">
-                            <img id="mainpic"
-                                src="<%= product[0].imagenPrincipal %>"
+                            <img id="ma<%= product.imagenPrincipal %>inpic"
+                                src=""
                                 alt="nombre-del-producto">
                         </div>
                         <div class="more">
                             <div class="item">
-                                <img src="<%= product[0].imagenSecundaria %>"
+                                <img src="<%= product.imagenSecundaria %>"
                                     alt="nombre-del-producto">
                             </div>
                             <div class="item">
-                                <img src="<%= product[0].imagenSecundaria %>"
+                                <img src="<%= product.imagenSecundaria %>"
                                     alt="nombre-del-producto">
                             </div>
                             <div class="item">
-                                <img src="<%= product[0].imagenSecundaria %>"
+                                <img src="<%= product.imagenSecundaria %>"
                                     alt="nombre-del-producto">
                             </div>
                             <div class="item">
-                                <img src="<%= product[0].imagenSecundaria %>"
+                                <img src="<%= product.imagenSecundaria %>"
                                     alt="nombre-del-producto">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="meta">
-                    <h1><%= product[0].name %> </h1>
+                    <h1><%= product.name %> </h1>
                     <section class="puntuacion">
                         <a class="fa-sharp fa-solid fa-star b1"></a>
                         <a class="fa-sharp fa-solid fa-star b2"></a>
@@ -49,13 +50,13 @@
                         <a class="fa-sharp fa-solid fa-star b5"></a>
                     </section>
                     <div class="price-main">
-                        Precio en efectivo o transferencia $<%= product[0].price %>
+                        Precio en efectivo o transferencia $<%= product.price %>
                     </div>
                     <div class="price-mp">
-                        Precio MecadoPago $<%= product[0].priceMP %> 
+                        Precio MecadoPago $<%= product.priceMP %> 
                         <img src="/images/mercadopago.png" alt="logo-mercadopago">
                     </div>
-                    <div class="price-main-cuotas"> ¡12 cuotas de $<%= product[0].priceCuotas %>!</div>
+                    <div class="price-main-cuotas"> ¡12 cuotas de $<%= product.priceCuotas %>!</div>
                     <div class="shipping">
                         Disponemos del producto para retiro por local o envio en las proximas 48hs
                     </div>
@@ -88,7 +89,7 @@
                 <h2>Descripcion del producto:</h2>
                 <div class="info air">
                     <p></p>
-                    <p><%= product[0].description %></p><br>
+                    <p><%= product.description %></p><br>
                     <!--<ul class="ul-description">
                         <li>Supports 12th Gen Intel<sup>®</sup>&nbsp;Core™ Series Processors</li>
                         <li>Dual Channel Non-ECC Unbuffered DDR4, 4 DIMMs</li>
