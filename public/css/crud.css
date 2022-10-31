@@ -16,9 +16,13 @@ body {
 .search {
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
     min-height: 40vh;
     align-items: center;
     justify-content: center;
+}
+.searchInput {
+    display: ;
 }
 
 .titles {
@@ -41,9 +45,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-
 .item {
-
     border: 1px solid var(--grisFondo);
     border-radius: 50px;
     width: 150px;
@@ -53,7 +55,6 @@ body {
     text-align: center;
     transition: all 0.5s;
 }
-
 .item:hover {
     background-color: var(--detail);
     color: var(--grisFondo);
@@ -62,7 +63,12 @@ body {
 
 @media (max-width: 480px) {
     .search {
+        display: block;
         align-items: center;
-
     }
+    .form-item {
+        display: block;
+        margin: auto;
+    }
+    
 }
