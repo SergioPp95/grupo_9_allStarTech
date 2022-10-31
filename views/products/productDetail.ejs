@@ -3,92 +3,92 @@
 
 <!-- Head -->
 <%- include("../partials/head") %>
-<body>
 
-   <!-- Header -->
-   <%- include("../partials/header") %>
+    <body>
 
-    <main>
-        <section class="main-container">
-            <div class="box-superior">
-                <div class="product">
-                    <div class="img-air">
-                        <div class="featured">
-                            <img id="mainpic"
-                                src="<%= product.imagenPrincipal %>"
-                                alt="nombre-del-producto">
-                        </div>
-                        <div class="more">
-                            <div class="item">
-                                <img src="<%= product.imagenSecundaria %>"
-                                    alt="nombre-del-producto">
-                            </div>
-                            <div class="item">
-                                <img src="<%= product.imagenSecundaria %>"
-                                    alt="nombre-del-producto">
-                            </div>
-                            <div class="item">
-                                <img src="<%= product.imagenSecundaria %>"
-                                    alt="nombre-del-producto">
-                            </div>
-                            <div class="item">
-                                <img src="<%= product.imagenSecundaria %>"
-                                    alt="nombre-del-producto">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="meta">
-                    <h1><%= product.name %> </h1>
-                    <section class="puntuacion">
-                        <a class="fa-sharp fa-solid fa-star b1"></a>
-                        <a class="fa-sharp fa-solid fa-star b2"></a>
-                        <a class="fa-sharp fa-solid fa-star b3"></a>
-                        <a class="fa-sharp fa-solid fa-star b4"></a>
-                        <a class="fa-sharp fa-solid fa-star b5"></a>
-                    </section>
-                    <div class="price-main">
-                        Precio en efectivo o transferencia $<%= product.price %>
-                    </div>
-                    <div class="price-mp">
-                        Precio MecadoPago $<%= product.priceMP %> 
-                        <img src="/images/mercadopago.png" alt="logo-mercadopago">
-                    </div>
-                    <div class="price-main-cuotas"> ¡12 cuotas de $<%= product.priceCuotas %>!</div>
-                    <div class="shipping">
-                        Disponemos del producto para retiro por local o envio en las proximas 48hs
-                    </div>
-                    <div class="tag">
-                        <span class="tag tag-stock">En Stock</span>
-                    </div>
-                    <form>
-                        <div class="qty">
-                            <label form="qty" class="qty-text">Cantidad:</label>
-                            <input type="number" id="qty" class="qty-item" value="1">
-                        </div>
-                    </form>
-                    <div class="final-buy">
-                        <div class="item-final-1">
-                            <!--<button type="submit"><a class="btn-outline"><i class="fas fa-shopping-cart"></i> Agregar</a></button> -->
-                            <button class="button-buy" type="submit" role="button"><a class="btn-outline"><i
-                                        class="fas fa-shopping-cart"></i> Agregar</a></button>
-                        </div>
-                        <div class="item-final-2">
-                            <button class="button-buy" type="submit" role="button"><a class="btn-outline"> Comprar
-                                    Ahora</a></button>
-                            <!--<button type="submit"><a class="btn-outline"></i> </a></button>-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
+        <!-- Header -->
+        <%- include("../partials/header") %>
 
-            <div class="descripcion-producto">
-                <h2>Descripcion del producto:</h2>
-                <div class="info air">
-                    <p></p>
-                    <p><%= product.description %></p><br>
-                    <!--<ul class="ul-description">
+            <main>
+                <section class="main-container">
+                    <div class="box-superior">
+                        <div class="product">
+                            <div class="img-air">
+                                <div class="featured">
+                                    <img id="mainpic" src="<%= product.imagenPrincipal %>" alt="nombre-del-producto">
+                                </div>
+                                <div class="more">
+                                    <div class="item">
+                                        <img src="<%= product.imagenSecundaria %>" alt="nombre-del-producto">
+                                    </div>
+                                    <div class="item">
+                                        <img src="<%= product.imagenSecundaria %>" alt="nombre-del-producto">
+                                    </div>
+                                    <div class="item">
+                                        <img src="<%= product.imagenSecundaria %>" alt="nombre-del-producto">
+                                    </div>
+                                    <div class="item">
+                                        <img src="<%= product.imagenSecundaria %>" alt="nombre-del-producto">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="meta">
+                            <h1>
+                                <%= product.name %>
+                            </h1>
+                            <section class="puntuacion">
+                                <a class="fa-sharp fa-solid fa-star b1"></a>
+                                <a class="fa-sharp fa-solid fa-star b2"></a>
+                                <a class="fa-sharp fa-solid fa-star b3"></a>
+                                <a class="fa-sharp fa-solid fa-star b4"></a>
+                                <a class="fa-sharp fa-solid fa-star b5"></a>
+                            </section>
+                            <div class="price-main">
+                                Precio en efectivo o transferencia $<%= product.price %>
+                            </div>
+                            <div class="price-mp">
+                                Precio MecadoPago $<%= product.priceMP %>
+                                    <img src="/images/mercadopago.png" alt="logo-mercadopago">
+                            </div>
+                            <div class="price-main-cuotas"> ¡12 cuotas de $<%= product.priceCuotas %>!</div>
+                            <div class="shipping">
+                                Disponemos del producto para retiro por local o envio en las proximas 48hs
+                            </div>
+                            <div class="tag">
+                                <span class="tag tag-stock">En Stock</span>
+                            </div>
+                            <form>
+                                <div class="qty">
+                                    <label form="qty" class="qty-text">Cantidad:</label>
+                                    <input type="number" id="qty" class="qty-item" value="1">
+                                </div>
+                            </form>
+                            <div class="final-buy">
+                                <div class="item-final-1">
+                                    <!--<button type="submit"><a class="btn-outline"><i class="fas fa-shopping-cart"></i> Agregar</a></button> -->
+                                    <button class="button-buy" type="submit" role="button"><a class="btn-outline"><i
+                                                class="fas fa-shopping-cart"></i> Agregar</a></button>
+                                </div>
+                                <div class="item-final-2">
+                                    <button class="button-buy" type="submit" role="button"><a class="btn-outline">
+                                            Comprar
+                                            Ahora</a></button>
+                                    <!--<button type="submit"><a class="btn-outline"></i> </a></button>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="descripcion-producto">
+                        <h2>Descripcion del producto:</h2>
+                        <div class="info air">
+                            <p></p>
+                            <p>
+                                <%= product.description %>
+                            </p><br>
+                            <!--<ul class="ul-description">
                         <li>Supports 12th Gen Intel<sup>®</sup>&nbsp;Core™ Series Processors</li>
                         <li>Dual Channel Non-ECC Unbuffered DDR4, 4 DIMMs</li>
                         <li>12*+1+1 Twin Hybrid Digital VRM Design with 60A DrMOS</li>
@@ -103,16 +103,16 @@
                         <li>Smart Fan 6 Features Multiple Temperature Sensors, Hybrid Fan Headers with FAN STOP</li>
                         <li>Q-Flash Plus Update BIOS without Installing the CPU, Memory and Graphics Card</li>
                     </ul> -->
-                    <p></p>
-                    <p></p>
-                </div>
-            </div>
-        </section>
-    </main>
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </div>
+                </section>
+            </main>
 
-   <!-- Footer -->
-   <%- include("../partials/footer") %>
+            <!-- Footer -->
+            <%- include("../partials/footer") %>
 
-</body>
+    </body>
 
 </html>
