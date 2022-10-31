@@ -83,13 +83,13 @@ a:hover {
 }
 
 @media (max-width: 480px) {
-    form {
+    .form-register {
         width: 75%;
         margin-top: 35px;
         box-shadow: none;
         border-radius: 50px;
     }
-    a {
+    .form-register a {
         color: var(--grisFondo);
     }
 }
