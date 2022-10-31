@@ -84,13 +84,15 @@ let products = [
 ];
 
 const controller = {
-    index: (req, res) => (res.render('./products/productResults',{products: products})),
+    index: (req, res) => {
+      res.render('./products/productResults',{products})
+    },
     detail: (req, res) => {
         /*let product = products.find( (elem) => elem.id == req.params.id );*/
         let id = req.params.id
-        let product = products.filter(product => {
+        let product = products.find(product => {
             return product.id == id})
-        res.render('./products/productDetail',{product: product})
+        res.render('./products/productDetail',{product})
     }
 }
 
