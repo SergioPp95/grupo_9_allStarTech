@@ -38,12 +38,12 @@ body {
     text-align: center;
     color: var(--grisFondo);
 }
-
 .form-item {
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 82px;
 }
 .item {
     border: 1px solid var(--grisFondo);
@@ -70,5 +70,4 @@ body {
         display: block;
         margin: auto;
     }
-    
 }
