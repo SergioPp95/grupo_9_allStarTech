@@ -21,10 +21,6 @@ body {
     align-items: center;
     justify-content: center;
 }
-.searchInput {
-    display: ;
-}
-
 .titles {
     width: 55%;
     background: var(--detail);
