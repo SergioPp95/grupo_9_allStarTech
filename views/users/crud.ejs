@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<%- include("../partials/head") %>
+
+
+    <head>
+        <link rel="stylesheet" href="/css/crud.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <title>Crud</title>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <%- include("../partials/header") %>
+            <main>
+                <form action="" method="POST">
+                    <div class="search">
+                        <input type="text" name="name">
+                        <input type="text" name="description">
+                        <input type="file" name="image">
+                    </div>
+                    <h3 class="titles">Categoria</h3>
+                    <div class="form-item">
+                        <div class="item">
+                            <label for="computadoras">Computadoras</label>
+                            <input type="radio" name="computadoras" id="computadoras" value="computadoras">
+                        </div>
+                        <div class="item">
+                            <label for="televisores">Televisores</label>
+                            <input type="radio" name="televisores" id="televisores" value="televisores">
+                        </div>
+                        <div class="item">
+                            <label for="celulares">Celulares</label>
+                            <input type="radio" name="celulares" id="celulares" value="celulares">
+                        </div>
+                        <div class="item">
+                            <label for="tablets">Tablets</label>
+                            <input type="radio" name="tablets" id="tablets" value="tablets">
+                        </div>
+                        <div class="item">
+                            <label for="componentes">Componentes</label>
+                            <input type="radio" name="componentes" id="componentes" value="componentes">
+                        </div>
+                    </div>
+                </form>
+                
+            </main>
+            <!-- Footer -->
+            <%- include("../partials/footer") %>
+    </body>
+
+</html>

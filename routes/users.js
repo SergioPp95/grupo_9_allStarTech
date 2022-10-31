@@ -5,5 +5,5 @@ const usersController = require('../controllers/usersController')
 router.get('/login',usersController.login);
 router.get('/register',usersController.register);
 router.get('/cart',usersController.cart)
-
+router.get('/crud',usersController.crud)
 module.exports = router;
