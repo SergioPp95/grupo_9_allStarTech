@@ -14,11 +14,20 @@
         <!-- Header -->
         <%- include("./partials/header") %>
             <main>
-                <form action="" method="POST">
-                    <div class="search">
-                        <input class="searchInput" type="text" name="name">
-                        <input class="searchInput"  type="text" name="description">
-                        <input class="searchInput"  type="file" name="image">
+                <form class="form-crud" action="" method="POST">
+                    <div class="crud-info">
+                        <div>
+                            <label for="name">Titulo</label>
+                            <input class="searchInput" type="text" name="name">
+                        </div>
+                        <div>
+                            <label for="description">Descripcion del producto:</label>
+                            <input class="searchInput" type="text" name="description">
+                        </div>
+                        <div>
+                            <label for="image">Seleccionar imagen:</label>
+                            <input class="searchInput" type="file" name="image">
+                        </div>
                     </div>
                     <h3 class="titles">Categoria</h3>
                     <div class="form-item">

@@ -1049,7 +1049,6 @@ main a {
    justify-content: space-evenly;
 }
 
-/*/////////////////iconos/////////////////*/
 .content .order-filter .sort {
    position: absolute;
    display: block;
@@ -1058,6 +1057,74 @@ main a {
    margin: 9px;
    text-align: center;
 
+}
+
+/** CRUD **/
+
+.form-crud {
+   background-color: var(--blanco);
+   width: 80%;
+   margin: 1rem auto;
+   border-radius: 20px;
+}
+
+.form-crud .crud-info {
+   color: var(--grisFondo);
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+   min-height: 40vh;
+   align-items: center;
+   justify-content: space-around;
+}
+
+.form-crud .crud-info div {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.form-crud .titles {
+   width: 55%;
+   background: var(--detail);
+   padding: 10px;
+   margin: auto;
+   border-radius: 5px;
+   margin-bottom: 6px;
+   border: 1px solid var(--blanco);
+   font-family: 'calibri';
+   font-size: 15px;
+   text-align: center;
+   color: var(--grisFondo);
+}
+
+.form-crud .form-item {
+   margin: auto;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 82px;
+}
+
+.form-crud .item {
+   margin: 1rem auto;
+   width: 90%;
+   border: 1px solid var(--grisFondo);
+   border-radius: 50px;
+   height: 23px;
+   color: var(--grisFondo);
+   background-color: var(--blanco);
+   text-align: center;
+   transition: all 0.5s;
+}
+
+.form-crud .item:hover {
+   background-color: var(--detail);
+   color: var(--grisFondo);
+   box-shadow: 7px 13px 37px black;
 }
 
 @media (max-width: 480px) {
@@ -1457,6 +1524,11 @@ main a {
       flex-direction: row;
    }
 
+   /** CRUD **/
+
+   .form-crud .item {
+      width: 40%;
+   }
 }
 
 @media (min-width:1280px) {
@@ -1489,7 +1561,7 @@ main a {
    /** product/detail/:id **/
 
    .main-container {
-      width: 60vw;
+      width: 70vw;
       transition: 0.5s all;
    }
 
