@@ -1489,7 +1489,7 @@ main a {
    /** product/detail/:id **/
 
    .main-container {
-      width: 60vw;
+      width: 70vw;
       transition: 0.5s all;
    }
 
