@@ -12,7 +12,7 @@ const usersRoute = require('./routes/users');
 const productRoute = require('./routes/product');
 
 app.use('/',indexRoute);
-app.use('/product',productRoute);
+app.use('/products',productRoute);
 app.use('/user',usersRoute);
 
 app.listen(8000, () => console.log("Servidor inicializado en el puerto 8.000"));

@@ -87,6 +87,13 @@ const controller = {
   index: (req, res) => {
     res.render('./products/productResults', { products })
   },
+  create: (req, res) => {
+    // Codigo
+  },
+  store: (req, res) => {
+    // Codigo
+    res.redirect('/products/' + req.params.id)
+  },
   detail: (req, res) => {
     /*let product = products.find( (elem) => elem.id == req.params.id );*/
     let id = req.params.id
@@ -94,7 +101,18 @@ const controller = {
       return product.id == id
     })
     res.render('./products/productDetail', { product })
-  }
+  },
+  edit: (req, res) => {
+    // Codigo
+  },
+  update: (req, res) => {
+    // Codigo
+    res.redirect('/products/' + req.params.id)
+  },
+  delete: (req, res) => {
+    // Codigo
+    res.redirect('/products/')
+  },
 }
 
 module.exports = controller;
