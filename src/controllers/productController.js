@@ -1,3 +1,8 @@
+const fs = require ('fs');
+const path = require ('path');
+
+
+
 let products = [
   {
     id: 1,
@@ -83,11 +88,14 @@ let products = [
   },
 ];
 
+
+
 const controller = {
   index: (req, res) => {
-    res.render('./products/productResults', { products })
+    res.render('./products/products', { products })
   },
   create: (req, res) => {
+    res.render('./products/product-create')
     // Codigo
   },
   store: (req, res) => {
@@ -100,10 +108,13 @@ const controller = {
     let product = products.find(product => {
       return product.id == id
     })
-    res.render('./products/productDetail', { product })
+    res.render('./products/product-detail', { product })
   },
   edit: (req, res) => {
     // Codigo
+    let product = products.find(element => element.id == req.params.id)
+
+    res.render('./products/product-edit', { product })
   },
   update: (req, res) => {
     // Codigo
@@ -111,6 +122,11 @@ const controller = {
   },
   delete: (req, res) => {
     // Codigo
+    let id = req.params.id
+    let productsFiltered = products.filter(element => element.id != id)
+
+    // fs.writefilesync
+
     res.redirect('/products/')
   },
 }

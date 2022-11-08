@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<%- include("../partials/head") %>
+
+
+    <head>
+        <link rel="stylesheet" href="/css/crud.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <title>Crud</title>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <%- include("../partials/header") %>
+            <main>
+                <form class="form-crud" action="/products/" method="POST"
+                    enctype="multipart/form-data">
+                    <div class="crud-info">
+                        <div>
+                            <label for="name">Titulo</label>
+                            <input class="searchInput" type="text" name="name">
+                        </div>
+                        <div>
+                            <label for="description">Descripcion del
+                                producto:</label>
+                            <textarea class="searchInput" type="textarea"
+                                name="description"> </textarea>
+                        </div>
+                        <div>
+                            <label for="name">Precio</label>
+                            <input class="searchInput" type="text" name="name">
+                        </div>
+                        <div>
+                            <label for="name">Descuentos</label>
+                            <input class="searchInput" type="text" name="name"
+                                value="0">
+                        </div>
+                        <div>
+                            <label for="image">Seleccionar imagen principal:</label>
+                            <input class="searchInput" type="file" name="image">
+                        </div>
+                        <div>
+                            <label for="image">Seleccionar imagen secundaria:</label>
+                            <input class="searchInput" type="file" name="image">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="category">Categoria Del Producto:</label>
+                        <select name="category">
+                            <option value="computer">Computadora</option>
+                            <option value="screen">Pantalla</option>
+                            <option value="phone">Celular</option>
+                            <option value="audio">Audio</option>
+                            <option value="other">Otro</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit">Crear Producto</button>
+                    </div>
+                </form>
+
+            </main>
+            <!-- Footer -->
+            <%- include("../partials/footer") %>
+    </body>
+
+</html>
