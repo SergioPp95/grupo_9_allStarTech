@@ -1,9 +1,12 @@
 const fs = require ('fs');
 const path = require ('path');
 
+const productsPath = path.join(__dirname, '../data/products.json')
+const products = JSON.parse(fs.readFileSync(productsPath, 'utf-8'))
 
 
-let products = [
+
+/*let products = [
   {
     id: 1,
     name: "MOTHER GIGABYTE B660M AORUS PRO DDR4 S1700",
@@ -87,7 +90,7 @@ let products = [
     imagenSecundaria: "/images/teclado-2.jpg",
   },
 ];
-
+*/
 
 
 const controller = {
