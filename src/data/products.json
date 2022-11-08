@@ -7,7 +7,7 @@
         "image 2": "/images/mother-aorus2.jpg",
         "category": "Otro",
         "price": "51.490,00",
-        "discount": ,
+        "discount": "5"
     },
     {
         "id": 2,
@@ -17,7 +17,7 @@
         "image 2": "/images/lenovo-2.jpg",
         "category": "Computadora",
         "price": "174.860,00",
-        "discount": ,
+        "discount": "10"
     },
     {
         "id": 3,
@@ -27,7 +27,7 @@
         "image 2": "/images/geforce-2.jpg",
         "category": "Otro",
         "price": "294.030,00",
-        "discount": ,
+        "discount": "5"
     },
     {
         "id": 4,
@@ -37,7 +37,7 @@
         "image 2": "/images/monitor-2.jpg",
         "category": "Pantalla",
         "price": "48.200,00",
-        "discount": ,
+        "discount": "10"
     },
     {
         "id": 5,
@@ -47,7 +47,7 @@
         "image 2": "/images/corsair-2.jpg",
         "category": "Audio",
         "price": "11.730,00",
-        "discount": ,
+        "discount": "7"
     },
     {
         "id": 6,
@@ -57,7 +57,7 @@
         "image 2": "/images/pc-completa-1.jpg",
         "category": "Computadora",
         "price": "92.440.00",
-        "discount": ,
+        "discount": "5"
     },
     {
         "id": 7,
@@ -67,7 +67,7 @@
         "image 2": "/images/galaxy-flip-3.jpg",
         "category": "Celular",
         "price": "150.340,00",
-        "discount": ,
+        "discount": "4"
     },
     {
         "id": 8,
@@ -77,6 +77,6 @@
         "image 2": "/images/teclado-2.jpg",
         "category": "Otro",
         "price": "13.990,00",
-        "discount": ,
+        "discount": "12"
     }
 ]
