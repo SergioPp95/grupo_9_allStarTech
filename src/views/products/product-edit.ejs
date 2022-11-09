@@ -48,8 +48,8 @@
                         <button type="submit"> Aplicar cambios</button>
                     </div>
                 </form>
-                <form>
-                    <button type="submit" action="/products/<%= product.id %>?_method=DELETE"  method="POST">Eliminar producto</button>
+                <form action="/products/<%= product.id %>?_method=DELETE"  method="POST">
+                    <button type="submit">Eliminar producto</button>
                 </form>
 
             </main>
