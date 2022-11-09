@@ -125,16 +125,16 @@ const controller = {
    const product = products.find(element => element.id == req.params.id)
    
    // Elimina imagenes anteriores del producto
-   fs.unlinkSync(path.join(__dirname, "../../public/images", product.imageMain))
-   fs.unlinkSync(path.join(__dirname, "../../public/images", product.imageOther))
+   fs.unlinkSync(path.join(__dirname, "../../public", product.imageMain))
+   fs.unlinkSync(path.join(__dirname, "../../public", product.imageOther))
 
    // Asigna nuevos valores a cada atributo
    product.id = req.body.id
    product.name = req.body.name
    product.description = req.body.description
-   product.imageMain = req.file.filename
-   product.imageOther = req.files.image1.filename
-   product.category = req.files.image2.filename
+   product.imageMain = req.files.image1.filename
+   product.imageOther = req.files.image2.filename
+   product.category = req.body.category
    product.price = req.body.price
    product.discount = req.body.discount
 

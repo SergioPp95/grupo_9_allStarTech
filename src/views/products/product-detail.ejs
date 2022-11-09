@@ -15,20 +15,20 @@
                         <div class="product">
                             <div class="img-air">
                                 <div class="featured">
-                                    <img id="mainpic" src="<%= product.imagenPrincipal %>" alt="nombre-del-producto">
+                                    <img id="mainpic" src="<%= product.imageMain %>" alt="nombre-del-producto">
                                 </div>
                                 <div class="more">
                                     <div class="item">
-                                        <img src="<%= product.imagenSecundaria %>" alt="nombre-del-producto">
+                                        <img src="<%= product.imageOther %>" alt="nombre-del-producto">
                                     </div>
                                     <div class="item">
-                                        <img src="<%= product.imagenSecundaria %>" alt="nombre-del-producto">
+                                        <img src="<%= product.imageOther %>" alt="nombre-del-producto">
                                     </div>
                                     <div class="item">
-                                        <img src="<%= product.imagenSecundaria %>" alt="nombre-del-producto">
+                                        <img src="<%= product.imageOther %>" alt="nombre-del-producto">
                                     </div>
                                     <div class="item">
-                                        <img src="<%= product.imagenSecundaria %>" alt="nombre-del-producto">
+                                        <img src="<%= product.imageOther %>" alt="nombre-del-producto">
                                     </div>
                                 </div>
                             </div>
@@ -48,10 +48,10 @@
                                 Precio en efectivo o transferencia $<%= product.price %>
                             </div>
                             <div class="price-mp">
-                                Precio MecadoPago $<%= product.priceMP %>
+                                Precio MecadoPago $<%= product.price %>
                                     <img src="/images/mercadopago.png" alt="logo-mercadopago">
                             </div>
-                            <div class="price-main-cuotas"> ¡12 cuotas de $<%= product.priceCuotas %>!</div>
+                            <div class="price-main-cuotas"> ¡12 cuotas de $<%= parseInt(product.price / 12) %>!</div>
                             <div class="shipping">
                                 Disponemos del producto para retiro por local o envio en las proximas 48hs
                             </div>
