@@ -145,13 +145,18 @@ const controller = {
     res.redirect('/products/' + req.params.id)
   },
   delete: (req, res) => {
-    // Codigo
-    const id = req.params.id
-    let productsFiltered = products.filter(element => element.id != id)
-
-    // fs.writefilesync
-
-    res.redirect('/products/')
+    
+   // Elimina imagen actual del producto a borrar
+    const product = products.find( element => element.id == req.params.id)
+    fs.unlinkSync(path.join(__dirname, "../../public", product.imageMain));
+    fs.unlinkSync(path.join(__dirname, "../../public", product.imageOther));
+    
+    // Filtra lista de productos sin producto a borrar, para sobreescribir en .json
+    products = products.filter( element => element.id != req.params.id);
+    fs.writeFileSync(productsFilePath, JSON.stringify(products));
+    
+    // Redirije a página principal de productos
+    res.redirect("/products");
   },
 }
 
