@@ -120,7 +120,7 @@ const controller = {
     res.render('./products/product-edit', { product })
   },
   update: (req, res) => {
-   
+
    // Filtra producto a editar
    const product = products.find(element => element.id == req.params.id)
    
@@ -129,11 +129,11 @@ const controller = {
    fs.unlinkSync(path.join(__dirname, "../../public", product.imageOther))
 
    // Asigna nuevos valores a cada atributo
-   product.id = req.body.id
+   product.id = req.params.id
    product.name = req.body.name
    product.description = req.body.description
-   product.imageMain = req.files.image1.filename
-   product.imageOther = req.files.image2.filename
+   product.imageMain = "/images/" + req.files.image1[0].filename
+   product.imageOther = "/images/" + req.files.image2[0].filename
    product.category = req.body.category
    product.price = req.body.price
    product.discount = req.body.discount
