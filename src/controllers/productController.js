@@ -152,8 +152,8 @@ const controller = {
     fs.unlinkSync(path.join(__dirname, "../../public", product.imageOther));
     
     // Filtra lista de productos sin producto a borrar, para sobreescribir en .json
-    products = products.filter( element => element.id != req.params.id);
-    fs.writeFileSync(productsFilePath, JSON.stringify(products));
+    const newProducts = products.filter( element => element.id != req.params.id);
+    fs.writeFileSync(productsPath, JSON.stringify(newProducts));
     
     // Redirije a página principal de productos
     res.redirect("/products");
