@@ -115,17 +115,38 @@ const controller = {
   },
   edit: (req, res) => {
     // Codigo
-    let product = products.find(element => element.id == req.params.id)
+    const product = products.find(element => element.id == req.params.id)
 
     res.render('./products/product-edit', { product })
   },
   update: (req, res) => {
-    // Codigo
+   
+   // Filtra producto a editar
+   const product = products.find(element => element.id == req.params.id)
+   
+   // Elimina imagenes anteriores del producto
+   fs.unlinkSync(path.join(__dirname, "../../public/images", product.imageMain))
+   fs.unlinkSync(path.join(__dirname, "../../public/images", product.imageOther))
+
+   // Asigna nuevos valores a cada atributo
+   product.id = req.body.id
+   product.name = req.body.name
+   product.description = req.body.description
+   product.imageMain = req.file.filename
+   product.imageOther = req.files.image1.filename
+   product.category = req.files.image2.filename
+   product.price = req.body.price
+   product.discount = req.body.discount
+
+   // Reescribe archivo json
+   fs.writeFileSync(productsPath, JSON.stringify(products));
+
+   // Reenvia a página del producto recién editado
     res.redirect('/products/' + req.params.id)
   },
   delete: (req, res) => {
     // Codigo
-    let id = req.params.id
+    const id = req.params.id
     let productsFiltered = products.filter(element => element.id != id)
 
     // fs.writefilesync
