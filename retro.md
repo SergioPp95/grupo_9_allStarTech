@@ -21,3 +21,11 @@ retro sprint 2:
 - 5: dejar de hacer - presentar cosas al final del sprint sin mostrar al equipo
 
 - juan alejando medina se reincorporo al grupo de forma proactiva.
+
+
+retro sprint 3:
+- 1: comenzar a hacer -  realizar pair programming, usar trello, mantenimiento del proyecto, establecer horarios donde podriamos compartir pair programming, establecer fechas limites de entrega para mergear con tiempo
+- 2: hacer mas - comunicacion mas activa , tener una mayor constancia con las reuniones, poder ayudar a los compañeros
+- 3: continuar haciendo - cumplir con las entregas
+- 4: hacer menos - quedarse con dudas y no consultar al equipo
+- 5: dejar de hacer - entregar y correjir las partes individuales a ultimo momento, dejar de desarrollar en desktop first

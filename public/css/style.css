@@ -236,6 +236,8 @@ main a {
 }
 
 .ads {
+   width: 90%;
+   margin: auto;
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
@@ -1205,7 +1207,7 @@ main a {
 
 /** CRUD **/
 
-.form-crud {
+/*.form-crud {
    background-color: var(--blanco);
    width: 80%;
    margin: 1rem auto;
@@ -1269,6 +1271,98 @@ main a {
    background-color: var(--detail);
    color: var(--grisFondo);
    box-shadow: 7px 13px 37px black;
+}
+*/
+
+/** crud correccion**/
+.container{
+   max-width: 700px;
+   width: 100%;
+   background-color: #fff;
+   padding: 25px 30px;
+   border-radius: 5px;
+   box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+   margin: 10px auto
+ }
+ .container .title{
+   font-size: 25px;
+   font-weight: 500;
+   position: relative;
+ }
+ .content form .product-details{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   margin: 20px 0 12px 0;
+ }
+ form .product-details .input-box{
+   margin-bottom: 15px;
+   width: calc(100% / 2 - 20px);
+ }
+ form .input-box span.details{
+   display: block;
+   font-weight: 500;
+   margin-bottom: 5px;
+ }
+ .product-details .input-box input{
+   height: 45px;
+   width: 100%;
+   outline: none;
+   font-size: 16px;
+   border-radius: 5px;
+   padding-left: 15px;
+   border: 1px solid #ccc;
+   border-bottom-width: 2px;
+   transition: all 0.3s ease;
+ }
+ .product-details .input-box input:focus,
+ .product-details .input-box input:valid{
+   border-color: var(--gray3-color);
+ }
+
+  form .category{
+    display: flex;
+    width: 80%;
+    margin: 14px 0 ;
+    justify-content: space-between;
+  }
+
+  .select-category{
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+     
+  }
+
+  .select-category select{
+   padding: 10px 0px
+  }
+
+  form .category label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+ form .button input{
+   height: 100%;
+   width: 100%;
+  
+ }
+
+.text-description{
+    display: flex;
+   flex-flow: column;
+}
+
+.button-crud-holder{
+   text-align: center
+}
+
+.button-crud{
+   margin: 10px auto;
+   width: 40%;
+   padding: 10px 0px;
 }
 
 @media (max-width: 480px) {
@@ -1361,6 +1455,7 @@ main a {
       width: 5%;
    }
 }
+
 
 
 @media (min-width:769px) {
@@ -1792,6 +1887,10 @@ main a {
 
    .main-container .meta h1 {
       margin-bottom: 30px;
+   }
+
+   .main-container .meta .final-buy{
+      justify-content: space-around;
    }
 
    /** /product/results/id **/
