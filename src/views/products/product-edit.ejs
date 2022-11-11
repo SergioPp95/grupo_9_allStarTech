@@ -56,7 +56,7 @@
 
             <main>
                 <div class="container">
-                    <div class="title">Creacion del producto</div>
+                    <div class="title">Edicion del producto</div>
                     <div class="content">
                         <form action="/products/<%= product.id %>?_method=PUT"
                             method="POST" enctype="multipart/form-data">
@@ -65,25 +65,27 @@
                                     <span class="details">Nombre del
                                         Producto</span>
                                     <input type="text"
-                                        value="<%= product.name %>" required>
+                                        value="<%= product.name %>" name="name"
+                                        required>
                                 </div>
                                 <div class="input-box">
                                     <span class="details">Precio del
                                         producto</span>
                                     <input type="text"
-                                        value="<%= product.price %>" required>
+                                        value="<%= product.price %>"
+                                        name="price" required>
                                 </div>
                                 <div class="input-box">
                                     <span class="details">Aplicar
                                         descuento</span>
                                     <input type="text"
                                         placeholder="Aplicar Descuento"
-                                        required>
+                                        name="discount" required>
                                 </div>
                                 <div class="input-box select-category">
                                     <span for="category">Categoria Del
                                         Producto</span>
-                                    <select name="category">
+                                    <select name="category" for="category">
                                         <option value="computer">Computadora
                                         </option>
                                         <option value="screen">Pantalla</option>
@@ -96,22 +98,23 @@
                                     <span class="details">Imagen
                                         principal</span>
                                     <input type="file"
-                                        placeholder="Imagen Principal" required>
+                                        placeholder="Imagen Principal"
+                                        name="image1" required>
                                 </div>
                                 <div class="input-box">
                                     <span class="details">Imagen
                                         Secundaria</span>
                                     <input type="file"
                                         placeholder="Imagen Secundaria"
-                                        required>
+                                        name="image2" required>
                                 </div>
                             </div>
                             <div class="input-box text-description">
                                 <label for="description">Descripcion del
                                     producto:</label>
                                 <textarea class="searchInput" type="textarea"
-                                    name="description" rows="5"
-                                    cols="33"><%= product.description %></textarea>
+                                    name="description" rows="5" cols="33"
+                                    name="description"><%= product.description %></textarea>
                             </div>
                             <div class="button-crud-holder">
                                 <button class="button-crud" type="submit">Crear

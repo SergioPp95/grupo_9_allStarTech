@@ -1277,7 +1277,7 @@ main a {
 /** crud correccion**/
 .container{
    max-width: 700px;
-   width: 100%;
+   width: 90%;
    background-color: #fff;
    padding: 25px 30px;
    border-radius: 5px;
@@ -1297,7 +1297,7 @@ main a {
  }
  form .product-details .input-box{
    margin-bottom: 15px;
-   width: calc(100% / 2 - 20px);
+   width: 100% /*calc(100% / 2 - 20px);*/
  }
  form .input-box span.details{
    display: block;
@@ -1830,10 +1830,12 @@ main a {
 
    /** CRUD **/
 
-   .form-crud .item {
-      width: 40%;
-   }
-
+   /*HACE QUE SE DIVIDA EN DOS COLUMNAS EL FORMULARIO*/
+   
+   /*form .product-details .input-box{
+      width: calc(100% / 2 - 20px);
+    }
+*/
 
 @media (min-width:1280px) {
 

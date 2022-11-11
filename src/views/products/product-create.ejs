@@ -67,28 +67,28 @@
                     <div class="title">Creacion del producto</div>
                     <div class="content">
                         <form action="/products/" method="POST"
-                        enctype="multipart/form-data">
+                            enctype="multipart/form-data">
                             <div class="product-details">
                                 <div class="input-box">
                                     <span class="details">Nombre del
                                         Producto</span>
                                     <input type="text"
                                         placeholder="Nombre del producto"
-                                        required>
+                                        name="name" required>
                                 </div>
                                 <div class="input-box">
                                     <span class="details">Precio del
                                         producto</span>
                                     <input type="text"
                                         placeholder="Precio del producto"
-                                        required>
+                                        name="price" required>
                                 </div>
                                 <div class="input-box">
                                     <span class="details">Aplicar
                                         descuento</span>
                                     <input type="text"
                                         placeholder="Aplicar Descuento"
-                                        required>
+                                        name="discount" required>
                                 </div>
                                 <div class="input-box select-category">
                                     <span for="category">Categoria Del
@@ -106,14 +106,15 @@
                                     <span class="details">Imagen
                                         principal</span>
                                     <input type="file"
-                                        placeholder="Imagen Principal" required>
+                                        placeholder="Imagen Principal"
+                                        name="image1" required>
                                 </div>
                                 <div class="input-box">
                                     <span class="details">Imagen
                                         Secundaria</span>
                                     <input type="file"
                                         placeholder="Imagen Secundaria"
-                                        required>
+                                        name="image2" required>
                                 </div>
                             </div>
                             <div class="input-box text-description">
@@ -121,10 +122,12 @@
                                     producto:</label>
                                 <textarea class="searchInput" type="textarea"
                                     name="description"
-                                    placeholder="insertar descripcion del producto"> </textarea>
+                                    placeholder="insertar descripcion del producto"
+                                    name="description"> </textarea>
                             </div>
                             <div class="button-crud-holder">
-                                <button class="button-crud" type="submit">Crear Producto</button>
+                                <button class="button-crud" type="submit">Crear
+                                    Producto</button>
                             </div>
                         </form>
                     </div>
@@ -133,4 +136,5 @@
             <!-- Footer -->
             <%- include("../partials/footer") %>
     </body>
+
 </html>
