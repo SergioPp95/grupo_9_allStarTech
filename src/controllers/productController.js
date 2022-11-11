@@ -29,22 +29,48 @@ const controller = {
   },
   edit: (req, res) => {
     // Codigo
-    let product = products.find(element => element.id == req.params.id)
+    const product = products.find(element => element.id == req.params.id)
 
     res.render('./products/product-edit', { product })
   },
   update: (req, res) => {
-    // Codigo
+
+   // Filtra producto a editar
+   const product = products.find(element => element.id == req.params.id)
+   
+   // Elimina imagenes anteriores del producto
+   fs.unlinkSync(path.join(__dirname, "../../public", product.imageMain))
+   fs.unlinkSync(path.join(__dirname, "../../public", product.imageOther))
+
+   // Asigna nuevos valores a cada atributo
+   product.id = req.params.id
+   product.name = req.body.name
+   product.description = req.body.description
+   product.imageMain = "/images/" + req.files.image1[0].filename
+   product.imageOther = "/images/" + req.files.image2[0].filename
+   product.category = req.body.category
+   product.price = req.body.price
+   product.discount = req.body.discount
+
+   // Reescribe archivo json
+   fs.writeFileSync(productsPath, JSON.stringify(products));
+
+   // Reenvia a página del producto recién editado
     res.redirect('/products/' + req.params.id)
   },
   delete: (req, res) => {
-    // Codigo
-    let id = req.params.id
-    let productsFiltered = products.filter(element => element.id != id)
-
-    // fs.writefilesync
-
-    res.redirect('/products/')
+    
+   // Elimina imagen actual del producto a borrar
+    const product = products.find( element => element.id == req.params.id)
+    fs.unlinkSync(path.join(__dirname, "../../public", product.imageMain));
+    fs.unlinkSync(path.join(__dirname, "../../public", product.imageOther));
+    
+    // Filtra lista de productos sin producto a borrar, para sobreescribir en .json
+    const newProducts = products.filter( element => element.id != req.params.id);
+    fs.writeFileSync(productsPath, JSON.stringify(newProducts));
+    
+    // Redirije a página principal de productos
+    res.redirect("/products");
   },
 }
 
