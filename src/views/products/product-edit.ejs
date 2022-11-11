@@ -14,24 +14,24 @@
                             <input class="searchInput" type="text" name="name" value= ""  >
                         </div>
                         <div>
-                            <label for="name">Precio</label>
-                            <input class="searchInput" type="text" name="name" value= ""  >
+                            <label for="price">Precio</label>
+                            <input class="searchInput" type="text" name="price" value= "<%= product.price %>"  >
                         </div>
                         <div>
-                            <label for="name">Descuentos</label>
-                            <input class="searchInput" type="text" name="name" value= "0"  >
+                            <label for="discount">Descuentos</label>
+                            <input class="searchInput" type="text" name="discount" value= "<%= product.discount %>"  >
                         </div>
                         <div>
                             <label for="description">Descripcion del producto:</label>
                             <textarea class="searchInput" type="textarea" name="description">  </textarea>
                         </div>
                         <div>
-                            <label for="image">Seleccionar imagen principal:</label>
-                            <input class="searchInput" type="file" name="image">
+                            <label for="image1">Seleccionar imagen principal:</label>
+                            <input class="searchInput" type="file" name="image1">
                         </div>
                         <div>
-                            <label for="image">Seleccionar imagen Secundaria:</label>
-                            <input class="searchInput" type="file" name="image">
+                            <label for="image2">Seleccionar imagen Secundaria:</label>
+                            <input class="searchInput" type="file" name="image2">
                         </div>
                     </div>
                     <div>
@@ -48,8 +48,8 @@
                         <button type="submit"> Aplicar cambios</button>
                     </div>
                 </form>
-                <form>
-                    <button type="submit" action="/products/?_method=DELETE"  method="POST">Eliminar producto</button>
+                <form action="/products/<%= product.id %>?_method=DELETE"  method="POST">
+                    <button type="submit">Eliminar producto</button>
                 </form>
 
             </main> -->

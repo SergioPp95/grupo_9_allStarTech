@@ -48,10 +48,10 @@
                                 Precio en efectivo o transferencia $<%= product.price %>
                             </div>
                             <div class="price-mp">
-                                Precio MecadoPago $<%= ((product.price * 0.25) + product.price) %>
+                                Precio MecadoPago $<%= product.price %>
                                     <img src="/images/mercadopago.png" alt="logo-mercadopago">
                             </div>
-                            <div class="price-main-cuotas"> ¡12 cuotas de $<%= ((product.price * 0.40) + product.price * (1 - product.discount/100)) %>!</div>
+                            <div class="price-main-cuotas"> ¡12 cuotas de $<%= parseInt(parseInt(product.price.replace(".","")) / 12) %>!</div>
                             <div class="shipping">
                                 Disponemos del producto para retiro por local o envio en las proximas 48hs
                             </div>
@@ -84,27 +84,9 @@
                     <div class="descripcion-producto">
                         <h2>Descripcion del producto:</h2>
                         <div class="info air">
-                            <p></p>
                             <p>
                                 <%= product.description %>
-                            </p><br>
-                            <!--<ul class="ul-description">
-                        <li>Supports 12th Gen Intel<sup>®</sup>&nbsp;Core™ Series Processors</li>
-                        <li>Dual Channel Non-ECC Unbuffered DDR4, 4 DIMMs</li>
-                        <li>12*+1+1 Twin Hybrid Digital VRM Design with 60A DrMOS</li>
-                        <li>Shielded Memory Routing for Better Memory Overclocking</li>
-                        <li>Fully Covered Thermal Design with High Coverage MOSFET Heatsinks</li>
-                        <li>Blazing Fast Intel<sup>®</sup> 2.5GbE LAN with Bandwidth Management</li>
-                        <li>Dual Ultra-Fast NVMe PCIe 4.0 x4 M.2 with Thermal Guard</li>
-                        <li>SuperSpeed USB 3.2 Gen 2x2 Type-C<sup>®</sup> delivers up to 20Gb/s transfer speeds</li>
-                        <li>Pre-installed IO Shield for easy and quick installation</li>
-                        <li>RGB FUSION 2.0 with Multi-Zone Addressable LED Light Show Design, Support Addressable LED
-                            &amp; RGB LED Strips</li>
-                        <li>Smart Fan 6 Features Multiple Temperature Sensors, Hybrid Fan Headers with FAN STOP</li>
-                        <li>Q-Flash Plus Update BIOS without Installing the CPU, Memory and Graphics Card</li>
-                    </ul> -->
-                            <p></p>
-                            <p></p>
+                            </p>
                         </div>
                     </div>
                 </section>
