@@ -709,6 +709,9 @@ main a {
 
 .product-cart-list{
    margin: 4%;
+   background-color: var(--blanco);
+   border-radius: 25px;
+   padding: 10px;
 }
 
 .product-cart-title{
