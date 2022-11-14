@@ -46,14 +46,14 @@ const controller = {
    product.id = req.params.id
    product.name = req.body.name
    product.description = req.body.description
-   product.imageMain = req.files.image1[0].filename
-   product.imageOther = req.files.image2[0].filename
+   product.imageMain = req.files.image1 ? req.files.image1[0].filename : product.imageMain
+   product.imageOther = req.files.image2 ? req.files.image2[0].filename : product.imageOther
    product.category = req.body.category
    product.price = req.body.price
    product.discount = req.body.discount
 
    // Reescribe archivo json
-   fs.writeFileSync(productsPath, JSON.stringify(products));
+   fs.writeFileSync(productsPath, JSON.stringify(products, null, " "));
 
    // Reenvia a página del producto recién editado
     res.redirect('/products/' + req.params.id)
