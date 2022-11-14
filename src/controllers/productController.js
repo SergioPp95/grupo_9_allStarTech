@@ -125,15 +125,15 @@ const controller = {
    const product = products.find(element => element.id == req.params.id)
    
    // Elimina imagenes anteriores del producto
-   fs.unlinkSync(path.join(__dirname, "../../public", product.imageMain))
-   fs.unlinkSync(path.join(__dirname, "../../public", product.imageOther))
+   fs.unlinkSync(path.join(__dirname, "../../public/images", product.imageMain))
+   fs.unlinkSync(path.join(__dirname, "../../public/images", product.imageOther))
 
    // Asigna nuevos valores a cada atributo
    product.id = req.params.id
    product.name = req.body.name
    product.description = req.body.description
-   product.imageMain = "/images/" + req.files.image1[0].filename
-   product.imageOther = "/images/" + req.files.image2[0].filename
+   product.imageMain = req.files.image1[0].filename
+   product.imageOther = req.files.image2[0].filename
    product.category = req.body.category
    product.price = req.body.price
    product.discount = req.body.discount
@@ -148,8 +148,8 @@ const controller = {
     
    // Elimina imagen actual del producto a borrar
     const product = products.find( element => element.id == req.params.id)
-    fs.unlinkSync(path.join(__dirname, "../../public", product.imageMain));
-    fs.unlinkSync(path.join(__dirname, "../../public", product.imageOther));
+    fs.unlinkSync(path.join(__dirname, "../../public/images", product.imageMain));
+    fs.unlinkSync(path.join(__dirname, "../../public/images", product.imageOther));
     
     // Filtra lista de productos sin producto a borrar, para sobreescribir en .json
     const newProducts = products.filter( element => element.id != req.params.id);
