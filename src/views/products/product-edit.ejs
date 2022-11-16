@@ -6,12 +6,12 @@
     <body>
         <!-- Header -->
         <%- include("../partials/header") %>
-            <main>
-                <form class="form-crud" action="/products/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <!-- <main>
+                <form class="form-crud" action="/products/?_method=PUT" method="POST" enctype="multipart/form-data">
                     <div class="crud-info">
                         <div>
                             <label for="name">Titulo</label>
-                            <input class="searchInput" type="text" name="name" value= "<%= product.name %>"  >
+                            <input class="searchInput" type="text" name="name" value= ""  >
                         </div>
                         <div>
                             <label for="price">Precio</label>
@@ -23,7 +23,7 @@
                         </div>
                         <div>
                             <label for="description">Descripcion del producto:</label>
-                            <textarea class="searchInput" type="textarea" name="description"> <%= product.description %> </textarea>
+                            <textarea class="searchInput" type="textarea" name="description">  </textarea>
                         </div>
                         <div>
                             <label for="image1">Seleccionar imagen principal:</label>
@@ -52,6 +52,86 @@
                     <button type="submit">Eliminar producto</button>
                 </form>
 
+            </main> -->
+
+            <main>
+                <div class="container">
+                    <div class="title">Edicion del producto</div>
+                    <div class="content">
+                        <form action="/products/<%= product.id %>?_method=PUT"
+                            method="POST" enctype="multipart/form-data">
+                            <div class="product-details">
+                                <div class="input-box">
+                                    <span class="details">Nombre del
+                                        Producto</span>
+                                    <input type="text"
+                                        value="<%= product.name %>" name="name"
+                                        required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Precio del
+                                        producto</span>
+                                    <input type="text"
+                                        value="<%= product.price %>"
+                                        name="price" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Aplicar
+                                        descuento</span>
+                                    <input type="text"
+                                        placeholder="Aplicar Descuento"
+                                        name="discount" required>
+                                </div>
+                                <div class="input-box select-category">
+                                    <span for="category">Categoria Del
+                                        Producto</span>
+                                    <select name="category" for="category">
+                                        <option value="computer">Computadora
+                                        </option>
+                                        <option value="screen">Pantalla</option>
+                                        <option value="phone">Celular</option>
+                                        <option value="audio">Audio</option>
+                                        <option value="other">Otro</option>
+                                    </select>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Imagen
+                                        principal</span>
+                                    <input type="file"
+                                        placeholder="Imagen Principal"
+                                        name="image1" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Imagen
+                                        Secundaria</span>
+                                    <input type="file"
+                                        placeholder="Imagen Secundaria"
+                                        name="image2" required>
+                                </div>
+                            </div>
+                            <div class="input-box text-description">
+                                <label for="description">Descripcion del
+                                    producto:</label>
+                                <textarea class="searchInput" type="textarea"
+                                    name="description" rows="5" cols="33"
+                                    name="description"><%= product.description %></textarea>
+                            </div>
+                            <div class="button-crud-holder">
+                                <button class="button-crud" type="submit">Crear
+                                    Producto</button>
+                            </div>
+                        </form>
+                        <form
+                            action="/products/<%= product.id %>?_method=DELETE"
+                            method="POST">
+                            <div class="button-crud-holder-eliminar">
+                                <button type="submit"
+                                    class="button-crud-eliminar">Eliminar
+                                    producto</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </main>
             <!-- Footer -->
             <%- include("../partials/footer") %>
