@@ -67,7 +67,7 @@ const controller = {
     
     // Filtra lista de productos sin producto a borrar, para sobreescribir en .json
     const newProducts = products.filter( element => element.id != req.params.id);
-    fs.writeFileSync(productsPath, JSON.stringify(newProducts));
+    fs.writeFileSync(productsPath, JSON.stringify(newProducts, null, " "));
     
     // Redirije a página principal de productos
     res.redirect("/products");
