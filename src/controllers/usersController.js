@@ -7,7 +7,7 @@ const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
 const controller = {
     login: (req, res) => res.render('./users/login'),
     register: (req, res) => res.render('./users/register'),
-    cart: (req, res) => res.render('./users/product-cart'),
+    cart: (req, res) => res.render('./users/productCartCorreccion'),
 }
 
 module.exports = controller;
