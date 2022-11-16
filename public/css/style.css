@@ -924,7 +924,7 @@ main a {
    margin-bottom: 10px;
 }
 
-/** /product/results **/
+/** /products **/
 
 .order-filter {
    margin: 1rem auto;
@@ -967,6 +967,15 @@ main a {
    padding: 2px;
    appearance: none;
    text-align: center;
+}
+
+.productList {
+   margin: auto;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: center;
 }
 
 .content .img {

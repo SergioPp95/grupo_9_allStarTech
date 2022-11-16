@@ -14,8 +14,7 @@
         <!-- Header -->
         <%- include("../partials/header") %>
             <main>
-                <form class="form-crud" action="/products/" method="POST"
-                    enctype="multipart/form-data">
+                <form class="form-crud" action="/products/" method="POST" enctype="multipart/form-data">
                     <div class="crud-info">
                         <div>
                             <label for="name">Titulo</label>
@@ -24,25 +23,23 @@
                         <div>
                             <label for="description">Descripcion del
                                 producto:</label>
-                            <textarea class="searchInput" type="textarea"
-                                name="description"> </textarea>
+                            <textarea class="searchInput" type="textarea" name="description"> </textarea>
                         </div>
                         <div>
                             <label for="name">Precio</label>
-                            <input class="searchInput" type="text" name="name">
+                            <input class="searchInput" type="text" name="price">
                         </div>
                         <div>
                             <label for="name">Descuentos</label>
-                            <input class="searchInput" type="text" name="name"
-                                value="0">
+                            <input class="searchInput" type="text" name="discount" value="0">
                         </div>
                         <div>
-                            <label for="image">Seleccionar imagen principal:</label>
-                            <input class="searchInput" type="file" name="image">
+                            <label for="image1">Seleccionar imagen principal:</label>
+                            <input class="searchInput" type="file" name="image1">
                         </div>
                         <div>
-                            <label for="image">Seleccionar imagen secundaria:</label>
-                            <input class="searchInput" type="file" name="image">
+                            <label for="image2">Seleccionar imagen secundaria:</label>
+                            <input class="searchInput" type="file" name="image2">
                         </div>
                     </div>
                     <div>
