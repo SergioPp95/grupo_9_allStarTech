@@ -21,3 +21,6 @@ El publico objetivo de la pagina va a ser toda aquella persona que quiera compra
 </ul>
 <p>Tipografia del sitio: Noto Sans</p>
 <p>https://fonts.google.com/noto/specimen/Noto+Sans</p> 
+
+Trello:
+https://trello.com/w/espaciodetrabajodeuser63829972
