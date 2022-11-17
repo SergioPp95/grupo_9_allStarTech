@@ -1,82 +1,82 @@
 [
-    {
-        "id": 1,
-        "name": "MOTHER GIGABYTE B660M AORUS PRO DDR4 S1700",
-        "description": "Intel® B660 AORUS Motherboard with 12*+1+1 Twin Hybrid Phases Digital VRM Design, Fully Covered Thermal Design , 2 x PCIe 4.0 M.2 with Thermal Guard, Intel® 2.5GbE LAN, Rear USB 3.2 Gen 2x2 Type-C®, RGB FUSION 2.0, Q-Flash Plus",
-        "imageMain": "mother-aorus1.jpg",
-        "imageOther": "mother-aorus2.jpg",
-        "category": "Otro",
-        "price": "51.490,00",
-        "discount": "5"
-    },
-    {
-        "id": 2,
-        "name": "NOTEBOOK LENOVO 15.6 V15 I5-1135G7 8GB 256GB",
-        "description": "Modelo Lenovo V15 IIL, Procesador Intel Core i5-1135G7, Graficos Integrated Intel UHD Graphics",
-        "imageMain": "lenovo-1.jpg",
-        "imageOther": "lenovo-2.jpg",
-        "category": "Computadora",
-        "price": "174.860,00",
-        "discount": "10"
-    },
-    {
-        "id": 3,
-        "name": "VIDEO GEFORCE RTX 3080 10GB MSI GAMING Z TRIO LHR",
-        "description": "Núcleos 8704 Unidades, Velocidad clock núcleo (MHz) Boost: 1830 MHz, Resolución máxima digital 7680x4320",
-        "imageMain": "geforce-1.jpg",
-        "imageOther": "geforce-2.jpg",
-        "category": "Otro",
-        "price": "294.030,00",
-        "discount": "5"
-    },
-    {
-        "id": 4,
-        "name": "MONITOR 24 SAMSUNG LED IPS T350 FULL HD 75HZ FREESYNC",
-        "description": "Modelo Samsung F24T350FHL, panel IPS, 75MHZ",
-        "imageMain": "monitor-1.jpg",
-        "imageOther": "monitor-2.jpg",
-        "category": "Pantalla",
-        "price": "48.200,00",
-        "discount": "10"
-    },
-    {
-        "id": 5,
-        "name": "AURICULARES CORSAIR GAMING HS35 GREEN ",
-        "description": "Compatibilad con PC, PS4, XBOX One, Nintendo Switch & Mobile devices",
-        "imageMain": "corsair-1.jpg",
-        "imageOther": "corsair-2.jpg",
-        "category": "Audio",
-        "price": "11.730,00",
-        "discount": "7"
-    },
-    {
-        "id": 6,
-        "name": "PC AMD RYZEN 5 5600G+A320+16GB+480GB",
-        "description": "PC con procesadord AMD RYZEN 5 5600G, Motherboard A320AM4, Memoria Ram 3200mhz DDR4 8GB & Disco SSD 480GB",
-        "imageMain": "pc-completa-1.jpg",
-        "imageOther": "pc-completa-1.jpg",
-        "category": "Computadora",
-        "price": "92.440.00",
-        "discount": "5"
-    },
-    {
-        "id": 7,
-        "name": "SAMSUNG GALAXY Z FLIP 3",
-        "description": "Celular Samsung galaxy Z Flip 3 color Violeta",
-        "imageMain": "galaxy-flip-3.jpg",
-        "imageOther": "galaxy-flip-3.jpg",
-        "category": "Celular",
-        "price": "150.340,00",
-        "discount": "4"
-    },
-    {
-        "id": 8,
-        "name": "TECLADO HP HYPERX ALLOY ORIGINS 65 MECANICO 4P5D6AA",
-        "description": "Teclado mecanico HyperX 65% red Switches",
-        "imageMain": "teclado-1.jpg",
-        "imageOther": "teclado-2.jpg",
-        "category": "Otro",
-        "price": "13.990,00",
-        "discount": "12"
-    }
+ {
+  "id": 1,
+  "name": "MOTHER GIGABYTE B660M AORUS PRO DDR4 S1700",
+  "description": "Intel® B660 AORUS Motherboard with 12*+1+1 Twin Hybrid Phases Digital VRM Design, Fully Covered Thermal Design , 2 x PCIe 4.0 M.2 with Thermal Guard, Intel® 2.5GbE LAN, Rear USB 3.2 Gen 2x2 Type-C®, RGB FUSION 2.0, Q-Flash Plus",
+  "imageMain": "mother-aorus1.jpg",
+  "imageOther": "mother-aorus2.jpg",
+  "category": "Otro",
+  "price": "51.490,00",
+  "discount": "5"
+ },
+ {
+  "id": 2,
+  "name": "NOTEBOOK LENOVO 15.6 V15 I5-1135G7 8GB 256GB",
+  "description": "Modelo Lenovo V15 IIL, Procesador Intel Core i5-1135G7, Graficos Integrated Intel UHD Graphics",
+  "imageMain": "lenovo-1.jpg",
+  "imageOther": "lenovo-2.jpg",
+  "category": "Computadora",
+  "price": "174.860,00",
+  "discount": "10"
+ },
+ {
+  "id": 3,
+  "name": "VIDEO GEFORCE RTX 3080 10GB MSI GAMING Z TRIO LHR",
+  "description": "Núcleos 8704 Unidades, Velocidad clock núcleo (MHz) Boost: 1830 MHz, Resolución máxima digital 7680x4320",
+  "imageMain": "geforce-1.jpg",
+  "imageOther": "geforce-2.jpg",
+  "category": "Otro",
+  "price": "294.030,00",
+  "discount": "5"
+ },
+ {
+  "id": 4,
+  "name": "MONITOR 24 SAMSUNG LED IPS T350 FULL HD 75HZ FREESYNC",
+  "description": "Modelo Samsung F24T350FHL, panel IPS, 75MHZ",
+  "imageMain": "monitor-1.jpg",
+  "imageOther": "monitor-2.jpg",
+  "category": "Pantalla",
+  "price": "48.200,00",
+  "discount": "10"
+ },
+ {
+  "id": 5,
+  "name": "AURICULARES CORSAIR GAMING HS35 GREEN ",
+  "description": "Compatibilad con PC, PS4, XBOX One, Nintendo Switch & Mobile devices",
+  "imageMain": "corsair-1.jpg",
+  "imageOther": "corsair-2.jpg",
+  "category": "Audio",
+  "price": "11.730,00",
+  "discount": "7"
+ },
+ {
+  "id": 6,
+  "name": "PC AMD RYZEN 5 5600G+A320+16GB+480GB",
+  "description": "PC con procesadord AMD RYZEN 5 5600G, Motherboard A320AM4, Memoria Ram 3200mhz DDR4 8GB & Disco SSD 480GB",
+  "imageMain": "pc-completa-1.jpg",
+  "imageOther": "pc-completa-1.jpg",
+  "category": "Computadora",
+  "price": "92.440.00",
+  "discount": "5"
+ },
+ {
+  "id": 7,
+  "name": "SAMSUNG GALAXY Z FLIP 3",
+  "description": "Celular Samsung galaxy Z Flip 3 color Violeta",
+  "imageMain": "galaxy-flip-3.jpg",
+  "imageOther": "galaxy-flip-3.jpg",
+  "category": "Celular",
+  "price": "150.340,00",
+  "discount": "4"
+ },
+ {
+  "id": 8,
+  "name": "TECLADO HP HYPERX ALLOY ORIGINS 65 MECANICO 4P5D6AA",
+  "description": "Teclado mecanico HyperX 65% red Switches",
+  "imageMain": "teclado-1.jpg",
+  "imageOther": "teclado-2.jpg",
+  "category": "Otro",
+  "price": "13.990,00",
+  "discount": "12"
+ }
 ]

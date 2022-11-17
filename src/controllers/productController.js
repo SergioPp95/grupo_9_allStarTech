@@ -1,11 +1,8 @@
-const fs = require ('fs');
-const path = require ('path');
+const fs = require('fs');
+const path = require('path');
 
 const productsPath = path.join(__dirname, '../data/products.json')
-const products = JSON.parse(fs.readFileSync(productsPath, 'utf-8'))
-
-
-
+let products = JSON.parse(fs.readFileSync(productsPath, 'utf-8'))
 
 const controller = {
   index: (req, res) => {
@@ -16,8 +13,21 @@ const controller = {
     // Codigo
   },
   store: (req, res) => {
-    // Codigo
-    res.redirect('/products/' + req.params.id)
+    let product = {
+      id: Date.now(),
+      name: req.body.name,
+      description: req.body.description,
+      imageMain: req.files.image1[0].filename,
+      imageOther: req.files.image2[0].filename,
+      category: req.body.category,
+      price: req.body.price,
+      discount: req.body.discount,
+    }
+
+    products.push(product)
+    fs.writeFileSync(productsPath, JSON.stringify(products, null, " "));
+
+    res.redirect('/products/')
   },
   detail: (req, res) => {
     /*let product = products.find( (elem) => elem.id == req.params.id );*/
@@ -39,8 +49,8 @@ const controller = {
    const product = products.find(element => element.id == req.params.id)
    
    // Elimina imagenes anteriores del producto
-   fs.unlinkSync(path.join(__dirname, "../../public/images", product.imageMain))
-   fs.unlinkSync(path.join(__dirname, "../../public/images", product.imageOther))
+   req.files.image1 ? fs.unlinkSync(path.join(__dirname, "../../public/images/products", product.imageMain)) : null
+   req.files.image2 ? fs.unlinkSync(path.join(__dirname, "../../public/images/products", product.imageOther)) : null
 
    // Asigna nuevos valores a cada atributo
    product.id = req.params.id
@@ -52,22 +62,22 @@ const controller = {
    product.price = req.body.price
    product.discount = req.body.discount
 
-   // Reescribe archivo json
-   fs.writeFileSync(productsPath, JSON.stringify(products, null, " "));
+    // Reescribe archivo json
+    fs.writeFileSync(productsPath, JSON.stringify(products, null, " "));
 
-   // Reenvia a página del producto recién editado
+    // Reenvia a página del producto recién editado
     res.redirect('/products/' + req.params.id)
   },
   delete: (req, res) => {
     
    // Elimina imagen actual del producto a borrar
     const product = products.find( element => element.id == req.params.id)
-    fs.unlinkSync(path.join(__dirname, "../../public/images", product.imageMain));
-    fs.unlinkSync(path.join(__dirname, "../../public/images", product.imageOther));
+    fs.unlinkSync(path.join(__dirname, "../../public/images/products", product.imageMain));
+    fs.unlinkSync(path.join(__dirname, "../../public/images/products", product.imageOther));
     
     // Filtra lista de productos sin producto a borrar, para sobreescribir en .json
-    const newProducts = products.filter( element => element.id != req.params.id);
-    fs.writeFileSync(productsPath, JSON.stringify(newProducts, null, " "));
+    products = products.filter( element => element.id != req.params.id);
+    fs.writeFileSync(productsPath, JSON.stringify(products, null, " "));
     
     // Redirije a página principal de productos
     res.redirect("/products");
