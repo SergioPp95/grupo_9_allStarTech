@@ -46,7 +46,6 @@ const controller = {
       // Se crea el usuario nuevo
       const encrypted = bcrypt.hashSync(req.body.contrasena, 10)
       const defaultPicture = "userDefault.png"
-      console.log(users[users.length - 1] + 1);
 
       const newUser = {
          id: users[users.length - 1].id + 1,
