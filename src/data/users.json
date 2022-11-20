@@ -78,5 +78,13 @@
   "email": "bgillet9@wikipedia.org",
   "contrasena": "EYKY9Idgni",
   "imagenPerfil": "https://robohash.org/nemoquiaqui.jpg?size=170x170&set=set1"
+ },
+ {
+  "id": 11,
+  "nombre": "Alberto",
+  "apellido": "Ortiz",
+  "email": "correofalso@dh.com",
+  "contrasena": "$2b$10$F54JrAqJYXuVzjGts/wU6OFKdZDhV6eBCloA/Fu9f.zfXAfVe7aDm",
+  "imagenPerfil": "userDefault.png"
  }
 ]
