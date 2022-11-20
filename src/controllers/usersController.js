@@ -23,8 +23,8 @@ const controller = {
             // Incluye al usuario en session
             req.session.userLogged = user
             
-            // Incluye al usuario en cookies para logearlo
-            res.cookie("userLogged", user.email, {maxAge: 1000 * 60 * 5}) // Cookie se guarda por 5 min
+            // Si aceptó en login, incluye al usuario en cookies para logearlo
+            req.body.recordar ? res.cookie("userLogged", user.email, {maxAge: 1000 * 60 * 5}) : null // Cookie se guarda por 5 min
 
             // Redirige a página del perfil si credenciales son correctas
             res.redirect("/user/profile")
