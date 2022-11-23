@@ -10,24 +10,34 @@
         <%- include("../partials/header") %>
 
             <main>
-                <form action="#" method="GET" class="form-register">
+                <form action="/user/register" method="post" class="form-register" enctype="multipart/form-data">
                     <h4>FORMULARIO DE REGISTRO</h4>
+                    
                     <label>Nombre:</label>
                     <input class="CampoTexto" type="text" name="nombre" id="nombre" placeholder="Insertar Nombre">
+                    
                     <label>Apellidos:</label>
-                    <input class="CampoTexto" type="text" name="apellido" id="nombre" placeholder="Insertar Apellido">
+                    <input class="CampoTexto" type="text" name="apellido" id="apellido" placeholder="Insertar Apellido">
+                    
+                    <label>Imagen de perfil:</label>
+                    <input class="CampoTexto" type="file" name="imagenPerfil" id="imagenPerfil">
+                    
                     <label>Correo:</label>
                     <input class="CampoTexto" type="email" name="email" id="email" placeholder="Insertar Correo">
+                    
                     <label>Contraseña:</label>
-                    <input class="CampoTexto" type="password" name="contraseña" id="contraseña"
-                        placeholder="Insertar Contraseña">
-                    <label>Confirma contraseña:</label>
-                    <input class="CampoTexto" type="password" name="contraseña" id="contraseña"
-                        placeholder="Repetir Contraseña">
-                    <p>
-                        <input type="checkbox" name="terminos" value="acepto">
+                    <input class="CampoTexto" type="password" name="contrasena" id="contrasena"
+                        placeholder="Insertar Contraseña" minlength="8">
+                    
+                     <label>Confirma contraseña:</label>
+                    <input class="CampoTexto" type="password" name="contrasena2" id="contrasena2"
+                        placeholder="Repetir Contraseña" minlength="8">
+                    
+                     <p>
+                        <input type="checkbox" name="terminos" value="acepto" required>
                         <a href="#">Aceptas terminos y condiciones</a>
                     </p>
+                    
                     <input class="Boton" type="submit" value="BIENVENIDO">
 
                     <p>
