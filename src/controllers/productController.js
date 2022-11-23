@@ -10,7 +10,6 @@ const controller = {
   },
   create: (req, res) => {
     res.render('./products/product-create')
-    // Codigo
   },
   store: (req, res) => {
     let product = {
@@ -30,7 +29,6 @@ const controller = {
     res.redirect('/products/')
   },
   detail: (req, res) => {
-    /*let product = products.find( (elem) => elem.id == req.params.id );*/
     let id = req.params.id
     let product = products.find(product => {
       return product.id == id
@@ -56,8 +54,8 @@ const controller = {
     product.id = req.params.id
     product.name = req.body.name
     product.description = req.body.description
-    product.imageMain = "/images/" + req.files.image1[0].filename
-    product.imageOther = "/images/" + req.files.image2[0].filename
+    product.imageMain = req.files.image1? "/images/" + req.files.image1[0].filename : product.imageMain,
+    product.imageOther = req.files.image2? "/images/" + req.files.image2[0].filename : product.imageOther,
     product.category = req.body.category
     product.price = req.body.price
     product.discount = req.body.discount

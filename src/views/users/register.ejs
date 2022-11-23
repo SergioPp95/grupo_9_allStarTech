@@ -10,7 +10,7 @@
         <%- include("../partials/header") %>
 
             <main>
-                <form action="#" method="GET" class="form-register">
+                <form action="#" method="GET" class="form-register" enctype="multipart/form-data">
                     <h4>FORMULARIO DE REGISTRO</h4>
                     <label>Nombre:</label>
                     <input class="CampoTexto" type="text" name="nombre" id="nombre" placeholder="Insertar Nombre">
@@ -18,6 +18,8 @@
                     <input class="CampoTexto" type="text" name="apellido" id="nombre" placeholder="Insertar Apellido">
                     <label>Correo:</label>
                     <input class="CampoTexto" type="email" name="email" id="email" placeholder="Insertar Correo">
+                    <label for="profilePic">Elegir Foto de Perfil:</label>
+                    <input type="file" name="profilePic" id="profilePic">
                     <label>Contraseña:</label>
                     <input class="CampoTexto" type="password" name="contraseña" id="contraseña"
                         placeholder="Insertar Contraseña">
