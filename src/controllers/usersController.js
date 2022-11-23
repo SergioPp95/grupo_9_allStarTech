@@ -7,19 +7,6 @@ let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
 
 const controller = {
     login: (req, res) => res.render('./users/login'),
-<<<<<<< HEAD
-    loginProcess: (req,res) => {
-
-    },
-    register: (req, res) => res.render('./users/register'),
-    registerProcess: (req,res) => {
-
-    },
-    profile: (req,res) => {
-
-    },
-    cart: (req, res) => res.render('./users/product-cart'),
-=======
 
     checkLogin: (req, res) => {
       // Trae info del usuario por email, si coincide
@@ -80,7 +67,6 @@ const controller = {
     profile: (req, res) => res.send("Hola " + req.session.userLogged.nombre + ", estás loggeado " + req.cookies.userLogged),
 
     cart: (req, res) => res.render('./users/productCartCorreccion'),
->>>>>>> 88657ecc8248c76e9326271704e60392661bf907
 }
 
 module.exports = controller;
