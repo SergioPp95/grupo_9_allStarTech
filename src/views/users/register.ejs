@@ -14,24 +14,73 @@
                     <h4>FORMULARIO DE REGISTRO</h4>
                     
                     <label>Nombre:</label>
-                    <input class="CampoTexto" type="text" name="nombre" id="nombre" placeholder="Insertar Nombre">
+                    <input class="CampoTexto" 
+                    type="text" 
+                    name="nombre" 
+                    id="nombre" 
+                    placeholder="Insertar Nombre"
+                    value="<%= locals.oldData ? oldData.nombre : null  %>">
+                    <% if (locals.errors && errors.nombre) { %>
+                        <div><label>
+                            <%= errors.nombre.msg  %> 
+                        </label></div>
+                    <% } %>
+                    
                     
                     <label>Apellidos:</label>
-                    <input class="CampoTexto" type="text" name="apellido" id="apellido" placeholder="Insertar Apellido">
+                    <input class="CampoTexto" 
+                    type="text" 
+                    name="apellido" 
+                    id="apellido" 
+                    placeholder="Insertar Apellido"
+                    value="<%= locals.oldData ? oldData.apellido: null  %>">
+                    <% if (locals.errors && errors.apellido) { %>
+                        <div><label>
+                            <%= errors.apellido.msg  %> 
+                        </label></div>
+                    <% } %>
                     
                     <label>Imagen de perfil:</label>
                     <input class="CampoTexto" type="file" name="imagenPerfil" id="imagenPerfil">
+                    <% if (locals.errors && errors.imagenPerfil) { %>
+                        <div><label>
+                            <%= errors.imagenPerfil.msg  %> 
+                        </label></div>
+                    <% } %>
                     
                     <label>Correo:</label>
-                    <input class="CampoTexto" type="email" name="email" id="email" placeholder="Insertar Correo">
+                    <input class="CampoTexto" 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    placeholder="Insertar Correo"
+                    value="<%= locals.oldData ? oldData.email : null  %>">
+                    <% if (locals.errors && errors.email) { %>
+                        <div><label>
+                            <%= errors.email.msg  %> 
+                        </label></div>
+                    <% } %>
                     
                     <label>Contraseña:</label>
-                    <input class="CampoTexto" type="password" name="contrasena" id="contrasena"
-                        placeholder="Insertar Contraseña" minlength="8">
+                    <input class="CampoTexto" 
+                    type="password" 
+                    name="contrasena" 
+                    id="contrasena"
+                    placeholder="Insertar Contraseña" minlength="8">
+                        <% if (locals.errors && errors.contrasena) { %>
+                            <div><label>
+                                <%= errors.contrasena.msg  %> 
+                            </label></div>
+                        <% } %>
                     
                      <label>Confirma contraseña:</label>
                     <input class="CampoTexto" type="password" name="contrasena2" id="contrasena2"
                         placeholder="Repetir Contraseña" minlength="8">
+                        <% if (locals.errors && errors.contrasena2) { %>
+                            <div><label>
+                                <%= errors.contrasena2.msg  %> 
+                            </label></div>
+                        <% } %>
                     
                      <p>
                         <input type="checkbox" name="terminos" value="acepto" required>
