@@ -1,6 +1,7 @@
 const fs = require ('fs');
 const path = require ('path');
 const bcrypt = require("bcrypt");
+const { validationResult } = require('express-validator');
 
 const usersPath = path.join(__dirname, '../data/users.json')
 let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
@@ -41,9 +42,16 @@ const controller = {
 
     register: (req, res) => res.render('./users/register'),
 
+
     addRegister: (req, res) => {
-      
-      // Se crea el usuario nuevo
+      const resultValidation = validationResult(req)
+      if(resultValidation.errors.length > 0) {
+         res.render('./users/register', {
+            errors: resultValidation.mapped(),
+            oldData: req.body
+         })
+      } else {
+         // Se crea el usuario nuevo
       const encrypted = bcrypt.hashSync(req.body.contrasena, 10)
       const defaultPicture = "userDefault.png"
 
@@ -62,6 +70,9 @@ const controller = {
 
       // Se redirige el cliente a login para que pueda ingresar
       res.redirect("/user/login")
+      }
+      
+      
     },
     
     profile: (req, res) => res.render('./users/profile', {user: req.session.userLogged}),

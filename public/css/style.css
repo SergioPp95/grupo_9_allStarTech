@@ -498,6 +498,13 @@ main a {
    line-height: 50px;
 }
 
+.form-register div  {
+   text-align: center;
+   color: red;
+}
+.is-invalid{
+   border-color: red
+}
 .form-register a {
    color: var(--grisFondo);
    text-decoration: none;
