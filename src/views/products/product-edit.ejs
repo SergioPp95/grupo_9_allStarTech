@@ -67,6 +67,11 @@
                                     <input type="text"
                                         value="<%= product.name %>" name="name"
                                         required>
+                                        <% if (locals.errors && errors.name) { %>
+                                            <div class="text-danger">
+                                                <%= errors.name.msg %> 
+                                            </div>
+                                        <% } %>
                                 </div>
                                 <div class="input-box">
                                     <span class="details">Precio del
@@ -74,6 +79,11 @@
                                     <input type="text"
                                         value="<%= product.price %>"
                                         name="price" required>
+                                        <% if (locals.errors && errors.price) { %>
+                                            <div class="text-danger">
+                                                <%= errors.price.msg %> 
+                                            </div>
+                                        <% } %>
                                 </div>
                                 <div class="input-box">
                                     <span class="details">Aplicar
@@ -81,6 +91,11 @@
                                     <input type="text"
                                         value="<%= product.discount %> "
                                         name="discount" required>
+                                        <% if (locals.errors && errors.discount) { %>
+                                            <div class="text-danger">
+                                                <%= errors.discount.msg %> 
+                                            </div>
+                                        <% } %>
                                 </div>
                                 <div class="input-box select-category">
                                     <span for="category">Categoria Del
@@ -93,6 +108,11 @@
                                         <option value="audio">Audio</option>
                                         <option value="other">Otro</option>
                                     </select>
+                                    <% if (locals.errors && errors.category) { %>
+                                        <div class="text-danger">
+                                            <%= errors.category.msg %> 
+                                        </div>
+                                    <% } %>
                                 </div>
                                 <div class="input-box">
                                     <span class="details">Imagen
@@ -100,6 +120,11 @@
                                     <input type="file"
                                         placeholder="Imagen Principal"
                                         name="image1" required>
+                                        <% if (locals.errors && errors.image1) { %>
+                                            <div class="text-danger">
+                                                <%= errors.image1.msg %> 
+                                            </div>
+                                        <% } %>
                                 </div>
                                 <div class="input-box">
                                     <span class="details">Imagen
@@ -107,6 +132,11 @@
                                     <input type="file"
                                         placeholder="Imagen Secundaria"
                                         name="image2" required>
+                                        <% if (locals.errors && errors.image2) { %>
+                                            <div class="text-danger">
+                                                <%= errors.image2.msg %> 
+                                            </div>
+                                        <% } %>
                                 </div>
                             </div>
                             <div class="input-box text-description">
@@ -115,6 +145,11 @@
                                 <textarea class="searchInput" type="textarea"
                                     name="description" rows="5" cols="33"
                                     name="description"><%= product.description %></textarea>
+                                    <% if (locals.errors && errors.description) { %>
+                                        <div class="text-danger">
+                                            <%= errors.description.msg %> 
+                                        </div>
+                                    <% } %>
                             </div>
                             <div class="button-crud-holder">
                                 <button class="button-crud" type="submit">Crear
