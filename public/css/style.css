@@ -1397,6 +1397,40 @@ form .button input {
    padding: 10px 0px;
 }
 
+/** user/profile **/
+
+.profile-main {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+.profile-description {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   background-color: var(--gray2-color);
+   flex-flow: column;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   width: 90%;
+   border-radius: 10px;
+}
+
+.profile-image {
+   max-width: 80%;
+   display: inline-block;
+   border-radius: 50%;
+}
+
+.profile-info {
+   text-align: center;
+}
+
+
 @media (max-width: 480px) {
 
    /** /user/login CAMBIAR A MOBILE FIRST **/
@@ -1487,6 +1521,12 @@ form .button input {
 
    .main-container .meta form .qty .qty-item {
       width: 5%;
+   }
+
+   /** user/profile **/
+   
+   .profile-image {
+      max-width: 300px;
    }
 }
 

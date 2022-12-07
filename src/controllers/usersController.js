@@ -64,7 +64,7 @@ const controller = {
       res.redirect("/user/login")
     },
     
-    profile: (req, res) => res.send("Hola " + req.session.userLogged.nombre + ", estás loggeado " + req.cookies.userLogged),
+    profile: (req, res) => res.render('./users/profile', {user: req.session.userLogged}),
 
     cart: (req, res) => res.render('./users/productCartCorreccion'),
 }
