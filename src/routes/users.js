@@ -19,6 +19,8 @@ router.post("/register", upload.single("imagenPerfil"), validations , usersContr
 
 router.get("/profile", userRouteCheck.forUsers, usersController.profile)
 
+router.post('/profile', userRouteCheck.forUsers, usersController.logout)
+
 router.get('/cart', userRouteCheck.forUsers, usersController.cart)
 
 module.exports = router;

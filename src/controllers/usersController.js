@@ -77,6 +77,16 @@ const controller = {
     
     profile: (req, res) => res.render('./users/profile', {user: req.session.userLogged}),
 
+    logout: (req, res) => {
+      
+      // Se elimina al user de session y de las cookies
+      req.session.userLogged = null
+      res.clearCookie('userLogged')
+
+      res.redirect("/")
+
+    },
+
     cart: (req, res) => res.render('./users/productCartCorreccion'),
 }
 
