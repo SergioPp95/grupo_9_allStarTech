@@ -38,6 +38,8 @@ const controller = {
          // Si email es incorrecto redirige a login
          res.redirect("/user/login")
       }
+
+      // CODIGO ACA // CODIGO ACA
     },
 
     register: (req, res) => res.render('./users/register'),
@@ -72,7 +74,7 @@ const controller = {
       res.redirect("/user/login")
       }
       
-      
+      // CODIGO ACA // CODIGO ACA
     },
     
     profile: (req, res) => res.send("Hola " + req.session.userLogged.nombre + ", estás loggeado " + req.cookies.userLogged),

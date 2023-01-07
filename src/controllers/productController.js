@@ -8,6 +8,7 @@ let products = JSON.parse(fs.readFileSync(productsPath, 'utf-8'))
 const controller = {
   index: (req, res) => {
     res.render('./products/products', { products })
+    // CODIGO ACA
   },
   create: (req, res) => {
     res.render('./products/product-create')
@@ -38,6 +39,8 @@ const controller = {
 
       res.redirect('/products/')
     }
+
+    // CODIGO ACA
   },
   detail: (req, res) => {
     let id = req.params.id
@@ -45,12 +48,15 @@ const controller = {
       return product.id == id
     })
     res.render('./products/product-detail', { product })
+
+    // CODIGO ACA
   },
   edit: (req, res) => {
     // Codigo
-    const product = products.find(element => element.id == req.params.id)
+    const product = products.find(element => element.id == req.params.id) // CODIGO ACA
 
     res.render('./products/product-edit', { product })
+    
   },
   update: (req, res) => { 
      const resultValidation = validationResult(req);
@@ -86,6 +92,7 @@ const controller = {
       // Reenvia a página del producto recién editado
       res.redirect('/products/' + req.params.id)
     }
+    // CODIGO ACA
   },
   delete: (req, res) => {
     
@@ -100,6 +107,8 @@ const controller = {
     
     // Redirije a página principal de productos
     res.redirect("/products");
+
+    // CODIGO ACA
   },
 }
 
