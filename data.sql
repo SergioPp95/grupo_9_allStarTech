@@ -16,3 +16,5 @@ INSERT INTO products  (name,price,category_id,img1,img2,description,discount) va
 INSERT INTO products  (name,price,category_id,img1,img2,description,discount) values ('TECLADO HP HYPERX ALLOY ORIGINS 65 MECANICO 4P5D6AA',13990,4,'teclado-1.jpg','teclado-2.jpg','Teclado mecanico HyperX 65% red Switches',12);
 
 select * from products;
+
+SELECT * from users;

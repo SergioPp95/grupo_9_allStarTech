@@ -86,5 +86,29 @@
   "email": "correofalso@dh.com",
   "contrasena": "$2b$10$F54JrAqJYXuVzjGts/wU6OFKdZDhV6eBCloA/Fu9f.zfXAfVe7aDm",
   "imagenPerfil": "userDefault.png"
+ },
+ {
+  "id": 12,
+  "nombre": "Juan",
+  "apellido": "Zimmermann",
+  "email": "juanmanuelzimmermann@gmail.com",
+  "contrasena": "$2b$10$ZLS5DfYVBMJaO6Q3bV5gW.tSnX3iNx6tvucRdId7o9CLiomLLz9eG",
+  "imagenPerfil": "imagenPerfil-1673121610161.jpg"
+ },
+ {
+  "id": 13,
+  "nombre": "Juan",
+  "apellido": "Zimmermann",
+  "email": "juanmanuelzimmermann@gmail.com",
+  "contrasena": "$2b$10$/5A7/lfgiOQrDK40dSTVu.Hhw/aIo2hFkZ2dchVsBaG617BUgH0RC",
+  "imagenPerfil": "imagenPerfil-1673121843421.png"
+ },
+ {
+  "id": 14,
+  "nombre": "Juan",
+  "apellido": "Zimmermann",
+  "email": "juanmanuelzimmermann@gmail.com",
+  "contrasena": "$2b$10$v4c26Z09j5QmMZ610ng8XetxT3JTOilTp0XuWuHBaxfOi4NCH3SfS",
+  "imagenPerfil": "imagenPerfil-1673121934227.png"
  }
 ]
