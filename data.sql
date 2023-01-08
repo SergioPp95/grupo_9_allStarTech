@@ -17,4 +17,4 @@ INSERT INTO products  (name,price,category_id,img1,img2,description,discount) va
 
 select * from products;
 
-SELECT * from users;
+select * FROM users;

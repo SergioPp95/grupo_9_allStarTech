@@ -10,23 +10,28 @@ let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
 const controller = {
    login: (req, res) => res.render('./users/login'),
 
-   checkLogin: (req, res) => {
+   checkLogin: async (req, res) => {
       // Trae info del usuario por email, si coincide
-      const user = users.find(user => user.email == req.body.email)
+      const user = await db.User.findOne({
+         where: {
+            mail: req.body.email
+         }
+      })
 
-      if (user) {
+      if (user.dataValues) {
          // Verifica si la contraseña es correcta
-         const verified = bcrypt.compareSync(req.body.contrasena, user.contrasena)
+         const verified = bcrypt.compareSync(req.body.contrasena, user.dataValues.password)
+         console.log(verified);
 
          if (verified) {
             // Elimina contraseña de user por seguridad
-            delete user.contrasena
+            delete user.dataValues.password
 
             // Incluye al usuario en session
-            req.session.userLogged = user
+            req.session.userLogged = user.dataValues
 
             // Si aceptó en login, incluye al usuario en cookies para logearlo
-            req.body.recordar ? res.cookie("userLogged", user.email, { maxAge: 1000 * 60 * 5 }) : null // Cookie se guarda por 5 min
+            req.body.recordar ? res.cookie("userLogged", user.dataValues.mail, { maxAge: 1000 * 60 * 5 }) : null // Cookie se guarda por 5 min
 
             // Redirige a página del perfil si credenciales son correctas
             res.redirect("/user/profile")
@@ -37,14 +42,11 @@ const controller = {
 
       } else {
          // Si email es incorrecto redirige a login
-         res.redirect("/user/login")
+         res.redirect("/login")
       }
-
-      // CODIGO ACA // CODIGO ACA
    },
 
    register: (req, res) => res.render('./users/register'),
-
 
    addRegister: async (req, res) => {
       const resultValidation = validationResult(req)
@@ -57,7 +59,6 @@ const controller = {
          // Se crea el usuario nuevo
          const encrypted = bcrypt.hashSync(req.body.contrasena, 10)
          const defaultPicture = "userDefault.png"
-
          const newUser = {
             name: req.body.nombre,
             last_name: req.body.apellido,
@@ -65,12 +66,11 @@ const controller = {
             password: encrypted,
             picture: req.file ? req.file.filename : defaultPicture,
          }
-
          // Se incluye el usuario nuevo al array de usuarios y se reescribe el archivo JSON con nueva lista
          try {
             await db.User.create(newUser)
          }
-         catch(error){
+         catch (error) {
             console.error(error)
          }
 

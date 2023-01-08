@@ -1,20 +1,25 @@
 const fs = require("fs")
 const path = require("path")
 const usersPath = path.join(__dirname, '../data/users.json')
-let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
+const db = require('../database/models');
+//let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
 
-function userLogin(req, res, next) {
+async function userLogin(req, res, next) {
    // Pregunta si existe el cookie
-   if(req.cookies.userLogged) {
+   if (req.cookies.userLogged) {
       // Filtra usuario por email
-      let user = users.find( user => user.email == req.cookies.userLogged)
-      
+      let user = await db.User.findOne({
+         where: {
+            mail: req.cookies.userLogged
+         }
+      })
+
       // Elimina contraseña de user por seguridad
-      delete user.contrasena
-      
+      delete user.dataValues.password;
+
       // Incluye al usuario en session
-      req.session.userLogged = user
-      
+      req.session.userLogged = user.dataValues;
+
       // Redirige a página del perfil
       res.redirect("/user/profile")
    } else {
