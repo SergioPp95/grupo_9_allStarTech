@@ -1,8 +1,6 @@
 const fs = require("fs")
 const path = require("path")
-const usersPath = path.join(__dirname, '../data/users.json')
 const db = require('../database/models');
-//let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
 
 async function userLogin(req, res, next) {
    // Pregunta si existe el cookie

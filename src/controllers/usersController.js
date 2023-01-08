@@ -4,9 +4,6 @@ const bcrypt = require("bcrypt");
 const { validationResult } = require('express-validator');
 const db = require('../database/models')
 
-const usersPath = path.join(__dirname, '../data/users.json')
-let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
-
 const controller = {
    login: (req, res) => res.render('./users/login'),
 
