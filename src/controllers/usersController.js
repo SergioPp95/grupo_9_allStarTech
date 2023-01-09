@@ -75,7 +75,7 @@ const controller = {
          res.redirect("/user/login")
       }
    },
-        
+         
     profile: (req, res) => res.render('./users/profile', {user: req.session.userLogged}),
 
     logout: (req, res) => {
@@ -87,7 +87,7 @@ const controller = {
 
     },
 
-    cart: (req, res) => res.render('./users/productCartCorreccion'),
+   cart: (req, res) => res.render('./users/productCartCorreccion'),
 }
 
 module.exports = controller;
