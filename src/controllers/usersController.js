@@ -18,7 +18,6 @@ const controller = {
       if (user.dataValues) {
          // Verifica si la contraseña es correcta
          const verified = bcrypt.compareSync(req.body.contrasena, user.dataValues.password)
-         console.log(verified);
 
          if (verified) {
             // Elimina contraseña de user por seguridad
