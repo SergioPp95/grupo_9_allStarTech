@@ -9,17 +9,19 @@
       <!-- Header -->
       <%- include("../partials/header") %>
 
-         <main class="profile-main">
-            <h2>Mi Perfil</h2>
-            <div class="profile-description">
-                <img src="" alt="">
-                <p class="profile-info">Nombre: </p>
-                <p class="profile-info">Apellido(s): </p>
-                <p class="profile-info">Correo electrónico: </p>
-            </div>
-            <form class="" method="" action="">
-                <button class="logout-button">Cerrar Sesión</button>
+         <main class="profile-description">
+
+            <img class="profile-image" src="/images/users/<%= user.picture %>" alt="Foto de perfil">
+            
+            <h2 class="profile-info">¡Hola <%= user.name %>!</h2>
+            <h3 class="profile-info">Esta es la información de tu perfil:</h3>
+            <p class="profile-info">Nombre: <%= `${user.name} ${user.last_name}` %> </p>
+            <p class="profile-info">Correo electrónico: <%= user.mail %></p>
+
+            <form method="post" action="/user/profile">
+               <button class="logout-button">Cerrar Sesión</button>
             </form>
+
          </main>
 
          <!-- Footer -->

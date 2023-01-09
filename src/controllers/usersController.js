@@ -18,7 +18,6 @@ const controller = {
       if (user.dataValues) {
          // Verifica si la contraseña es correcta
          const verified = bcrypt.compareSync(req.body.contrasena, user.dataValues.password)
-         console.log(verified);
 
          if (verified) {
             // Elimina contraseña de user por seguridad
@@ -75,8 +74,17 @@ const controller = {
          res.redirect("/user/login")
       }
    },
+         
+    profile: (req, res) => res.render('./users/profile', {user: req.session.userLogged}),
 
-   profile: (req, res) => res.send("Hola " + req.session.userLogged.nombre + ", estás loggeado " + req.cookies.userLogged),
+    logout: (req, res) => {
+      
+      // Se elimina al user de session
+      req.session.userLogged = null
+
+      res.redirect("/")
+
+    },
 
    cart: (req, res) => res.render('./users/productCartCorreccion'),
 }
