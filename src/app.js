@@ -34,7 +34,7 @@ app.use('/products',productRoute);
 app.use('/user',usersRoute);
 
 // ************ catch 404 and forward to error handler ************
-app.use((req, res, next) => next(createError(404)));
+/*app.use((req, res, next) => next(createError(404)));
 
 // ************ error handler ************
 app.use((err, req, res, next) => {
@@ -46,7 +46,7 @@ app.use((err, req, res, next) => {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
-});
+});*/
 
 const port = process.env.PORT || 8000
 app.listen(port, () => console.log(`Servidor inicializado en http://localhost:${port}`));

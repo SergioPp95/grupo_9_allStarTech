@@ -20,71 +20,70 @@
                         <form action="/products/" method="POST" enctype="multipart/form-data">
                             <div class="product-details">
                                 <div class="input-box">
-                                    <span class="details">Nombre del
-                                        Producto</span>
-                                    <input type="text" placeholder="Nombre del producto" name="name" value="<%= locals.oldData ? oldData.name : null %>" >
+                                    <span class="details">Nombre del Producto</span>
+                                    <input type="text" placeholder="Nombre del producto" name="name"
+                                        value="<%= locals.oldData ? oldData.name : null %>">
                                     <% if (locals.errors && errors.name) { %>
                                         <div class="text-danger">
-                                            <%= errors.name.msg %> 
+                                            <%= errors.name.msg %>
                                         </div>
-                                    <% } %>
+                                        <% } %>
                                 </div>
                                 <div class="input-box">
-                                    <span class="details">Precio del
-                                        producto</span>
-                                    <input type="text" placeholder="Precio del producto" name="price" value="<%= locals.oldData ? oldData.price : null %>" >
+                                    <span class="details">Precio del producto</span>
+                                    <input type="text" placeholder="Precio del producto" name="price"
+                                        value="<%= locals.oldData ? oldData.price : null %>">
                                     <% if (locals.errors && errors.price) { %>
                                         <div class="text-danger">
-                                            <%= errors.price.msg %> 
+                                            <%= errors.price.msg %>
                                         </div>
-                                    <% } %>
+                                        <% } %>
                                 </div>
                                 <div class="input-box">
                                     <span class="details">Aplicar
                                         descuento</span>
-                                    <input type="text" placeholder="Aplicar Descuento" name="discount" value="<%= locals.oldData ? oldData.discount : null %>" >
+                                    <input type="text" placeholder="Aplicar Descuento" name="discount"
+                                        value="<%= locals.oldData ? oldData.discount : null %>">
                                     <% if (locals.errors && errors.discount) { %>
                                         <div class="text-danger">
-                                            <%= errors.discount.msg %> 
+                                            <%= errors.discount.msg %>
                                         </div>
-                                    <% } %>
+                                        <% } %>
                                 </div>
                                 <div class="input-box select-category">
-                                    <span for="category">Categoria Del
-                                        Producto</span>
-                                    <select name="category">
-                                        <option value="computer">Computadora
-                                        </option>
-                                        <option value="screen">Pantalla</option>
-                                        <option value="phone">Celular</option>
-                                        <option value="audio">Audio</option>
-                                        <option value="other">Otro</option>
+                                    <label for="category">Categoria Del Producto</label>
+                                    <select name="category" id="category" class="control-form" required>
+                                        <% for(let i=0; i<categories.length; i++) { %>
+                                            <option value="<%= categories[i].id %>">
+                                                <%= categories[i].name %>
+                                            </option>
+                                            <% } %>
                                     </select>
                                     <% if (locals.errors && errors.category) { %>
                                         <div class="text-danger">
-                                            <%= errors.category.msg %> 
+                                            <%= errors.category.msg %>
                                         </div>
-                                    <% } %>
+                                        <% } %>
                                 </div>
                                 <div class="input-box">
                                     <span class="details">Imagen
                                         principal</span>
-                                    <input type="file" placeholder="Imagen Principal" name="image1" >
+                                    <input type="file" placeholder="Imagen Principal" name="image1">
                                     <% if (locals.errors && errors.image1) { %>
                                         <div class="text-danger">
-                                            <%= errors.image1.msg %> 
+                                            <%= errors.image1.msg %>
                                         </div>
-                                    <% } %>
+                                        <% } %>
                                 </div>
                                 <div class="input-box">
                                     <span class="details">Imagen
                                         Secundaria</span>
-                                    <input type="file" placeholder="Imagen Secundaria" name="image2" >
+                                    <input type="file" placeholder="Imagen Secundaria" name="image2">
                                     <% if (locals.errors && errors.image2) { %>
                                         <div class="text-danger">
-                                            <%= errors.image2.msg %> 
+                                            <%= errors.image2.msg %>
                                         </div>
-                                    <% } %>
+                                        <% } %>
                                 </div>
                             </div>
                             <div class="input-box text-description">
@@ -92,10 +91,10 @@
                                     producto:</label>
                                 <textarea class="searchInput" type="textarea" name="description"
                                     placeholder="insertar descripcion del producto"> </textarea>
-                                    <% if (locals.errors && errors.description) { %>
-                                        <div class="text-danger">
-                                            <%= errors.description.msg %> 
-                                        </div>
+                                <% if (locals.errors && errors.description) { %>
+                                    <div class="text-danger">
+                                        <%= errors.description.msg %>
+                                    </div>
                                     <% } %>
                             </div>
                             <div class="button-crud-holder">

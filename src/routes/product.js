@@ -13,19 +13,19 @@ router.get('/', productController.index);
 
 router.get('/create', productController.create); // Formulario de crear producto
 
-router.post('/', upload.fields([
+router.post('/', /*validations,*/ upload.fields([
     { name: "image1", maxCount: 1 },
     { name: "image2", maxCount: 1 }
-]), validations, productController.store); // Recibe datos de creacion
+]), productController.store); // Recibe datos de creacion
 
 router.get('/:id', productController.detail); // Muestra detalles
 
 router.get('/:id/edit', productController.edit) // Formulario de editar producto
 
-router.put('/:id', upload.fields([
+router.put('/:id', /*validations ,*/upload.fields([
     { name: "image1", maxCount: 1 },
     { name: "image2", maxCount: 1 }
-]), validations, productController.update) // Recibe datos de edicion
+]), productController.update) // Recibe datos de edicion
 
 router.delete('/:id', productController.delete)
 

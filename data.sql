@@ -17,4 +17,7 @@ INSERT INTO products  (name,price,category_id,img1,img2,description,discount) va
 
 select * from products;
 
+delete from products 
+where id = 9;
+
 select * FROM users;

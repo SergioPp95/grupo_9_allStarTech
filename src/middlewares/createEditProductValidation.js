@@ -18,7 +18,6 @@ const validations = [
 				throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
 			}
 		}
-
 		return true;
 	}),
     check('image2').custom((value, { req }) => {
