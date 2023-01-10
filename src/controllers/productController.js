@@ -56,6 +56,7 @@ const controller = {
   },
   update: async (req, res) => {
     const resultValidation = validationResult(req);
+    const categories = await db.Category.findAll()
 
     if (resultValidation.errors.length > 0) {
       return res.render('./products/product-Create', {
