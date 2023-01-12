@@ -3,7 +3,7 @@
 
 <!-- Head -->
 <%- include("../partials/head") %>
-
+   <script defer src="/js/login.js"></script>
    <body>
 
       <!-- Header -->
@@ -15,9 +15,11 @@
 
                <label for="email">Correo:</label>
                <input class="CampoTexto" type="email" name="email" id="email" placeholder="Ingresa tu correo">
+               <div class="errorLogin" id="login-error-mail"></div>
 
                <label for="contrasena">Contraseña</label>
-               <input class="CampoTexto" type="password" name="contrasena" id="contrasena" placeholder="Ingresa tu contraseña">
+               <input class="CampoTexto" type="password" name="contrasena" id="password" placeholder="Ingresa tu contraseña">
+               <div class="errorLogin" id="login-error-password"></div>
                
                <p>
                   <input type="checkbox" name="recordar" value="recordar">
