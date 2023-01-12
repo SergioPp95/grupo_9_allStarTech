@@ -3,6 +3,7 @@
 
 <!-- Head -->
 <%- include("../partials/head") %>
+    <script src="/js/register.js" defer></script>
 
     <body>
 
@@ -10,88 +11,85 @@
         <%- include("../partials/header") %>
 
             <main>
-                <form action="/user/register" method="post" class="form-register" enctype="multipart/form-data">
+                <form action="/user/register" method="post" class="form-register" enctype="multipart/form-data" id="register-form">
                     <h4>FORMULARIO DE REGISTRO</h4>
-                    
+
                     <label>Nombre:</label>
-                    <input class="CampoTexto" 
-                    type="text" 
-                    name="nombre" 
-                    id="nombre" 
-                    placeholder="Insertar Nombre"
-                    value="<%= locals.oldData ? oldData.nombre : null  %>">
+                    <input class="CampoTexto" type="text" name="nombre" id="register-name" placeholder="Insertar Nombre"
+                        value="<%= locals.oldData ? oldData.nombre : null  %>">
                     <% if (locals.errors && errors.nombre) { %>
                         <div><label>
-                            <%= errors.nombre.msg  %> 
-                        </label></div>
-                    <% } %>
-                    
-                    
-                    <label>Apellidos:</label>
-                    <input class="CampoTexto" 
-                    type="text" 
-                    name="apellido" 
-                    id="apellido" 
-                    placeholder="Insertar Apellido"
-                    value="<%= locals.oldData ? oldData.apellido: null  %>">
-                    <% if (locals.errors && errors.apellido) { %>
-                        <div><label>
-                            <%= errors.apellido.msg  %> 
-                        </label></div>
-                    <% } %>
-                    
-                    <label>Imagen de perfil:</label>
-                    <input class="CampoTexto" type="file" name="imagenPerfil" id="imagenPerfil">
-                    <% if (locals.errors && errors.imagenPerfil) { %>
-                        <div><label>
-                            <%= errors.imagenPerfil.msg  %> 
-                        </label></div>
-                    <% } %>
-                    
-                    <label>Correo:</label>
-                    <input class="CampoTexto" 
-                    type="email" 
-                    name="email" 
-                    id="email" 
-                    placeholder="Insertar Correo"
-                    value="<%= locals.oldData ? oldData.email : null  %>">
-                    <% if (locals.errors && errors.email) { %>
-                        <div><label>
-                            <%= errors.email.msg  %> 
-                        </label></div>
-                    <% } %>
-                    
-                    <label>Contraseña:</label>
-                    <input class="CampoTexto" 
-                    type="password" 
-                    name="contrasena" 
-                    id="contrasena"
-                    placeholder="Insertar Contraseña" minlength="8">
-                        <% if (locals.errors && errors.contrasena) { %>
-                            <div><label>
-                                <%= errors.contrasena.msg  %> 
+                                <%= errors.nombre.msg %>
                             </label></div>
                         <% } %>
-                    
-                     <label>Confirma contraseña:</label>
-                    <input class="CampoTexto" type="password" name="contrasena2" id="contrasena2"
-                        placeholder="Repetir Contraseña" minlength="8">
-                        <% if (locals.errors && errors.contrasena2) { %>
-                            <div><label>
-                                <%= errors.contrasena2.msg  %> 
-                            </label></div>
-                        <% } %>
-                    
-                     <p>
-                        <input type="checkbox" name="terminos" value="acepto" required>
-                        <a href="#">Aceptas terminos y condiciones</a>
-                    </p>
-                    
-                    <input class="Boton" type="submit" value="BIENVENIDO">
+                            <div class="errorLogin" id="register-error-name"></div>
 
-                    <p>
-                        <a href="./login">¿Ya tienes cuenta?</a>
-                    </p>
+
+                            <label>Apellidos:</label>
+                            <input class="CampoTexto" type="text" name="apellido" id="register-last-name"
+                                placeholder="Insertar Apellido" value="<%= locals.oldData ? oldData.apellido: null  %>">
+                            <% if (locals.errors && errors.apellido) { %>
+                                <div><label>
+                                        <%= errors.apellido.msg %>
+                                    </label></div>
+                                <% } %>
+                                    <div class="errorLogin" id="register-error-last-name"></div>
+
+                                    <label>Imagen de perfil:</label>
+                                    <input class="CampoTexto" type="file" name="imagenPerfil" id="register-file">
+                                    <% if (locals.errors && errors.imagenPerfil) { %>
+                                        <div><label>
+                                                <%= errors.imagenPerfil.msg %>
+                                            </label></div>
+                                        <% } %>
+                                            <div class="errorLogin" id="register-error-file"></div>
+
+                                            <label>Correo:</label>
+                                            <input class="CampoTexto" type="email" name="email" id="register-mail"
+                                                placeholder="Insertar Correo"
+                                                value="<%= locals.oldData ? oldData.email : null  %>">
+                                            <% if (locals.errors && errors.email) { %>
+                                                <div><label>
+                                                        <%= errors.email.msg %>
+                                                    </label></div>
+                                                <% } %>
+                                                    <div class="errorLogin" id="register-error-mail"></div>
+
+                                                    <label>Contraseña:</label>
+                                                    <input class="CampoTexto" type="password" name="contrasena"
+                                                        id="register-password" placeholder="Insertar Contraseña"
+                                                        minlength="8">
+                                                    <% if (locals.errors && errors.contrasena) { %>
+                                                        <div><label>
+                                                                <%= errors.contrasena.msg %>
+                                                            </label></div>
+                                                        <% } %>
+                                                            <div class="errorLogin" id="register-error-password"></div>
+
+                                                            <label>Confirma contraseña:</label>
+                                                            <input class="CampoTexto" type="password" name="contrasena2"
+                                                                id="register-check-password"
+                                                                placeholder="Repetir Contraseña" minlength="8">
+                                                            <% if (locals.errors && errors.contrasena2) { %>
+                                                                <div><label>
+                                                                        <%= errors.contrasena2.msg %>
+                                                                    </label></div>
+                                                                <% } %>
+                                                                    <div class="errorLogin"
+                                                                        id="register-error-check-password"></div>
+
+                                                                    <p>
+                                                                        <input type="checkbox" name="terminos"
+                                                                            value="acepto" required>
+                                                                        <a href="#">Aceptas terminos y condiciones</a>
+                                                                    </p>
+
+                                                                    <input class="Boton" type="submit"
+                                                                        value="BIENVENIDO">
+
+                                                                    <p>
+                                                                        <a href="./login">¿Ya tienes cuenta?</a>
+                                                                    </p>
                 </form>
             </main>
 

@@ -10,16 +10,16 @@
       <%- include("../partials/header") %>
 
          <main>
-            <form class="login" action="/user/login" method="post">
+            <form class="login" id="login-form" action="/user/login" method="post">
                <h5>INICIAR SESION</h5>
 
                <label for="email">Correo:</label>
                <input class="CampoTexto" type="email" name="email" id="email" placeholder="Ingresa tu correo">
-               <div class="errorLogin" id="login-error-mail"></div>
+               <div class="errorLogin" id="login-error-mail">Tienes que ingresar un mail válido</div>
 
                <label for="contrasena">Contraseña</label>
                <input class="CampoTexto" type="password" name="contrasena" id="password" placeholder="Ingresa tu contraseña">
-               <div class="errorLogin" id="login-error-password"></div>
+               <div class="errorLogin" id="login-error-password">Tienes que escribir una contraseña</div>
                
                <p>
                   <input type="checkbox" name="recordar" value="recordar">

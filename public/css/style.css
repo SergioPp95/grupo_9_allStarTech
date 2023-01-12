@@ -492,6 +492,11 @@ main a {
    font-size: 14px;
 }
 
+.errorLogin {
+   color: red;
+   display: none;
+}
+
 /** /user/register **/
 
 .form-register {

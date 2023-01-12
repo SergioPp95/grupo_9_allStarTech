@@ -9,8 +9,6 @@ const validations = [
 	check('image1').custom(function (value, { req }) {
 		if (req.files.image1) {
 			let extension = (path.extname(req.files.image1[0].originalname)).toLowerCase();
-			console.log(!(['.jpg', '.png', '.jpeg'].includes(extension)));
-			console.log(extension)
 			if (!(['.jpg', '.png', '.jpeg'].includes(extension))) {
 				throw new Error('Tienes que subir una imagen en formato:'['.jpg', '.png', '.jpeg'].join(', '))
 			}
@@ -21,8 +19,6 @@ const validations = [
 	check('image2').custom(function (value, { req }) {
 		if (req.files.image1) {
 			let extension = (path.extname(req.files.image2[0].originalname)).toLowerCase();
-			console.log(!(['.jpg', '.png', '.jpeg'].includes(extension)));
-			console.log(extension)
 			if (!(['.jpg', '.png', '.jpeg'].includes(extension))) {
 				throw new Error('Tienes que subir una imagen en formato:'['.jpg', '.png', '.jpeg'].join(', '))
 			}
