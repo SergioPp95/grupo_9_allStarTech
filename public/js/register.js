@@ -3,12 +3,14 @@ let name = document.getElementById('register-name');
 let lastName = document.getElementById('register-last-name');
 let mail = document.getElementById('register-mail');
 let password = document.getElementById('register-password');
+let checkPassword = document.getElementById('register-check-password');
 let file = document.getElementById('register-file');
 
 let errorName = document.getElementById('register-error-name');
 let errorLastName = document.getElementById('register-error-last-name');
 let errorMail = document.getElementById('register-error-mail');
 let errorPassword = document.getElementById('register-error-password');
+let errorCheckPassword = document.getElementById('register-error-check-password');
 let errorFile = document.getElementById('register-error-file')
 
 let errors = {
@@ -68,20 +70,35 @@ mail.addEventListener('change', () => {
 });
 
 password.addEventListener('change', () => {
-    let regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/
-    let valid = regex.test(password.value);
+    const regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/
+    const valid = regex.test(password.value);
     if (!valid) {
         errors.password = true;
     } else {
         errors.password = false
     }
 
-    if (errors.lastName) {
-        errorPassword.innerHTML = 'Obligatorio: 8 caracteres, 1 mayúscula, 1 minúscula y un caracter especial (@$!%*#?&)'
+    if (errors.password) {
+        errorPassword.innerHTML = 'Obligatorio: mínimo 8 caracteres, 1 mayúscula, 1 minúscula y un caracter especial (@$!%*#?&)'
         errorPassword.style.display = 'block'
     } else {
         errorPassword.style.display = 'none'
     }
+});
+
+checkPassword.addEventListener('change', () => {
+   if (!(checkPassword.value === password.value)) {
+       errors.checkPassword = true;
+   } else {
+       errors.checkPassword = false
+   }
+   
+   if (errors.checkPassword) {
+      errorCheckPassword.innerHTML = 'Las contraseñas deben coincidir'
+      errorCheckPassword.style.display = 'block'
+   } else {
+      errorCheckPassword.style.display = 'none'
+   }
 });
 
 file.addEventListener('change', () => {
