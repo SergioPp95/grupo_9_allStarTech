@@ -2,7 +2,7 @@
 <html lang="en">
 <!-- Head -->
 <%- include("../partials/head") %>
-
+<script defer src="/js/editProduct.js"></script>
     <body>
         <!-- Header -->
         <%- include("../partials/header") %>
@@ -10,38 +10,45 @@
                 <div class="container">
                     <div class="title">Edicion del producto</div>
                     <div class="content">
-                        <form action="/products/<%= product.id %>?_method=PUT" method="POST"
+                        <form id="product-edit-form" action="/products/<%= product.id %>?_method=PUT" method="POST"
                             enctype="multipart/form-data">
                             <div class="product-details">
                                 <div class="input-box">
                                     <span class="details">Nombre del Producto</span>
-                                    <input type="text" value="<%= product.name %>" name="name" required>
+                                    <input id ="product-edit-name" type="text" value="<%= product.name %>" name="name" required>
                                     <% if (locals.errors && errors.name) { %>
                                         <div class="text-danger">
                                             <%= errors.name.msg %>
                                         </div>
                                         <% } %>
+                                    <div class="errorLogin" id="product-edit-error-name"></div>
                                 </div>
+
+
+
                                 <div class="input-box">
                                     <span class="details">Precio del
                                         producto</span>
-                                    <input type="text" value="<%= product.price %>" name="price" required>
+                                    <input type="text" id="product-edit-price" value="<%= product.price %>" name="price" required>
                                     <% if (locals.errors && errors.price) { %>
                                         <div class="text-danger">
                                             <%= errors.price.msg %>
                                         </div>
                                         <% } %>
+                                    <div class="errorLogin" id="product-edit-error-price"></div>
                                 </div>
                                 <div class="input-box">
                                     <span class="details">Aplicar
                                         descuento</span>
-                                    <input type="text" value="<%= product.discount %> " name="discount" required>
+                                    <input type="text" id="product-edit-discount" value="<%= product.discount %> " name="discount" required>
                                     <% if (locals.errors && errors.discount) { %>
                                         <div class="text-danger">
                                             <%= errors.discount.msg %>
                                         </div>
                                         <% } %>
+                                    <div class="errorLogin" id="product-edit-error-discount"></div>
                                 </div>
+
                                 <div class="input-box select-category">
                                     <span for="category">Categoria Del
                                         Producto</span>
@@ -62,34 +69,37 @@
                                 <div class="input-box">
                                     <span class="details">Imagen
                                         principal</span>
-                                    <input type="file" placeholder="Imagen Principal" name="image1">
+                                    <input type="file" id='product-edit-file' placeholder="Imagen Principal" name="image1">
                                     <% if (locals.errors && errors.image1) { %>
                                         <div class="text-danger">
                                             <%= errors.image1.msg %>
                                         </div>
                                         <% } %>
+                                    <div class="errorLogin" id="product-edit-error-file"></div>
                                 </div>
                                 <div class="input-box">
                                     <span class="details">Imagen
                                         Secundaria</span>
-                                    <input type="file" placeholder="Imagen Secundaria" name="image2">
+                                    <input type="file" id='product-edit-file2' placeholder="Imagen Secundaria" name="image2">
                                     <% if (locals.errors && errors.image2) { %>
                                         <div class="text-danger">
                                             <%= errors.image2.msg %>
                                         </div>
                                         <% } %>
+                                    <div class="errorLogin" id="product-edit-error-file2"></div>
                                 </div>
                             </div>
                             <div class="input-box text-description">
                                 <label for="description">Descripcion del
                                     producto:</label>
-                                <textarea class="searchInput" type="textarea" name="description" rows="5" cols="33"
+                                <textarea class="searchInput" type="textarea" name="description" id= 'product-edit-description' rows="5" cols="33"
                                     name="description"><%= product.description %></textarea>
                                 <% if (locals.errors && errors.description) { %>
                                     <div class="text-danger">
                                         <%= errors.description.msg %>
                                     </div>
                                     <% } %>
+                                <div class="errorLogin" id="product-edit-error-description"></div>
                             </div>
                             <div class="button-crud-holder">
                                 <button class="button-crud" type="submit">Actualizar
