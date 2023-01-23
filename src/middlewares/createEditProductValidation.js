@@ -6,37 +6,27 @@ const validations = [
 	check('price').notEmpty().withMessage('Tienes que insertar el precio del producto'),
 	check('discount').notEmpty().withMessage('Tienes que insertar el descuento del producto'),
 	check('category').notEmpty().withMessage('Tienes que elegir la categoria del producto'),
-	check('image1').custom((value, { req }) => {
-		let file = req.file;
-		let acceptedExtensions = ['.jpg', '.png', '.gif'];
-		
-		if (!file) {
-			throw new Error('Tienes que subir una imagen');
-		} else {
-			let fileExtension = path.extname(file.originalname);
-			if (!acceptedExtensions.includes(fileExtension)) {
-				throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+	check('image1').custom(function (value, { req }) {
+		if (req.files.image1) {
+			let extension = (path.extname(req.files.image1[0].originalname)).toLowerCase();
+			if (!(['.jpg', '.png', '.jpeg'].includes(extension))) {
+				throw new Error('Tienes que subir una imagen en formato:'['.jpg', '.png', '.jpeg'].join(', '))
 			}
 		}
 
-		return true;
+		return true
 	}),
-    check('image2').custom((value, { req }) => {
-		let file = req.file;
-		let acceptedExtensions = ['.jpg', '.png', '.gif'];
-		
-		if (!file) {
-			throw new Error('Tienes que subir una imagen');
-		} else {
-			let fileExtension = path.extname(file.originalname);
-			if (!acceptedExtensions.includes(fileExtension)) {
-				throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+	check('image2').custom(function (value, { req }) {
+		if (req.files.image1) {
+			let extension = (path.extname(req.files.image2[0].originalname)).toLowerCase();
+			if (!(['.jpg', '.png', '.jpeg'].includes(extension))) {
+				throw new Error('Tienes que subir una imagen en formato:'['.jpg', '.png', '.jpeg'].join(', '))
 			}
 		}
 
-		return true;
+		return true
 	}),
-    check('description').notEmpty().withMessage('tienes que escribir una descripcion del producto')
+	check('description').notEmpty().withMessage('tienes que escribir una descripcion del producto')
 ]
 
 module.exports = validations

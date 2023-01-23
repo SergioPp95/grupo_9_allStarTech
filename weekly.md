@@ -54,3 +54,77 @@ sprint 5:
   - eslint
   - mantenimiento
   - validacion del login
+
+
+sprint 6:
+6/1/2023
+
+-que se va a hacer?
+  - creacion del esquema de la base de datos
+  - creacion de las tablas y la base de datos
+  - linkear la base de datos con el proyecto 
+  - realizar el config y las asociaciones entre entre tablas dentro del proyecto a traves de sequelize
+  - realizar el crud completo con base de datos
+
+-asistentes: 
+ - juan zimmerman
+ - nico lanzilotta
+ - edgard sanchez
+ - juan medina
+ - bryan ortiz
+  
+-inasitencia:
+  -sergio pepe
+
+
+7/1/2023 
+
+-¿Qué se hizo en la última daily? division de tareas
+
+-impedimentos? ninguno
+
+-que se hizo?
+  - creacion de la base de datos 
+  - linkeo de la base con el proyecto 
+  - config y asociaciones a traves de sequelize
+
+  -que se va a hacer?
+  - crud 
+  - completar la base de datos con los productos
+  
+-asistentes: 
+ - juan zimmerman
+ - nico lanzilotta
+ - edgard sanchez
+ - juan medina
+ - bryan ortiz
+  
+-inasitencia:
+  -sergio pepe
+
+
+9/1/2023 
+
+-¿Qué se hizo en la última daily? pair programming del proyecto
+
+-impedimentos? ninguno
+
+-que se hizo?
+  - crud 
+  - completar la base de datos con los productos
+
+
+-asistentes: 
+ - juan zimmerman
+ - nico lanzilotta
+ - edgard sanchez
+ - juan medina
+ - bryan ortiz
+  
+-inasitencia:
+  -sergio pepe
+
+
+
+  
+  

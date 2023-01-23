@@ -38,3 +38,24 @@ retro sprint 4:
 - 4: hacer menos - quedarse con dudas y no consultar al equipo
 - 5: dejar de hacer - entregar y correjir las partes individuales a ultimo momento, dejar de desarrollar en desktop first
 
+retro sprint 5:
+- 1: comenzar a hacer -  realizar pair programming, mantenimiento del proyecto, establecer horarios donde podriamos compartir pair programming, establecer fechas limites de entrega para mergear con tiempo
+- 2: hacer mas - comunicacion mas activa , tener una mayor constancia con las reuniones, poder ayudar a los compañeros
+- 3: continuar haciendo - cumplir con las entregas, la practica del pull request y avisar cuando cada uno subio su parte, usar trello
+- 4: hacer menos - quedarse con dudas y no consultar al equipo
+- 5: dejar de hacer - entregar y correjir las partes individuales a ultimo momento
+
+
+retro sprint 6:
+- 1: comenzar a hacer - establecer horarios donde podriamos compartir pair programming, motivarnos para terminar la ultima etapa del proyecto
+- 2: hacer mas -  realizar pair programming,  mantenimiento del proyecto, reuniones
+- 3: continuar haciendo -  cumplir con las entregas, la practica del pull request y avisar cuando cada uno subio su parte, establecer fechas limites de entrega para mergear con tiempo, usar trello
+- 4: hacer menos - quedarse con dudas y no consultar al equipo
+- 5: dejar de hacer - falta de compromiso con el proyecto
+
+retro sprint 7:
+- 1: Comenzar a hacer - -----------
+- 2: Hacer más - Pair programming (funcionó bastante). Más de una reunion en el mismo día si no podemos a la vez.
+- 3: Continuar haciendo - cumplir con entregas, pair programming, avisar cuando alguien sube su parte y establecer fechas limites.
+- 4: Hacer menos - Quedarse hasta ultimo momento y no hacer nada al principio.
+- 5: Dejar de hacer - Faltar a reuniones
