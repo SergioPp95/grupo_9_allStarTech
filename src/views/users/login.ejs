@@ -3,7 +3,8 @@
 
 <!-- Head -->
 <%- include("../partials/head") %>
-   <script defer src="/js/login.js"></script>
+   <!--<script defer src="/js/login.js"></script>-->
+
    <body>
 
       <!-- Header -->
@@ -15,26 +16,37 @@
 
                <label for="email">Correo:</label>
                <input class="CampoTexto" type="email" name="email" id="email" placeholder="Ingresa tu correo">
-               <div class="errorLogin" id="login-error-mail">Tienes que ingresar un mail válido</div>
+               <% if (locals.errors && errors.email) { %>
+                  <div><label>
+                        <%= errors.email.msg %>
+                     </label></div>
+                  <% } %>
+                     <div class="errorLogin" id="login-error-mail">Tienes que ingresar un mail válido</div>
 
-               <label for="contrasena">Contraseña</label>
-               <input class="CampoTexto" type="password" name="contrasena" id="password" placeholder="Ingresa tu contraseña">
-               <div class="errorLogin" id="login-error-password">Tienes que escribir una contraseña</div>
-               
-               <p>
-                  <input type="checkbox" name="recordar" value="recordar">
-                  <label for="recordar">¿Quieres que te recordemos?</label>
-              </p>
+                     <label for="contrasena">Contraseña</label>
+                     <input class="CampoTexto" type="password" name="contrasena" id="password"
+                        placeholder="Ingresa tu contraseña">
+                     <% if (locals.errors && errors.contrasena) { %>
+                        <div><label>
+                              <%= errors.contrasena.msg %>
+                           </label></div>
+                        <% } %>
+                           <div class="errorLogin" id="login-error-password">Tienes que escribir una contraseña</div>
 
-               <input class="Boton" type="submit" value="Ingresar">
+                           <p>
+                              <input type="checkbox" name="recordar" value="recordar">
+                              <label for="recordar">¿Quieres que te recordemos?</label>
+                           </p>
 
-               <p class="Olvido">
-                  <a href="#">¿Olvidaste tu contraseña?</a>
-               </p>
+                           <input class="Boton" type="submit" value="Ingresar">
 
-               <p class="Registro">
-                  <a href="register">¿Aun no tienes cuenta?</a>
-               </p>
+                           <p class="Olvido">
+                              <a href="#">¿Olvidaste tu contraseña?</a>
+                           </p>
+
+                           <p class="Registro">
+                              <a href="register">¿Aun no tienes cuenta?</a>
+                           </p>
             </form>
          </main>
 

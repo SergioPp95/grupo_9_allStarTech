@@ -8,37 +8,25 @@ const controller = {
    login: (req, res) => res.render('./users/login'),
 
    checkLogin: async (req, res) => {
-      // Trae info del usuario por email, si coincide
-      const user = await db.User.findOne({
-         where: {
-            mail: req.body.email
-         }
-      })
-
-      if (user.dataValues) {
-         // Verifica si la contraseña es correcta
-         const verified = bcrypt.compareSync(req.body.contrasena, user.dataValues.password)
-
-         if (verified) {
-            // Elimina contraseña de user por seguridad
-            delete user.dataValues.password
-
-            // Incluye al usuario en session
-            req.session.userLogged = user.dataValues
-
-            // Si aceptó en login, incluye al usuario en cookies para logearlo
-            req.body.recordar ? res.cookie("userLogged", user.dataValues.mail, { maxAge: 1000 * 60 * 5 }) : null // Cookie se guarda por 5 min
-
-            // Redirige a página del perfil si credenciales son correctas
-            res.redirect("/user/profile")
-         } else {
-            // Si contraseña es incorrecta redirige a login
-            res.redirect("/user/login")
-         }
-
+      const resultValidation = validationResult(req)
+      if (resultValidation.errors.length > 0) {
+         res.render('./users/login', {
+            errors: resultValidation.mapped(),
+            oldData: req.body
+         })
       } else {
-         // Si email es incorrecto redirige a login
-         res.redirect("/login")
+
+         const user = await db.User.findOne({
+            where: {
+               mail: req.body.email
+            }
+         })
+         delete(user.dataValues.password)
+         req.session.userLogged = user.dataValues
+
+         req.body.recordar ? res.cookie("userLogged", user.dataValues.mail, { maxAge: 1000 * 60 * 5 }) : null // Cookie se guarda por 5 min
+
+         res.redirect("/user/profile")
       }
    },
 
@@ -74,17 +62,17 @@ const controller = {
          res.redirect("/user/login")
       }
    },
-         
-    profile: (req, res) => res.render('./users/profile', {user: req.session.userLogged}),
 
-    logout: (req, res) => {
-      
+   profile: (req, res) => res.render('./users/profile', { user: req.session.userLogged }),
+
+   logout: (req, res) => {
+
       // Se elimina al user de session
       req.session.userLogged = null
 
       res.redirect("/")
 
-    },
+   },
 
    cart: (req, res) => res.render('./users/productCartCorreccion'),
 }
