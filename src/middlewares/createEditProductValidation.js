@@ -3,7 +3,7 @@ const { check } = require('express-validator') //req validator
 
 const validations = [
 	check('name').notEmpty().custom((value) => {
-        if (value.length < 5) {
+        if (value.length < 6) {
             throw new Error('El nombre es obligatiorio (5 caracteres obligatorio)')
         }
         return true;
