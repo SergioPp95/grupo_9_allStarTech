@@ -1,19 +1,25 @@
 const db = require('../../database/models')
 
+const baseUrl = 'http://127.0.0.1:8000/api/products'
+
 const controller = {
 
    async list(req, res) {
 
       try {
+
+         const itemsPerPage = 5
          
          const categories = await db.Category.findAll({
             attributes: ['name']
          })
          let products = await db.Product.findAll({
             attributes: ['id', 'name', 'description'],
-            include: {association: 'category', attributes: ['name']}
+            include: {association: 'category', attributes: ['name']},
+            limit: req.query.page ? itemsPerPage : null,
+            offset: req.query.page ? (Number(req.query.page) - 1) * itemsPerPage : 0
          })
-         
+
          let countResult = {}
 
          categories.map( category => {
@@ -24,13 +30,18 @@ const controller = {
 
          products = products.map(product => {
             return {
-               detail: `http://127.0.0.1:8000/api/products/${product.dataValues.id}`,
+               detail: `${baseUrl}/${product.dataValues.id}`,
                ...product.dataValues
             }
          })
 
+         const productQuantity = await db.Product.count()
+
          res.status(200).json({
-            count: products.length,
+            count: productQuantity,
+            page: req.query.page ? `${req.query.page} de ${Math.ceil(productQuantity/itemsPerPage)}` :  `Todos los productos mostrados`,
+            next: req.query.page < Math.ceil(productQuantity/itemsPerPage) || req.query.page == undefined ? `${baseUrl}?page=${(Number(req.query.page) || 0) + 1}` : null,
+            previous: req.query.page > 1 ? `${baseUrl}?page=${Number(req.query.page) - 1}` : null,
             countByCategory: countResult,
             products
          })
@@ -54,7 +65,7 @@ const controller = {
          })
 
          res.status(200).json({
-            view_all_products: `http://127.0.0.1:8000/api/products`,
+            view_all_products: baseUrl,
             ...product.dataValues
          })
 
