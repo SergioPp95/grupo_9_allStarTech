@@ -1,12 +1,13 @@
+DROP DATABASE IF EXISTS allStarTech;
 CREATE DATABASE allStarTech;
 USE allStarTech;
 
 create table users (
     id smallint not null auto_increment,
-    mail text default null,
+    mail text unique not null,
     name text default null,
     last_name text default null,
-    password text default null,
+    password text not null,
     picture text NOT NULL,
     is_admin smallint(2) default null,
     createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -29,6 +30,7 @@ create table products (
     name text default null,
     price mediumint(10) default null,
     category_id smallint(6) default null,
+    seller_id smallint(6) default null,
     img1 text default null,
     img2 text default null,
     description text default null,
@@ -37,5 +39,6 @@ create table products (
     updatedAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     deletedAt timestamp NULL,
   primary key (id),
-  foreign key (category_id) references categories(id)
+  foreign key (category_id) references categories(id),
+  foreign key (seller_id) references users(id)
 );

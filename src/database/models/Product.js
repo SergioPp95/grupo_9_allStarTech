@@ -17,6 +17,9 @@ module.exports = function products(sequelize, dataTypes) {
         category_id: {
             type: dataTypes.INTEGER,
         },
+        seller_id: {
+            type: dataTypes.INTEGER,
+        },
         img1: {
             type: dataTypes.TEXT,
         },
@@ -43,6 +46,10 @@ module.exports = function products(sequelize, dataTypes) {
         Product.belongsTo(models.Category, {
             as: "category",
             foreignKey: "category_id"
+        })
+        Product.belongsTo(models.User, {
+            as: 'Seller',
+            foreignKey: 'seller_id'
         })
     };
 

@@ -1,9 +1,9 @@
 const { check } = require('express-validator');
+const { unlinkSync } = require('fs');
 const path = require('path');
 const db = require('../database/models');
 
 const validations = [
-    //check('nombre').notEmpty().withMessage('El nombre es obligatiorio (2 caracteres obligatorio)'),
     check('nombre').custom((value) => {
         if (value.length < 2) {
             throw new Error('El nombre es obligatiorio (2 caracteres obligatorio)')
@@ -19,14 +19,14 @@ const validations = [
     check('email').notEmpty().withMessage('El email es obligatiorio').bail()
         .isEmail().withMessage('El formato no coincide con un correo electronico')
         .custom(async (value) => {
-            valid = await db.User.findOne(
+            valid = await db.User.count(
                 {
                     where: {
                         mail: value
                     }
                 }
             )
-            console.log(valid);
+            
             if (valid) {
                 throw new Error('Ya existe una cuenta con ese mail')
             }
@@ -52,6 +52,7 @@ const validations = [
         if (req.file) {
             let extension = (path.extname(req.file.originalname)).toLowerCase();
             if (!(['.jpg', '.png', '.jpeg'].includes(extension))) {
+               unlinkSync(req.file.path)
                 throw new Error('Tienes que subir una imagen en formato .jpg, .png, .jpeg')
             }
         }

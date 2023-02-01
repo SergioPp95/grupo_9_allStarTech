@@ -1,19 +1,15 @@
 const { check } = require('express-validator');
-const path = require('path');
+const bcrypt = require('bcrypt');
 const db = require('../database/models');
 
 const validations = [
     check('email').notEmpty().withMessage('El email es obligatiorio').bail()
-        .isEmail().withMessage('El formato no coincide con un correo electronico')
-        .custom(async (value) => {
-            valid = await db.User.findOne(
-                {
-                    where: {
-                        mail: value
-                    }
-                }
-            )
-            console.log(valid);
+        .isEmail().withMessage('El formato no coincide con un correo electronico').bail()
+        .custom(async value => {
+            valid = await db.User.count({
+                    where: {mail: value}
+            })
+            
             if (!valid) {
                 throw new Error('No existe una cuenta con ese email')
             }
@@ -23,7 +19,8 @@ const validations = [
         const user = await db.User.findOne({
             where: {
                 mail: req.body.email
-            }
+            },
+            attributes: ['password']
         })
         if (user) {
             const verified = bcrypt.compareSync(value, user.dataValues.password)
@@ -31,7 +28,7 @@ const validations = [
                 throw new Error('Contraseña incorrecta');
             }
         } else {
-            throw new Error('Contraseña incorrecta')
+            throw new Error('No existe una cuenta con ese email')
         }
         return true;
     }),

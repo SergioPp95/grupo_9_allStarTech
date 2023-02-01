@@ -3,9 +3,6 @@ const path = require('path');
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
 
-//const productsPath = path.join(__dirname, '../data/products.json')
-//let products = JSON.parse(fs.readFileSync(productsPath, 'utf-8'))
-
 const controller = {
   index: async (req, res) => {
     let products = await db.Product.findAll()
