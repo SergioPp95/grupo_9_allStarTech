@@ -1,5 +1,6 @@
 const path = require("path");
-const { check } = require('express-validator') //req validator
+const { check } = require('express-validator'); //req validator
+const { unlinkSync } = require("fs");
 
 const validations = [
 	check('name').custom((value) => {
@@ -33,6 +34,7 @@ const validations = [
 		if (req.files.image1) {
 			let extension = (path.extname(req.files.image1[0].originalname)).toLowerCase();
 			if (!(['.jpg', '.png', '.jpeg'].includes(extension))) {
+            unlinkSync(req.files.image1[0].path)
 				throw new Error('Tienes que subir una imagen en formato:'['.jpg', '.png', '.jpeg'].join(', '))
 			}
 		}
@@ -43,6 +45,7 @@ const validations = [
 		if (req.files.image2) {
 			let extension = (path.extname(req.files.image2[0].originalname)).toLowerCase();
 			if (!(['.jpg', '.png', '.jpeg'].includes(extension))) {
+            unlinkSync(req.files.image2[0].path)
 				throw new Error('Tienes que subir una imagen en formato:'['.jpg', '.png', '.jpeg'].join(', '))
 			}
 		}
