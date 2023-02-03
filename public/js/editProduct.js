@@ -49,7 +49,7 @@ price.addEventListener('change', () => {
     }
     
     if (errors.price) {
-        errorPrice.innerHTML = 'Obligatorio'
+        errorPrice.innerHTML = 'Obligatorio (solo valores numéricos)'
         errorPrice.style.display = 'block'
     } else {
         errorPrice.style.display = 'none'
@@ -67,7 +67,7 @@ discount.addEventListener('change', () => {
     }
 
     if (errors.discount) {
-        errorDiscount.innerHTML = 'Obligatorio'
+        errorDiscount.innerHTML = 'Obligatorio (solo valores numéricos entre 0 y 100'
         errorDiscount.style.display = 'block'
     } else {
         errorDiscount.style.display = 'none'

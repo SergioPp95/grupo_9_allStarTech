@@ -37,6 +37,7 @@ const controller = {
         img1: req.files.image1 ? req.files.image1[0].filename : defaultImg,
         img2: req.files.image2 ? req.files.image2[0].filename : defaultImg,
         category_id: req.body.category,
+        seller_id: req.session.userLogged.id,
         price: req.body.price,
         discount: req.body.discount,
       }
