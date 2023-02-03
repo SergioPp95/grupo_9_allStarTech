@@ -1,5 +1,3 @@
-const fs = require('fs');
-const path = require('path');
 const bcrypt = require("bcrypt");
 const { validationResult } = require('express-validator');
 const db = require('../database/models')
@@ -19,9 +17,10 @@ const controller = {
          const user = await db.User.findOne({
             where: {
                mail: req.body.email
-            }
+            },
+            attributes: {exclude: ['password']}
          })
-         delete(user.dataValues.password)
+         
          req.session.userLogged = user.dataValues
 
          req.body.recordar ? res.cookie("userLogged", user.dataValues.mail, { maxAge: 1000 * 60 * 5 }) : null // Cookie se guarda por 5 min

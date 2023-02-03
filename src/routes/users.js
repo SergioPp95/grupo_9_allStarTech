@@ -6,7 +6,7 @@ const usersController = require('../controllers/usersController')
 const upload = require("../middlewares/uploadUser")
 const userLoginByCookie = require("../middlewares/userLoginByCookie")
 const userRouteCheck = require("../middlewares/userRouteCheck")
-const validations = require('../middlewares/userValidations');
+const validationsRegister = require('../middlewares/userRegisterValidation');
 const validationsLogin = require('../middlewares/userLoginValidation');
 
 // ** Rutas **
@@ -16,7 +16,7 @@ router.post("/login", validationsLogin, usersController.checkLogin)
 
 router.get('/register', userRouteCheck.forGuests, usersController.register);
 
-router.post("/register", upload.single("imagenPerfil"), validations , usersController.addRegister)
+router.post("/register", upload.single("imagenPerfil"), validationsRegister , usersController.addRegister)
 
 router.get("/profile", userRouteCheck.forUsers, usersController.profile)
 
