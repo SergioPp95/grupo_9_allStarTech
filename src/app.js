@@ -26,10 +26,14 @@ app.set('views', 'src/views')
 const indexRoute = require('./routes/index');
 const usersRoute = require('./routes/users');
 const productRoute = require('./routes/product');
+const usersApiRoute = require('./routes/api/usersApi');
+const productsApiRoute = require('./routes/api/productsApi');
 
 app.use('/',indexRoute);
 app.use('/products',productRoute);
 app.use('/user',usersRoute);
+app.use('/api/users', usersApiRoute);
+app.use('/api/products', productsApiRoute);
 
 // ************ catch 404 and forward to error handler ************
 /*app.use((req, res, next) => next(createError(404)));
