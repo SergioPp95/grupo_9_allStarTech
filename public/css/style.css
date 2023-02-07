@@ -1123,6 +1123,12 @@ main a {
 
 /** /product/results **/
 
+.newTitle{
+   color: blanchedalmond;
+    padding-left: 4%;
+    padding-bottom: 4px;
+}
+
 .order-filter {
    margin: 1rem auto;
    display: flex;
@@ -1876,6 +1882,14 @@ main a {
       width: 40%;
    }
 
+   .productList{
+      display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+
    .content .product {
       width: 45%;
       display: flex;
@@ -1963,6 +1977,17 @@ main a {
 
    .content .product {
       width: 22%;
+      display: flex;
+      flex: wrap;
+   }
+
+   .productList {
+      display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    height: 47%;
+    gap: 9px;
    }
 
    /** productCart Correccion **/
