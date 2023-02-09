@@ -18,6 +18,8 @@ router.post('/', forUsers, upload.fields([
     { name: "image2", maxCount: 1 }
 ]), validations, productController.store); // Recibe datos de creacion
 
+router.post('/search', productController.search);
+
 router.get('/:id', productController.detail); // Muestra detalles
 
 router.get('/:id/edit', forUsers, updateProductCheck, productController.edit) // Formulario de editar producto

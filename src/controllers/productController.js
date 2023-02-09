@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
+const Op = db.Sequelize.Op;
 
 const controller = {
 
@@ -11,9 +12,22 @@ const controller = {
     // CODIGO ACA
   },
 
+  search: async (req, res) => {
+    const search = req.body.search;
+    const results = await db.Product.findAll({
+      where: {
+        name: {
+          [Op.like]: '%' + search + '%'
+        }
+      }
+    })
+    console.log(results)
+    res.render('./products/products',{products: results})
+  },
+
   create: async (req, res) => {
     const categories = await db.Category.findAll()
-    res.render('./products/product-create', { categories:categories })
+    res.render('./products/product-create', { categories: categories })
   },
 
   store: async (req, res) => {
@@ -25,7 +39,7 @@ const controller = {
       return res.render('./products/product-Create', {
         errors: resultValidation.mapped(),
         oldData: req.body,
-        categories:categories
+        categories: categories
       });
     } else {
 
@@ -41,7 +55,7 @@ const controller = {
         price: req.body.price,
         discount: req.body.discount,
       }
-      
+
       await db.Product.create(product)
 
       res.redirect('/products/')
@@ -67,7 +81,7 @@ const controller = {
       return res.render('./products/product-Create', {
         errors: resultValidation.mapped(),
         oldData: req.body,
-        categories:categories
+        categories: categories
       });
     } else {
       // Filtra producto a editar
@@ -100,15 +114,15 @@ const controller = {
   },
 
   delete: async (req, res) => {
-   
-   const product = await db.Product.findByPk(req.params.id)
-    
-   // Elimina imagen actual del producto a borrar
 
-   const defaultImg = "productDefault.png"
+    const product = await db.Product.findByPk(req.params.id)
 
-    if(product.img1 != defaultImg) fs.unlinkSync(path.join(__dirname, "../../public/images/products", product.img1));
-    if(product.img2 != defaultImg) fs.unlinkSync(path.join(__dirname, "../../public/images/products", product.img2));
+    // Elimina imagen actual del producto a borrar
+
+    const defaultImg = "productDefault.png"
+
+    if (product.img1 != defaultImg) fs.unlinkSync(path.join(__dirname, "../../public/images/products", product.img1));
+    if (product.img2 != defaultImg) fs.unlinkSync(path.join(__dirname, "../../public/images/products", product.img2));
 
     await db.Product.destroy({
       where: {

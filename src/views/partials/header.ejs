@@ -12,13 +12,15 @@
       </ul>
    </nav>
 
-   <form action="/" method="get" class="form">
-      <input type="text" placeholder="Search.." id="search">
+   <form action="/products/search" method="POST" class="form">
+      <input type="text" placeholder="Search.." id="search" name="search">
       <button class="botton" type="submit"><i class="fa fa-search"></i></button>
    </form>
 
    <a href="/user/cart" id="shoping-car" class="links"><i class="fas fa-shopping-cart"></i></a>
-   <a href="/user/login" id="shoping-car2" class="links"><i class="fas fa-user-circle"></i></a>
+   <a href="/user/login" id="shoping-car2" class="links">
+      <i class="fas fa-user-circle"></i>
+   </a>
    <button class="burguer-menu" type="button">
       <i class="fas fa-bars"></i>
    </button>
