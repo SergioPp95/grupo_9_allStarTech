@@ -834,7 +834,7 @@ footer article ul {
 .main-container .meta .price-mp {
    align-items: center;
    display: flex;
-   justify-content: space-between;
+   justify-content: space-around;
    font-size: 18px;
    font-weight: 400;
    margin: 20px 0 20px;
@@ -938,6 +938,7 @@ footer article ul {
 .main-container .meta .final-buy .item-final-2 {
    width: 60%;
    height: 58px;
+   margin-bottom: 10px;
 }
 
 .main-container .meta .final-buy div .button-buy .btn-outline {
@@ -948,11 +949,17 @@ footer article ul {
    background-color: #3b3b3b;
    color: var(--blanco);
    margin: 1px 0;
-   padding: 5px 10px;
+   padding: 10px 20px;
 }
+
 
 .main-container .descripcion-producto h2 {
    font-size: 24px;
+   margin-bottom: 15px;
+}
+
+.main-container .descripcion-producto .info{
+   padding: 0px 40px 0px 0px 
 }
 
 .main-container .descripcion-producto p {
@@ -1267,6 +1274,12 @@ form .button input {
       color: var(--grisFondo);
    }
 
+
+   /* product result */
+
+   .content .product {
+      width: 90%
+   }
 }
 
 @media (min-width:481px) {
@@ -1328,7 +1341,7 @@ form .button input {
    /** product/detail/:id? **/
 
    .main-container .meta form .qty .qty-item {
-      width: 5%;
+      width: 10%;
    }
 
    /** user/profile **/
