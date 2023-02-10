@@ -3,14 +3,15 @@ const { validationResult } = require('express-validator');
 const db = require('../database/models')
 
 const controller = {
-   login: (req, res) => res.render('./users/login'),
+   login: (req, res) => res.render('./users/login', { user: req.session.userLogged }),
 
    checkLogin: async (req, res) => {
       const resultValidation = validationResult(req)
       if (resultValidation.errors.length > 0) {
          res.render('./users/login', {
             errors: resultValidation.mapped(),
-            oldData: req.body
+            oldData: req.body,
+            user: req.session.userLogged
          })
       } else {
 
@@ -18,9 +19,9 @@ const controller = {
             where: {
                mail: req.body.email
             },
-            attributes: {exclude: ['password']}
+            attributes: { exclude: ['password'] }
          })
-         
+
          req.session.userLogged = user.dataValues
 
          req.body.recordar ? res.cookie("userLogged", user.dataValues.mail, { maxAge: 1000 * 60 * 5 }) : null // Cookie se guarda por 5 min
@@ -36,7 +37,8 @@ const controller = {
       if (resultValidation.errors.length > 0) {
          res.render('./users/register', {
             errors: resultValidation.mapped(),
-            oldData: req.body
+            oldData: req.body,
+            user: req.session.userLogged
          })
       } else {
          // Se crea el usuario nuevo
@@ -73,7 +75,7 @@ const controller = {
 
    },
 
-   cart: (req, res) => res.render('./users/productCartCorreccion'),
+   cart: (req, res) => res.render('./users/productCartCorreccion', { user: req.session.userLogged }),
 }
 
 module.exports = controller;

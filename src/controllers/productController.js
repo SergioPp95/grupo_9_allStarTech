@@ -8,7 +8,7 @@ const controller = {
 
   index: async (req, res) => {
     let products = await db.Product.findAll()
-    res.render('./products/products', { products })
+    res.render('./products/products', { products, user: req.session.userLogged })
     // CODIGO ACA
   },
 
@@ -22,12 +22,12 @@ const controller = {
       }
     })
     console.log(results)
-    res.render('./products/products',{products: results})
+    res.render('./products/products', { products: results, user: req.session.userLogged })
   },
 
   create: async (req, res) => {
     const categories = await db.Category.findAll()
-    res.render('./products/product-create', { categories: categories })
+    res.render('./products/product-create', { categories: categories, user: req.session.userLogged })
   },
 
   store: async (req, res) => {
@@ -63,14 +63,14 @@ const controller = {
   },
 
   detail: async (req, res) => {
-    let product = await db.Product.findByPk(req.params.id)
-    res.render('./products/product-detail', { product: product.dataValues })
+    let product = await db.Product.findByPk(req.params.id, { include: [{ association: "seller" }] })
+    res.render('./products/product-detail', { product: product.dataValues, user: req.session.userLogged })
   },
 
   edit: async (req, res) => {
     const categories = await db.Category.findAll()
     const product = await db.Product.findByPk(req.params.id)
-    res.render('./products/product-edit', { product: product, categories: categories })
+    res.render('./products/product-edit', { product: product, categories: categories, user: req.session.userLogged })
   },
 
   update: async (req, res) => {

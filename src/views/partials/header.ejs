@@ -5,10 +5,8 @@
 
    <nav>
       <ul class="nav-bar" style="list-style-type:none">
-         <li><a href="/products">PC</a></li>
-         <li><a href="/products">Celulares</a></li>
-         <li><a href="/products">Audio</a></li>
-         <li><a href="/products">Periféricos</a></li>
+         <li><a href="/products">Nuestros Productos</a></li>
+         <li><a href="/products/create">Vender</a></li>
       </ul>
    </nav>
 
@@ -17,9 +15,11 @@
       <button class="botton" type="submit"><i class="fa fa-search"></i></button>
    </form>
 
-   <a href="/user/cart" id="shoping-car" class="links"><i class="fas fa-shopping-cart"></i></a>
    <a href="/user/login" id="shoping-car2" class="links">
       <i class="fas fa-user-circle"></i>
+      <% if(user){ %>
+         <p><%= user.name %></p>
+         <% } %>
    </a>
    <button class="burguer-menu" type="button">
       <i class="fas fa-bars"></i>

@@ -48,7 +48,7 @@ module.exports = function products(sequelize, dataTypes) {
             foreignKey: "category_id"
         })
         Product.belongsTo(models.User, {
-            as: 'Seller',
+            as: 'seller',
             foreignKey: 'seller_id'
         })
     };
