@@ -26,7 +26,7 @@ module.exports = function products(sequelize, dataTypes) {
         img2: {
             type: dataTypes.TEXT,
         },
-        description:{
+        description: {
             type: dataTypes.TEXT,
         },
         discount: {
