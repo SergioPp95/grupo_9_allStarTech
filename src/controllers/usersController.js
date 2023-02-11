@@ -30,7 +30,7 @@ const controller = {
       }
    },
 
-   register: (req, res) => res.render('./users/register'),
+   register: (req, res) => res.render('./users/register', { user: req.session.userLogged}),
 
    addRegister: async (req, res) => {
       const resultValidation = validationResult(req)

@@ -9,59 +9,29 @@
         <!-- Header -->
         <%- include("../partials/header") %>
 
-            <main>
+            <main class="product-content">
 
-                <div class="order-filter">
-
-                    <div class="order">
-                        <select class="ordenar">
-                            <option>Ordenar</option>
-                            <option>Mayor precio</option>
-                            <option>Menor precio</option>
-                        </select>
-                        
-                    </div>
-
-
-                    <div class="categories">
-                        <h3>Producto:</h3>
-                        <label><input type="checkbox" id="cbox1" value="first_checkbox"> PC</label>
-                        <label><input type="checkbox" id="cbox1" value="first_checkbox"> Celulares</label>
-                        <label><input type="checkbox" id="cbox1" value="first_checkbox"> Perifericos</label>
-                    </div>
-                </div>
-
-
-
-                <div class="content">
-
-                    <h4 class="newTitle">Nuevo</h4>
-                    <div class="productList">
-                        <% products.forEach(product=> { %>
-                            <div class="product">
-                                <div>
-                                    <img class="img" src="/images/products/<%= product.img1 %>" />
-                                    <div class="text">
-                                        <p class="name">
-                                            <%= product.name %>
-                                        </p>
-                                        <p class="price">$<%= product.price %>
-                                        </p>
-                                        <p class="discount">%<%= product.discount %> OFF</p>
-                                        <div class="options">
-                                            <a class="ver-más" href="/products/<%= product.id %>">Ver más</a>
-                                            <button type="submit" id="carrito">Agregar
-                                                <span><i class="fa-solid fa-cart-shopping"></i></span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
+                <h4 class="product-title">Nuestros Productos</h4>
+                <div class="productList">
+                    <% products.forEach(product=> { %>
+                        <div class="product container">
+                            <img class="img" src="/images/products/<%= product.img1 %>" />
+                            <div class="text">
+                                <p class="name">
+                                    <%= product.name %>
+                                </p>
+                                <p class="price">$<%= product.price %>
+                                </p>
+                                <p class="discount">%<%= product.discount %> OFF</p>
                             </div>
-                            <% }) %>
-
-
-
-                    </div>
+                            <div class="options">
+                                <a class="ver-más" href="/products/<%= product.id %>">Ver más</a>
+                                <button type="submit" id="carrito">Agregar
+                                    <span><i class="fa-solid fa-cart-shopping"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                        <% }) %>
 
                 </div>
             </main>

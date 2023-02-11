@@ -9,88 +9,39 @@
         <!-- Header -->
         <%- include("../partials/header") %>
 
-            <main>
-                <section class="main-container">
-                    <div class="box-superior">
-                        <div class="product">
-                            <div class="img-air">
-                                <div class="featured">
-                                    <img id="mainpic" src="/images/products/<%= product.img1 %>" alt="<%= product.name %>">
-                                </div>
-                                <div class="more">
-                                    <div class="item">
-                                        <img src="/images/products/<%= product.img2 %>" alt="<%= product.name %>">
-                                    </div>
-                                    <div class="item">
-                                        <img src="/images/products/<%= product.img2 %>" alt="<%= product.name %>">
-                                    </div>
-                                    <div class="item">
-                                        <img src="/images/products/<%= product.img2 %>" alt="<%= product.name %>">
-                                    </div>
-                                    <div class="item">
-                                        <img src="/images/products/<%= product.img2 %>" alt="<%= product.name %>">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="meta">
-                            <h2>
-                                <%= product.name %>
-                            </h2>
-                            <h3>Vendedor: <%= product.seller.name %> </h3>
-                            <section class="puntuacion">
-                                <a class="fa-sharp fa-solid fa-star b1"></a>
-                                <a class="fa-sharp fa-solid fa-star b2"></a>
-                                <a class="fa-sharp fa-solid fa-star b3"></a>
-                                <a class="fa-sharp fa-solid fa-star b4"></a>
-                                <a class="fa-sharp fa-solid fa-star b5"></a>
-                            </section>
-                            <div class="price-main">
-                                Precio en efectivo o transferencia $<%= product.price %>
-                            </div>
-                            <div class="price-mp">
-                                Precio MecadoPago $<%= product.price %>
-                                    <img src="/images/mercadopago.png" alt="logo-mercadopago">
-                            </div>
-                            <div class="price-main-cuotas"> ¡12 cuotas de $<%= parseInt(product.price / 12) %>!</div>
-                            <div class="shipping">
-                                Disponemos del producto para retiro por local o envio en las proximas 48hs
-                            </div>
-                            <div class="tag">
-                                <span class="tag tag-stock">En Stock</span>
-                            </div>
-                            <form>
-                                <div class="qty">
-                                    <label form="qty" class="qty-text">Cantidad:</label>
-                                    <input type="number" id="qty" class="qty-item" value="1">
-                                </div>
-                            </form>
-                            <div class="final-buy">
-                                <div class="item-final-1">
-                                    <!--<button type="submit"><a class="btn-outline"><i class="fas fa-shopping-cart"></i> Agregar</a></button> -->
-                                    <button class="button-buy" type="submit" role="button"><a class="btn-outline"><i
-                                                class="fas fa-shopping-cart"></i> Agregar</a></button>
-                                </div>
-                                <div class="item-final-2">
-                                    <button class="button-buy" type="submit" role="button"><a class="btn-outline">
-                                            Comprar
-                                            Ahora</a></button>
-                                    <!--<button type="submit"><a class="btn-outline"></i> </a></button>-->
-                                </div>
-                            </div>
-                        </div>
+            <main class="container">
+                <h2 class="detail-title">
+                    <%= product.name %>
+                </h2>
+                <div class="detail-imgs">
+                    <img id="img1" src="/images/products/<%= product.img1 %>" alt="<%= product.name %>">
+                    <img id="img2" src="/images/products/<%= product.img2 %>" alt="<%= product.name %>">
+                </div>
+                <div class="meta">
+                    <h3 class="detail-seller">Producto de: <%= product.seller.name %>
+                    </h3>
+                    <div class="detail-price">
+                        $<%= product.price %>
                     </div>
+                    <div class="detail-discount">
+                        Precio <img src="/images/mercadopago.png" alt="logo-mercadopago"> $<%= product.price -
+                            product.price*product.discount/100%>
                     </div>
-
-                    <div class="descripcion-producto">
-                        <h2>Descripcion del producto:</h2>
-                        <div class="info air">
-                            <p>
-                                <%= product.description %>
-                            </p>
-                        </div>
+                    <div class="detail-cuotas"> ¡Hasta 12 cuotas de $<%= parseInt(product.price / 12) %>!</div>
+                    <div class="detail-shipping">
+                        <p>Disponemos del producto para retiro por local o envío en las proximas 48hs</p>
+                        <p class="detail-stock">En Stock</p>
                     </div>
-                </section>
+                    <button class="detail-button" type="submit" role="button"><a class="btn-outline">Comprar
+                            Ahora</a></button>
+                </div>
+                </div>
+                <div class="meta detail-description">
+                    <h2>Descripción:</h2>
+                    <p>
+                        <%= product.description %>
+                    </p>
+                </div>
             </main>
 
             <!-- Footer -->
