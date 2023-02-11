@@ -186,7 +186,7 @@ footer article ul {
 
 .index-body{
    background-color: rgba(0, 0, 0, 0);
-   background: url("./images/notebook-banner.jpg");
+   background: url('images/background1.jpg')
 }
 .container {
    width: 90%;
