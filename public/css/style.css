@@ -184,6 +184,10 @@ footer article ul {
 
 /** index **/
 
+.index-body{
+   background-color: rgba(0, 0, 0, 0);
+   background: url('images/background1.jpg')
+}
 .container {
    width: 90%;
    background-color: #FFFFFF;
@@ -202,7 +206,7 @@ footer article ul {
 }
 
 .index-titles {
-   margin: 1rem auto;
+   margin: 0.5rem auto;
 }
 
 .index-title {
@@ -214,6 +218,25 @@ footer article ul {
 .index-subtitle {
    text-align: center;
    font-size: 1rem;
+}
+
+.index-buttons{
+   margin: 0.5rem auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.index-button{
+   width: 75%;
+   background-color: var(--detail);
+   color: var(--grisFondo);
+   font-size: medium;
+   margin: 0.5rem auto;
+   border: 1px solid black;
+   border-radius: 5px;
+   height: 2rem;
 }
 
 
@@ -415,7 +438,7 @@ footer article ul {
 
 /** product/detail/ **/
 
-.detail-title {
+.detail-title  {
    display: block;
    font-size: x-large;
 }
@@ -424,7 +447,7 @@ footer article ul {
    display: none
 }
 
-.detail-imgs {
+.detail-imgs  {
    margin: 0px auto 1rem;
    display: flex;
    flex-direction: column;
@@ -432,7 +455,7 @@ footer article ul {
    align-items: center;
 }
 
-.detail-imgs img {
+.detail-imgs img  {
    width: 100%;
 }
 
@@ -448,19 +471,19 @@ footer article ul {
    padding: 5px 10px;
 }
 
-.meta .detail-price {
+.meta .detail-price  {
    font-size: 2rem;
    margin-top: 1rem;
    margin-bottom: 1rem;
 }
 
-.meta .detail-discount {
+.meta .detail-discount  {
    font-size: 1.5rem;
    margin-top: 1rem;
    margin-bottom: 1rem;
 }
 
-.meta .detail-discount img {
+.meta .detail-discount img  {
    height: 1.5rem;
 }
 
@@ -470,13 +493,13 @@ footer article ul {
    margin-bottom: 1rem;
 }
 
-.meta .detail-shipping .detail-stock {
+.meta .detail-shipping .detail-stock  {
    margin-top: 0.5rem;
    color: greenyellow;
    font-size: large;
 }
 
-.meta .detail-button {
+.meta .detail-button  {
    align-self: center;
    width: 50%;
    height: 2rem;
