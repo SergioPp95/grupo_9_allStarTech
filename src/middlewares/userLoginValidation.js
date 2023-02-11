@@ -27,8 +27,6 @@ const validations = [
             if (!verified) {
                 throw new Error('Contraseña incorrecta');
             }
-        } else {
-            throw new Error('No existe una cuenta con ese email')
         }
         return true;
     }),

@@ -24,6 +24,7 @@ mail.addEventListener('change', () => {
     } else {
         errorMail.style.display = 'none'
     }
+
 })
 
 password.addEventListener('change', () => {

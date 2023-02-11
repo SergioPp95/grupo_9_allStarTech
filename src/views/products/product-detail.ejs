@@ -13,28 +13,41 @@
                 <h2 class="detail-title">
                     <%= product.name %>
                 </h2>
-                <div class="detail-imgs">
-                    <img id="img1" src="/images/products/<%= product.img1 %>" alt="<%= product.name %>">
-                    <img id="img2" src="/images/products/<%= product.img2 %>" alt="<%= product.name %>">
-                </div>
-                <div class="meta">
-                    <h3 class="detail-seller">Producto de: <%= product.seller.name %>
-                    </h3>
-                    <div class="detail-price">
-                        $<%= product.price %>
+                <div class="detail-container-img-info">
+                    <div class="detail-imgs">
+                        <img id="img1"
+                            src="/images/products/<%= product.img1 %>"
+                            alt="<%= product.name %>">
+                        <img id="img2"
+                            src="/images/products/<%= product.img2 %>"
+                            alt="<%= product.name %>">
                     </div>
-                    <div class="detail-discount">
-                        Precio <img src="/images/mercadopago.png" alt="logo-mercadopago"> $<%= product.price -
-                            product.price*product.discount/100%>
+                    <div class="meta">
+                        <h2 class="detail-title-meta">
+                            <%= product.name %>
+                        </h2>
+                        <h3 class="detail-seller">Vendedor: <%=
+                                product.seller.name %>
+                        </h3>
+                        <div class="detail-price">
+                            $<%= product.price %>
+                        </div>
+                        <div class="detail-discount">
+                            Precio <img src="/images/mercadopago.png"
+                                alt="logo-mercadopago"> $<%= product.price -
+                                product.price*product.discount/100%>
+                        </div>
+                        <div class="detail-cuotas"> ¡Hasta 12 cuotas de $<%=
+                                parseInt(product.price / 12) %>!</div>
+                        <div class="detail-shipping">
+                            <p>Disponemos del producto para retiro por local o
+                                envío en las proximas 48hs</p>
+                            <p class="detail-stock">En Stock</p>
+                        </div>
+                        <button class="detail-button" type="submit"
+                            role="button"><a class="btn-outline">Comprar
+                                Ahora</a></button>
                     </div>
-                    <div class="detail-cuotas"> ¡Hasta 12 cuotas de $<%= parseInt(product.price / 12) %>!</div>
-                    <div class="detail-shipping">
-                        <p>Disponemos del producto para retiro por local o envío en las proximas 48hs</p>
-                        <p class="detail-stock">En Stock</p>
-                    </div>
-                    <button class="detail-button" type="submit" role="button"><a class="btn-outline">Comprar
-                            Ahora</a></button>
-                </div>
                 </div>
                 <div class="meta detail-description">
                     <h2>Descripción:</h2>
