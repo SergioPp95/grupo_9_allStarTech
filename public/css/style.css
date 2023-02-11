@@ -185,9 +185,11 @@ footer article ul {
 /** index **/
 
 .index-body{
-   background-color: rgba(0, 0, 0, 0);
-   background: url('images/background1.jpg')
+   background: url('/images/notebook-banner.jpg') no-repeat; 
+   background-size: auto 100vh;
+   background-position: 25% 0px;
 }
+
 .container {
    width: 90%;
    background-color: #FFFFFF;
