@@ -1,5 +1,5 @@
 const path = require("path");
-const { check } = require('express-validator') //req validator
+const { check } = require('express-validator')
 
 const validations = [
 	check('name').notEmpty().withMessage('Tienes que insertar el nombre del producto'),

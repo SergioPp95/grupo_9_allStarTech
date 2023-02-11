@@ -8,24 +8,23 @@ const upload = require("../middlewares/uploadProduct")
 
 
 
-// ** Rutas **
 router.get('/', productController.index);
 
-router.get('/create', productController.create); // Formulario de crear producto
+router.get('/create', productController.create); 
 
 router.post('/', upload.fields([
     { name: "image1", maxCount: 1 },
     { name: "image2", maxCount: 1 }
-]), validations, productController.store); // Recibe datos de creacion
+]), validations, productController.store); 
 
-router.get('/:id', productController.detail); // Muestra detalles
+router.get('/:id', productController.detail); 
 
-router.get('/:id/edit', productController.edit) // Formulario de editar producto
+router.get('/:id/edit', productController.edit)
 
 router.put('/:id', upload.fields([
     { name: "image1", maxCount: 1 },
     { name: "image2", maxCount: 1 }
-]), validations, productController.update) // Recibe datos de edicion
+]), validations, productController.update) 
 
 router.delete('/:id', productController.delete)
 

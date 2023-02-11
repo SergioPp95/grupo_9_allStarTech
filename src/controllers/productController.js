@@ -3,14 +3,11 @@ const path = require('path');
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
 
-//const productsPath = path.join(__dirname, '../data/products.json')
-//let products = JSON.parse(fs.readFileSync(productsPath, 'utf-8'))
 
 const controller = {
   index: async (req, res) => {
     let products = await db.Product.findAll()
     res.render('./products/products', { products })
-    // CODIGO ACA
   },
   create: async (req, res) => {
     const categories = await db.Category.findAll()
@@ -65,14 +62,14 @@ const controller = {
         categories:categories
       });
     } else {
-      // Filtra producto a editar
+      
       const product = await db.Product.findByPk(req.params.id)
 
-      // Elimina imagenes anteriores del producto
+      
       req.files.image1 ? fs.unlinkSync(path.join(__dirname, "../../public/images/products", product.img1)) : null
       req.files.image2 ? fs.unlinkSync(path.join(__dirname, "../../public/images/products", product.img2)) : null
 
-      // Asigna nuevos valores a cada atributo
+
       await db.Product.update({
         name: req.body.name,
         description: req.body.description,
@@ -87,13 +84,13 @@ const controller = {
         }
       })
 
-      // Reenvia a página del producto recién editado
+     
       res.redirect('/products/' + req.params.id)
     }
   },
   delete: async (req, res) => {
 
-    // Elimina imagen actual del producto a borrar
+ 
     const product = await db.Product.findByPk(req.params.id)
     fs.unlinkSync(path.join(__dirname, "../../public/images/products", product.img1));
     fs.unlinkSync(path.join(__dirname, "../../public/images/products", product.img2));
@@ -104,7 +101,7 @@ const controller = {
       }
     })
 
-    // Redirije a página principal de productos
+    
     res.redirect("/products");
   }
 }

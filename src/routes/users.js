@@ -8,7 +8,7 @@ const userLoginByCookie = require("../middlewares/userLoginByCookie")
 const userRouteCheck = require("../middlewares/userRouteCheck")
 const validations = require('../middlewares/userValidations')
 
-// ** Rutas **
+
 router.get('/login', userRouteCheck.forGuests, userLoginByCookie, usersController.login);
 
 router.post("/login", usersController.checkLogin)
