@@ -184,8 +184,8 @@ footer article ul {
 
 /** index **/
 
-.index-body{
-   background: url('/images/notebook-banner.jpg') no-repeat; 
+.index-body {
+   background: url('/images/notebook-banner.jpg') no-repeat;
    background-size: auto 100vh;
    background-position: 25% 0px;
 }
@@ -198,13 +198,27 @@ footer article ul {
    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
    margin: 1rem auto;
 }
-.container2{
+
+.container2 {
    width: 90%;
    background-color: #303030;
    padding: 1rem;
    border-radius: 5px;
    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
    margin: 1rem auto;
+   background-image: url(https://i.stack.imgur.com/pMAiU.jpg);
+   background-repeat: repeat;
+}
+
+.container3 {
+   width: 90%;
+   background-color: #303030;
+   padding: 1rem;
+   border-radius: 5px;
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+   margin: 1rem auto;
+   background-image: url(https://i.stack.imgur.com/pMAiU.jpg);
+   background-repeat: repeat;
 }
 
 .index-titles {
@@ -222,7 +236,7 @@ footer article ul {
    font-size: 1rem;
 }
 
-.index-buttons{
+.index-buttons {
    margin: 0.5rem auto;
    display: flex;
    flex-direction: column;
@@ -230,7 +244,7 @@ footer article ul {
    align-items: center;
 }
 
-.index-button{
+.index-button {
    width: 75%;
    background-color: var(--detail);
    color: var(--grisFondo);
@@ -293,9 +307,6 @@ footer article ul {
    transition: all 0.5s;
 }
 
-.login:hover {
-   box-shadow: 4px 8px 18px #000;
-}
 
 .login h5 {
    margin: 0;
@@ -311,7 +322,7 @@ footer article ul {
    width: 100%;
    background: var(--grisFondo);
    padding: 10px;
-   border-radius: 5px;
+   border-radius: 10px;
    margin-bottom: 6px;
    border: 1px solid #ffffff;
    font-family: 'calibri';
@@ -329,6 +340,8 @@ footer article ul {
    border: 1px black solid;
    padding: 8px;
    margin: 16px 0;
+   border-radius: 10px;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .Olvido {
@@ -367,12 +380,7 @@ footer article ul {
    font-family: 'calibri';
    color: var(--grisFondo);
    transition: all 0.5s;
-
-}
-
-.form-register:hover {
-   box-shadow: 4px 8px 18px #000;
-   
+   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
 .form-register h4 {
@@ -381,11 +389,16 @@ footer article ul {
    text-align: center;
 }
 
+#register-title{
+   padding-bottom: 10px;
+   border-bottom: 1px solid black;
+}
+
 .form-register .CampoTexto {
    width: 100%;
    background: var(--grisFondo);
    padding: 10px;
-   border-radius: 5px;
+   border-radius: 10px;
    margin-bottom: 6px;
    border: 1px solid #ffffff;
    font-family: 'calibri';
@@ -396,8 +409,16 @@ footer article ul {
 
 .form-register p {
    text-align: center;
-   font-size: 15px;
+   font-size: 14px;
    line-height: 50px;
+}
+
+#register-p1 {
+   border-bottom: 1px solid black;
+}
+
+#register-p2 {
+   border-top: 1px solid black;
 }
 
 .form-register div {
@@ -421,12 +442,16 @@ footer article ul {
 
 .form-register .Boton {
    width: 100%;
-   background: #FAF34C;
+   background: #faf34c;
+   background-color: rgb(250, 243, 76);
    font-family: 'calibri';
    font-size: 15px;
    color: black;
+   border: 1px black solid;
    padding: 8px;
    margin: 16px 0;
+   border-radius: 10px;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .form-register .Terminos {
@@ -440,16 +465,13 @@ footer article ul {
 
 /** product/detail/ **/
 
-.detail-title  {
+.detail-title {
    display: block;
    font-size: x-large;
 }
 
-.detail-title-meta {
-   display: none
-}
 
-.detail-imgs  {
+.detail-imgs {
    margin: 0px auto 1rem;
    display: flex;
    flex-direction: column;
@@ -457,8 +479,12 @@ footer article ul {
    align-items: center;
 }
 
-.detail-imgs img  {
+.detail-imgs img {
    width: 100%;
+}
+
+#img2 {
+   margin-top: 10px;
 }
 
 .meta {
@@ -473,19 +499,19 @@ footer article ul {
    padding: 5px 10px;
 }
 
-.meta .detail-price  {
+.meta .detail-price {
    font-size: 2rem;
    margin-top: 1rem;
    margin-bottom: 1rem;
 }
 
-.meta .detail-discount  {
+.meta .detail-discount {
    font-size: 1.5rem;
    margin-top: 1rem;
    margin-bottom: 1rem;
 }
 
-.meta .detail-discount img  {
+.meta .detail-discount img {
    height: 1.5rem;
 }
 
@@ -495,13 +521,13 @@ footer article ul {
    margin-bottom: 1rem;
 }
 
-.meta .detail-shipping .detail-stock  {
+.meta .detail-shipping .detail-stock {
    margin-top: 0.5rem;
    color: greenyellow;
    font-size: large;
 }
 
-.meta .detail-button  {
+.meta .detail-button {
    align-self: center;
    width: 50%;
    height: 2rem;
@@ -783,7 +809,7 @@ form .button input {
    /** /user/login CAMBIAR A MOBILE FIRST **/
 
    .login {
-      width: 70%;
+      width: 90%;
       margin-bottom: 10px;
       box-shadow: none;
       border-radius: 20px;
@@ -792,15 +818,16 @@ form .button input {
    .login a {
       color: #000;
    }
-   .login-remember{
+
+   .login-remember {
       font-size: 0.8rem;
    }
+
    /** /user/register/ **/
 
    .form-register {
       width: 75%;
       margin-top: 35px;
-      box-shadow: none;
       border-radius: 20px;
    }
 
@@ -836,12 +863,16 @@ form .button input {
 
    .login {
       margin: 180px auto;
+      border-radius: 20px;
+      box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
    }
 
    /** /user/register **/
 
    .form-register {
       margin: 100px auto;
+      width: 75%;
+      border-radius: 20px;
    }
 
    /** productCart **/
@@ -884,16 +915,16 @@ form .button input {
       max-width: 300px;
    }
 
-      /* product list */ 
-   
+   /* product list */
 
-.order-filter div {
-   width: 40%;
-}
 
-.product {
-   width: 45%;
-}
+   .order-filter div {
+      width: 40%;
+   }
+
+   .product {
+      width: 45%;
+   }
 }
 
 
@@ -1076,10 +1107,6 @@ form .button input {
       flex-flow: row;
    }
 
-   .detail-title {
-      display: none;
-   }
-
    .detail-imgs img {
       width: 100%;
       box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
@@ -1088,17 +1115,17 @@ form .button input {
    .meta {
       justify-content: space-around;
       align-items: flex-start;
+      margin-left: 10px;
       box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
    }
 
    .detail-title-meta {
-      display: block;
-      font-size: 2rem;
+      font-size: 1.5rem;
    }
 
    .meta .detail-button {
-      width: 60%;
-      height: 4rem;
+      width: 50%;
+      height: 3.5rem;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
    }
 
@@ -1147,6 +1174,11 @@ form .button input {
 
    /** product/detail/:id **/
 
+   .container3 {
+      width: 70%;
+      padding: 2rem
+   }
+
    .detail-container-img-info {
       display: flex;
       flex-flow: row;
@@ -1158,17 +1190,21 @@ form .button input {
 
    .detail-imgs img {
       width: 100%;
+      margin-bottom: 10px;
       box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+   }
+
+   #img2 {
+      margin-bottom: 0px;
    }
 
    .meta {
       justify-content: space-around;
       align-items: flex-start;
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+      margin-left: 10px;
    }
 
    .detail-title-meta {
-      display: block;
       font-size: 2rem;
    }
 
@@ -1182,17 +1218,37 @@ form .button input {
    }
 
    .meta .detail-cuotas {
+      padding: 10px 0;
       font-size: 1.5rem
    }
 
    .meta .detail-shipping {
-      font-size: 1.2rem
+      padding: 10px 0; 
+      font-size: 1rem
    }
 
    .meta .detail-button {
-      width: 70%;
-      height: 5rem;
+      width: 60%;
+      height: 4rem;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+   }
+
+   .meta .detail-button:hover{
+      background-color: #fae104;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      transition: all 0.5s;
+   }
+
+   .detail-description{
+      margin-left: auto;
+   }
+   .detail-description h2{
+      padding-bottom: 15px;
+   }
+
+   .detail-description p{
+      padding-bottom: 15px;
+      font-size: 0.9rem;
    }
 
    .container .detail-description p {
@@ -1249,5 +1305,25 @@ form .button input {
 
    .item-description {
       font-size: 14px;
+   }
+
+
+   /* login */
+   .Boton:hover {
+      background-color: #fae104;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      transition: all 0.5s;
+   }
+
+   /* register */ 
+
+   .form-register {
+      width: 50%;
+    }
+
+    #register-button:hover {
+      background-color: #fae104;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      transition: all 0.5s;
    }
 }
