@@ -116,6 +116,27 @@ header {
    display: none;
 }
 
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.menuItem {
+   display: block;
+   margin: 2rem 4rem;
+   font-size: 1.8rem;
+   color: white;
+   text-decoration: none;
+}
+
+.menuItem:hover {
+   text-decoration: underline;
+}
+
+
+
 /** footer **/
 
 footer {
@@ -145,6 +166,11 @@ footer article h3 {
 footer article ul {
    list-style-type: none;
    padding: 0;
+}
+
+.footer-anchor {
+   text-decoration: none;
+   color: white;
 }
 
 .footer-socials {
@@ -184,8 +210,8 @@ footer article ul {
 
 /** index **/
 
-.index-body{
-   background: url('/images/notebook-banner.jpg') no-repeat; 
+.index-body {
+   background: url('/images/notebook-banner.jpg') no-repeat;
    background-size: auto 100vh;
    background-position: 25% 0px;
 }
@@ -198,7 +224,8 @@ footer article ul {
    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
    margin: 1rem auto;
 }
-.container2{
+
+.container2 {
    width: 90%;
    background-color: #303030;
    padding: 1rem;
@@ -222,7 +249,7 @@ footer article ul {
    font-size: 1rem;
 }
 
-.index-buttons{
+.index-buttons {
    margin: 0.5rem auto;
    display: flex;
    flex-direction: column;
@@ -230,7 +257,7 @@ footer article ul {
    align-items: center;
 }
 
-.index-button{
+.index-button {
    width: 75%;
    background-color: var(--detail);
    color: var(--grisFondo);
@@ -372,7 +399,7 @@ footer article ul {
 
 .form-register:hover {
    box-shadow: 4px 8px 18px #000;
-   
+
 }
 
 .form-register h4 {
@@ -440,7 +467,7 @@ footer article ul {
 
 /** product/detail/ **/
 
-.detail-title  {
+.detail-title {
    display: block;
    font-size: x-large;
 }
@@ -449,7 +476,7 @@ footer article ul {
    display: none
 }
 
-.detail-imgs  {
+.detail-imgs {
    margin: 0px auto 1rem;
    display: flex;
    flex-direction: column;
@@ -457,7 +484,7 @@ footer article ul {
    align-items: center;
 }
 
-.detail-imgs img  {
+.detail-imgs img {
    width: 100%;
 }
 
@@ -473,19 +500,19 @@ footer article ul {
    padding: 5px 10px;
 }
 
-.meta .detail-price  {
+.meta .detail-price {
    font-size: 2rem;
    margin-top: 1rem;
    margin-bottom: 1rem;
 }
 
-.meta .detail-discount  {
+.meta .detail-discount {
    font-size: 1.5rem;
    margin-top: 1rem;
    margin-bottom: 1rem;
 }
 
-.meta .detail-discount img  {
+.meta .detail-discount img {
    height: 1.5rem;
 }
 
@@ -495,13 +522,13 @@ footer article ul {
    margin-bottom: 1rem;
 }
 
-.meta .detail-shipping .detail-stock  {
+.meta .detail-shipping .detail-stock {
    margin-top: 0.5rem;
    color: greenyellow;
    font-size: large;
 }
 
-.meta .detail-button  {
+.meta .detail-button {
    align-self: center;
    width: 50%;
    height: 2rem;
@@ -777,6 +804,10 @@ form .button input {
    color: black;
 }
 
+/** CRUD **/
+.text-danger {
+   color: rgb(160, 16, 16)
+}
 
 @media (max-width: 480px) {
 
@@ -792,9 +823,11 @@ form .button input {
    .login a {
       color: #000;
    }
-   .login-remember{
+
+   .login-remember {
       font-size: 0.8rem;
    }
+
    /** /user/register/ **/
 
    .form-register {
@@ -884,16 +917,16 @@ form .button input {
       max-width: 300px;
    }
 
-      /* product list */ 
-   
+   /* product list */
 
-.order-filter div {
-   width: 40%;
-}
 
-.product {
-   width: 45%;
-}
+   .order-filter div {
+      width: 40%;
+   }
+
+   .product {
+      width: 45%;
+   }
 }
 
 
@@ -972,6 +1005,11 @@ form .button input {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+   }
+
+   .footer-anchor:hover {
+      color: var(--detail);
+      transition: all 0.5s
    }
 
    /** index **/
@@ -1105,17 +1143,6 @@ form .button input {
 }
 
 
-/** CRUD **/
-.text-danger {
-   color: rgb(160, 16, 16)
-}
-
-/*HACE QUE SE DIVIDA EN DOS COLUMNAS EL FORMULARIO*/
-
-/*form .product-details .input-box{
-      width: calc(100% / 2 - 20px);
-    }
-*/
 
 
 @media (min-width:1280px) {
@@ -1130,6 +1157,7 @@ form .button input {
    #shoping-car2 {
       margin-right: 20%;
    }
+
 
    /** index **/
 
