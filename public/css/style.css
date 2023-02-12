@@ -19,6 +19,10 @@ body {
    background-color: var(--grisFondo);
 }
 
+main{
+   padding: 2rem 0px;
+}
+
 main a {
    text-decoration: none;
    color: var(--grisFondo);
@@ -282,26 +286,15 @@ footer article ul {
 
 /** user/login **/
 
-.login {
-   width: 400px;
-   height: 405px;
-   background: var(--blanco);
-   margin: 2rem auto;
-   padding: 20px 30px;
-   color: var(--grisFondo);
-   font-family: 'calibri';
-   transition: all 0.5s;
+.login-form {
+   width: 80%;
+   border-radius: 20px;
 }
 
-.login:hover {
-   box-shadow: 4px 8px 18px #000;
-}
-
-.login h5 {
-   margin: 0;
+.login-form h5 {
    text-align: center;
    height: 40px;
-   margin-bottom: 30px;
+   margin: 1rem auto;
    border-bottom: 1px solid;
    font-family: 'calibri';
    font-size: 20px;
@@ -324,11 +317,12 @@ footer article ul {
    width: 100%;
    background: #faf34c;
    font-family: 'calibri';
-   font-size: 15px;
+   font-size: 1rem;
    color: black;
    border: 1px black solid;
+   border-radius: 5px;
    padding: 8px;
-   margin: 16px 0;
+   margin: 1rem auto;
 }
 
 .Olvido {
@@ -340,103 +334,23 @@ footer article ul {
    text-align: center;
 }
 
-.login a {
+.login-form a {
    color: var(--grisFondo);
    text-decoration: none;
    font-size: 0.8rem;
 }
 
-.login a:hover {
+.login-form a:hover {
    color: black;
    text-decoration: underline;
 }
 
 .errorLogin {
    color: red;
+   font-size: small;
+   text-align: center;
    display: none;
 }
-
-/** /user/register **/
-
-.form-register {
-   width: 400px;
-   background-color: var(--blanco);
-   padding: 30px;
-   margin: auto;
-   margin-top: 50px;
-   font-family: 'calibri';
-   color: var(--grisFondo);
-   transition: all 0.5s;
-
-}
-
-.form-register:hover {
-   box-shadow: 4px 8px 18px #000;
-   
-}
-
-.form-register h4 {
-   font-size: 22px;
-   margin-bottom: 20px;
-   text-align: center;
-}
-
-.form-register .CampoTexto {
-   width: 100%;
-   background: var(--grisFondo);
-   padding: 10px;
-   border-radius: 5px;
-   margin-bottom: 6px;
-   border: 1px solid #ffffff;
-   font-family: 'calibri';
-   font-size: 15px;
-   text-align: center;
-   color: var(--blanco);
-}
-
-.form-register p {
-   text-align: center;
-   font-size: 15px;
-   line-height: 50px;
-}
-
-.form-register div {
-   text-align: center;
-   color: red;
-}
-
-.is-invalid {
-   border-color: red
-}
-
-.form-register a {
-   color: var(--grisFondo);
-   text-decoration: none;
-}
-
-.form-register a:hover {
-   text-decoration: underline;
-   color: var(--grisFondo)
-}
-
-.form-register .Boton {
-   width: 100%;
-   background: #FAF34C;
-   font-family: 'calibri';
-   font-size: 15px;
-   color: black;
-   padding: 8px;
-   margin: 16px 0;
-}
-
-.form-register .Terminos {
-   height: 50px;
-   text-align: center;
-   font-size: 15px;
-   line-height: 50px;
-   justify-self: center;
-}
-
 
 /** product/detail/ **/
 
@@ -619,8 +533,6 @@ footer article ul {
    text-decoration: none;
    color: white;
    padding: 5px 5px;
-
-
 }
 
 .product .options .ver-más {
@@ -775,45 +687,6 @@ form .button input {
 .logout-button:hover {
    background-color: var(--detail);
    color: black;
-}
-
-
-@media (max-width: 480px) {
-
-   /** /user/login CAMBIAR A MOBILE FIRST **/
-
-   .login {
-      width: 70%;
-      margin-bottom: 10px;
-      box-shadow: none;
-      border-radius: 20px;
-   }
-
-   .login a {
-      color: #000;
-   }
-   .login-remember{
-      font-size: 0.8rem;
-   }
-   /** /user/register/ **/
-
-   .form-register {
-      width: 75%;
-      margin-top: 35px;
-      box-shadow: none;
-      border-radius: 20px;
-   }
-
-   .form-register a {
-      color: var(--grisFondo);
-   }
-
-
-   /* product result */
-
-   .content .product {
-      width: 90%
-   }
 }
 
 @media (min-width:481px) {

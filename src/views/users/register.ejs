@@ -11,8 +11,9 @@
         <%- include("../partials/header") %>
 
             <main>
-                <form action="/user/register" method="post" class="form-register" enctype="multipart/form-data" id="register-form">
-                    <h4>FORMULARIO DE REGISTRO</h4>
+                <form action="/user/register" method="post" class="container login-form" enctype="multipart/form-data"
+                    id="register-form">
+                    <h5>FORMULARIO DE REGISTRO</h5>
 
                     <label>Nombre:</label>
                     <input class="CampoTexto" type="text" name="nombre" id="register-name" placeholder="Insertar Nombre"
@@ -88,7 +89,8 @@
                                                                         value="BIENVENIDO">
 
                                                                     <p>
-                                                                        <a href="./login">¿Ya tienes cuenta?</a>
+                                                                        <a href="./login">¿Ya tienes cuenta? Inicia
+                                                                            Sesión</a>
                                                                     </p>
                 </form>
             </main>
