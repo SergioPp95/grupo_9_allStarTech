@@ -8,7 +8,7 @@
         <!-- Header -->
         <%- include("../partials/header") %>
             <main>
-                <div class="container">
+                <div class="container edit-container">
                     <div class="title">Edicion del producto</div>
                     <div class="content">
                         <form id="product-edit-form" action="/products/<%= product.id %>?_method=PUT" method="POST"
@@ -107,15 +107,13 @@
                                         <div class="errorLogin" id="product-edit-error-description"></div>
                             </div>
                             <div class="button-crud-holder">
-                                <button class="button-crud" type="submit">Actualizar
+                                <button class="Boton" type="submit">Actualizar
                                     Producto</button>
                             </div>
                         </form>
-                        <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
-                            <div class="button-crud-holder-eliminar">
-                                <button type="submit" class="button-crud-eliminar">Eliminar
-                                    producto</button>
-                            </div>
+                        <form class="delete-form" action="/products/<%= product.id %>?_method=DELETE" method="POST">
+                            <button type="submit" class="Boton button-delete">Eliminar
+                                producto</button>
                         </form>
                     </div>
                 </div>
