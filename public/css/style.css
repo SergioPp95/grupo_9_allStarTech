@@ -551,9 +551,9 @@ footer article ul {
 
 }
 
-/** crud correccion**/ 
+/** crud correccion**/
 
-.edit-container{
+.edit-container {
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -646,13 +646,13 @@ form .button input {
    padding: 10px 0px;
 }
 
-.delete-form{
+.delete-form {
    margin: auto;
    display: flex;
    flex-direction: column;
 }
 
-.button-delete{
+.button-delete {
    background-color: red;
    color: var(--blanco);
    margin: auto;
@@ -715,7 +715,7 @@ form .button input {
       width: 34%;
    }
 
-   .social-contacts{
+   .social-contacts {
       justify-content: center;
    }
 
@@ -752,7 +752,7 @@ form .button input {
    }
 
    /** product/id/edit **/
-   .content .Boton{
+   .content .Boton {
       width: 50%;
    }
 
