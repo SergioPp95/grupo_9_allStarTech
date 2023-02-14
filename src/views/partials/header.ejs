@@ -5,6 +5,15 @@
 
    <nav>
       <ul class="nav-bar" style="list-style-type:none">
+         <li><a href="/user/login" id="shoping-car2" class="nav-profile">
+               <i class="fas fa-user-circle"></i>
+               <% if(user){ %>
+                  <p>
+                     <%= user.name %>
+                  </p>
+                  <% } %>
+            </a>
+         </li>
          <li><a href="/products">Nuestros Productos</a></li>
          <li><a href="/products/create">Vender</a></li>
       </ul>
@@ -15,10 +24,12 @@
       <button class="searchbar-button" type="submit"><i class="fa fa-search"></i></button>
    </form>
 
-   <a href="/user/login" id="shoping-car2" class="links">
+   <a href="/user/login" id="shoping-car2" class="nav-profile2">
       <i class="fas fa-user-circle"></i>
       <% if(user){ %>
-         <p><%= user.name %></p>
+         <p>
+            <%= user.name %>
+         </p>
          <% } %>
    </a>
    <button class="burguer-menu" type="button">
