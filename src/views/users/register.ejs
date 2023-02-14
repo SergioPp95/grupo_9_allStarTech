@@ -10,10 +10,16 @@
         <!-- Header -->
         <%- include("../partials/header") %>
 
+<<<<<<< HEAD
             <main>
                 <form action="/user/register" method="post" class="container login-form" enctype="multipart/form-data"
                     id="register-form">
                     <h5>FORMULARIO DE REGISTRO</h5>
+=======
+            <main class="container2">
+                <form action="/user/register" method="post" class="form-register" enctype="multipart/form-data" id="register-form">
+                    <h4 id="register-title">FORMULARIO DE REGISTRO</h4>
+>>>>>>> origin/css
 
                     <label>Nombre:</label>
                     <input class="CampoTexto" type="text" name="nombre" id="register-name" placeholder="Insertar Nombre"
@@ -79,18 +85,23 @@
                                                                     <div class="errorLogin"
                                                                         id="register-error-check-password"></div>
 
-                                                                    <p>
+                                                                    <p id="register-p1">
                                                                         <input type="checkbox" name="terminos"
                                                                             value="acepto" required>
                                                                         <a href="#">Aceptas terminos y condiciones</a>
                                                                     </p>
 
-                                                                    <input class="Boton" type="submit"
+                                                                    <input id="register-button" class="Boton" type="submit"
                                                                         value="BIENVENIDO">
 
+<<<<<<< HEAD
                                                                     <p>
                                                                         <a href="./login">¿Ya tienes cuenta? Inicia
                                                                             Sesión</a>
+=======
+                                                                    <p id="register-p2">
+                                                                        <a href="./login">¿Ya tienes cuenta?</a>
+>>>>>>> origin/css
                                                                     </p>
                 </form>
             </main>
