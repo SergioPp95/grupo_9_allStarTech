@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<%- include("../partials/head", {user}) %>
+
+<body>
+   
+   <!-- Header -->
+   <%- include("../partials/header") %>
+
+   <form class="admin-products-form" action="/products/create" method="get">
+      <button class="admin-products-button-create" type="submit">Crear nuevo producto</button>
+   </form>
+
+   <main class="admin-products-main">
+
+      <% if(products) { %>
+         <% products.forEach(product => { %>
+            <article class="admin-products-section">
+               
+               <div class="admin-products-img">
+                  <img src="/images/products/<%= product.img1 %>" alt="<%= product.name %>">
+               </div>
+               
+               <p class="admin-products-name"><strong><%= product.name %></strong></p>
+
+               <div class="admin-products-buttons">
+                  <form class="admin-products-button-form" action="/products/<%= product.id %>" method="get">
+                     <button class="admin-products-button-view" type="submit">Ver</button>
+                  </form>
+                  
+                  <form class="admin-products-button-form" action="/products/<%= product.id %>/edit" method="get">
+                     <button class="admin-products-button-update" type="submit">Editar</button>
+                  </form>
+   
+                  <form class="admin-products-button-form" action="/products/<%= product.id %>?_method=DELETE" method="post" id="admin-products-button-delete">
+                     <button class="admin-products-button-delete" type="submit">Eliminar</button>
+                  </form>
+               </div>
+
+            </article>
+         <% }) %>  
+      <% } %>
+
+   </main>
+   
+   <!-- Footer -->
+   <%- include("../partials/footer")%>
+
+</body>
+</html>

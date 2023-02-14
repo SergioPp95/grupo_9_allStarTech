@@ -75,6 +75,23 @@ const controller = {
 
    },
 
+   listProducts: async (req, res) => {
+      
+      try {
+
+         const products = await db.Product.findAll({
+            where: {seller_id: req.session.userLogged.id}
+         })
+
+         res.status(200).render('./users/productsAdmin', { products, user: req.session.userLogged })
+
+      } catch(err) {
+         errorHandler(err)
+         res.status(500).redirect('/users/profile')
+      }
+
+   },
+
    cart: (req, res) => res.render('./users/productCartCorreccion', { user: req.session.userLogged }),
 }
 
