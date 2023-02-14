@@ -45,12 +45,15 @@ header {
 }
 
 nav {
+   display: none;
    order: 1;
    width: 100%;
    border-top: 2px var(--gray2-color) solid;
    border-bottom: 2px var(--gray2-color) solid;
    padding-top: 0.5rem;
    padding-bottom: 0.5rem;
+
+   transition-duration: 700ms;
 }
 
 .links {
@@ -330,18 +333,6 @@ footer article ul {
 }
 
 /** user/login **/
-
-.login {
-   width: 400px;
-   height: 405px;
-   background: var(--blanco);
-   margin: 2rem auto;
-   padding: 20px 30px;
-   color: var(--grisFondo);
-   font-family: 'calibri';
-   transition: all 0.5s;
-}
-
 
 .login-form h5 {
    text-align: center;
@@ -1125,6 +1116,7 @@ form .button input {
    }
 
    nav {
+      display: block;
       order: 0;
       width: auto;
       border: none;
@@ -1275,6 +1267,13 @@ form .button input {
 
    .create-container {
       width: 75%;
+   }
+
+   /** login **/
+
+   .login-form{
+      margin: 4rem auto;
+      width: 25%;
    }
 
 }
