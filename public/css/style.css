@@ -700,6 +700,120 @@ form .button input {
    color: black;
 }
 
+/* Products admin view */
+
+.admin-products-main {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   gap: 1rem;
+   padding-top: 0;
+}
+
+.admin-products-section {
+   background-color: white;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   border-radius: 15px;
+   transition: all 450ms;
+   width: min(85%,600px);
+   gap: 10px;
+}
+.admin-products-section:hover {
+   box-shadow: 5px 5px rgb(0, 0, 0, 0.5);
+}
+
+.admin-products-img {
+   max-width: 50%;
+   height: 95%;
+   border-radius: 25%;
+   display: grid;
+   align-items: center;
+}
+
+.admin-products-img img {
+   width: 100%;
+   height: 100% auto;
+}
+
+.admin-products-name {
+   color: black;
+   width: 100%;
+   padding: 2rem;
+}
+
+.admin-products-buttons {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: .5rem
+}
+
+.admin-products-form {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 80px;
+}
+
+.admin-products-button-form {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 30px;
+}
+
+.admin-products-button-create {
+   background-color: var(--detail);
+   transition-duration: 0.3s;
+   width: 180px;
+   height: 30px;
+}
+
+.admin-products-button-create:hover {
+   background-color: var(--blanco);
+   color: black;
+}
+
+.admin-products-button-view {
+   background-color: var(--gray3-color);
+   color: white;
+   transition-duration: 0.2s;
+   width: 90px;
+   height: 30px;
+}
+
+.admin-products-button-view:hover {
+   transform: scale(1.05);
+   box-shadow: 2px 2px #888888;
+}
+
+.admin-products-button-update {
+   background-color: var(--gray2-color);
+   transition-duration: 0.2s;
+   width: 90px;
+   height: 30px;
+}
+
+.admin-products-button-update:hover {
+   transform: scale(1.05);
+   box-shadow: 2px 2px #888888;
+}
+
+.admin-products-button-delete {
+   background-color: red;
+   transition-duration: 0.2s;
+   width: 90px;
+   height: 30px;
+}
+
+.admin-products-button-delete:hover {
+   transform: scale(1.05);
+   box-shadow: 2px 2px #888888;
+}
+
 /*  TABLET  */
 @media (min-width:481px) {
 
@@ -950,6 +1064,40 @@ form .button input {
       width: 60%;
       height: 4rem;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+   }
+
+   /* Products admin view */
+
+   .admin-products-main {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+
+   .admin-products-section {
+      flex-direction: row;
+      height: 200px;
+   }
+   
+   .admin-products-img {
+      padding-left: 20px;
+      width: 20%;
+      height: 95%;
+   }
+   
+   .admin-products-name {
+      flex: auto;
+      width: 30%;
+   }
+
+   .admin-products-button-form {
+      margin-top: 10px;
+      margin-bottom: 10px;
+   }
+   
+   .admin-products-buttons {
+      flex-direction: column;
+      width: 20%;
    }
 
 }

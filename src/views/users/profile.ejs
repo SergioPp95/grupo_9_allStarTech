@@ -18,6 +18,10 @@
             <p class="profile-info">Nombre: <%= `${user.name} ${user.last_name}` %> </p>
             <p class="profile-info">Correo electrónico: <%= user.mail %></p>
 
+            <form method="get" action="/user/products">
+               <button class="logout-button">Administrar productos</button>
+            </form>
+
             <form method="post" action="/user/profile">
                <button class="logout-button">Cerrar Sesión</button>
             </form>
