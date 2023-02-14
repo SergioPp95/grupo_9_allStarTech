@@ -121,12 +121,12 @@ const controller = {
 
     const defaultImg = "productDefault.png"
 
-    /* try {
+    try {
       if (product.img1 != defaultImg) fs.unlinkSync(path.join(__dirname, "../../public/images/products", product.img1));
       if (product.img2 != defaultImg) fs.unlinkSync(path.join(__dirname, "../../public/images/products", product.img2));
     } catch(err) {
       console.error(err)
-    } */
+    }
 
     await db.Product.destroy({
       where: {
