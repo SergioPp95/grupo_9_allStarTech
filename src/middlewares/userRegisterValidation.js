@@ -1,5 +1,4 @@
 const { check } = require('express-validator');
-const { unlinkSync } = require('fs');
 const path = require('path');
 const db = require('../database/models');
 
@@ -52,7 +51,6 @@ const validations = [
         if (req.file) {
             let extension = (path.extname(req.file.originalname)).toLowerCase();
             if (!(['.jpg', '.png', '.jpeg'].includes(extension))) {
-               unlinkSync(req.file.path)
                 throw new Error('Tienes que subir una imagen en formato .jpg, .png, .jpeg')
             }
         }

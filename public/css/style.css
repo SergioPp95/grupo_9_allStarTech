@@ -397,6 +397,12 @@ footer article ul {
    display: none;
 }
 
+.errorLoginBack {
+   color: red;
+   text-align: center;
+   font-size: small;
+}
+
 /** /user/register **/
 
 .form-register {

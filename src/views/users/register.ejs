@@ -18,7 +18,7 @@
                     <input class="CampoTexto" type="text" name="nombre" id="register-name" placeholder="Insertar Nombre"
                         value="<%= locals.oldData ? oldData.nombre : null  %>">
                     <% if (locals.errors && errors.nombre) { %>
-                        <div class="errorLogin"><label>
+                        <div class="errorLoginBack"><label>
                                 <%= errors.nombre.msg %>
                             </label></div>
                         <% } %>
@@ -29,7 +29,7 @@
                             <input class="CampoTexto" type="text" name="apellido" id="register-last-name"
                                 placeholder="Insertar Apellido" value="<%= locals.oldData ? oldData.apellido: null  %>">
                             <% if (locals.errors && errors.apellido) { %>
-                                <div class="errorLogin"><label>
+                                <div class="errorLoginBack"><label>
                                         <%= errors.apellido.msg %>
                                     </label></div>
                                 <% } %>
@@ -38,7 +38,7 @@
                                     <label>Imagen de perfil:</label>
                                     <input class="CampoTexto" type="file" name="imagenPerfil" id="register-file">
                                     <% if (locals.errors && errors.imagenPerfil) { %>
-                                        <div class="errorLogin"><label>
+                                        <div class="errorLoginBack"><label>
                                                 <%= errors.imagenPerfil.msg %>
                                             </label></div>
                                         <% } %>
@@ -49,7 +49,7 @@
                                                 placeholder="Insertar Correo"
                                                 value="<%= locals.oldData ? oldData.email : null  %>">
                                             <% if (locals.errors && errors.email) { %>
-                                                <div class="errorLogin"><label>
+                                                <div class="errorLoginBack"><label>
                                                         <%= errors.email.msg %>
                                                     </label></div>
                                                 <% } %>
@@ -60,7 +60,7 @@
                                                         id="register-password" placeholder="Insertar Contraseña"
                                                         minlength="8">
                                                     <% if (locals.errors && errors.contrasena) { %>
-                                                        <div class="errorLogin"><label>
+                                                        <div class="errorLoginBack"><label>
                                                                 <%= errors.contrasena.msg %>
                                                             </label></div>
                                                         <% } %>
@@ -71,7 +71,7 @@
                                                                 id="register-check-password"
                                                                 placeholder="Repetir Contraseña" minlength="8">
                                                             <% if (locals.errors && errors.contrasena2) { %>
-                                                                <div class="errorLogin"><label>
+                                                                <div class="errorLoginBack"><label>
                                                                         <%= errors.contrasena2.msg %>
                                                                     </label></div>
                                                                 <% } %>

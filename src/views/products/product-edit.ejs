@@ -19,7 +19,7 @@
                                     <input id="product-edit-name" type="text" value="<%= product.name %>" name="name"
                                         required>
                                     <% if (locals.errors && errors.name) { %>
-                                        <div class="text-danger">
+                                        <div class="errorLoginBack">
                                             <%= errors.name.msg %>
                                         </div>
                                         <% } %>
@@ -32,7 +32,7 @@
                                     <input type="text" id="product-edit-price" value="<%= product.price %>" name="price"
                                         required>
                                     <% if (locals.errors && errors.price) { %>
-                                        <div class="text-danger">
+                                        <div class="errorLoginBack">
                                             <%= errors.price.msg %>
                                         </div>
                                         <% } %>
@@ -44,7 +44,7 @@
                                     <input type="text" id="product-edit-discount" value="<%= product.discount %>"
                                         name="discount" required>
                                     <% if (locals.errors && errors.discount) { %>
-                                        <div class="text-danger">
+                                        <div class="errorLoginBack">
                                             <%= errors.discount.msg %>
                                         </div>
                                         <% } %>
@@ -63,7 +63,7 @@
                                             <% } %>
                                     </select>
                                     <% if (locals.errors && errors.category) { %>
-                                        <div class="text-danger">
+                                        <div class="errorLoginBack">
                                             <%= errors.category.msg %>
                                         </div>
                                         <% } %>
@@ -74,7 +74,7 @@
                                     <input type="file" id='product-edit-file' placeholder="Imagen Principal"
                                         name="image1">
                                     <% if (locals.errors && errors.image1) { %>
-                                        <div class="text-danger">
+                                        <div class="errorLoginBack">
                                             <%= errors.image1.msg %>
                                         </div>
                                         <% } %>
@@ -86,7 +86,7 @@
                                     <input type="file" id='product-edit-file2' placeholder="Imagen Secundaria"
                                         name="image2">
                                     <% if (locals.errors && errors.image2) { %>
-                                        <div class="text-danger">
+                                        <div class="errorLoginBack">
                                             <%= errors.image2.msg %>
                                         </div>
                                         <% } %>
@@ -100,7 +100,7 @@
                                     id='product-edit-description' rows="5" cols="33"
                                     name="description"><%= product.description %></textarea>
                                 <% if (locals.errors && errors.description) { %>
-                                    <div class="text-danger">
+                                    <div class="errorLoginBack">
                                         <%= errors.description.msg %>
                                     </div>
                                     <% } %>

@@ -1,4 +1,5 @@
 const bcrypt = require("bcrypt");
+const { unlinkSync } = require('fs')
 const { validationResult } = require('express-validator');
 const db = require('../database/models')
 
@@ -35,6 +36,7 @@ const controller = {
    addRegister: async (req, res) => {
       const resultValidation = validationResult(req)
       if (resultValidation.errors.length > 0) {
+         unlinkSync(req.file.path)
          res.render('./users/register', {
             errors: resultValidation.mapped(),
             oldData: req.body,

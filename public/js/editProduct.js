@@ -67,7 +67,7 @@ discount.addEventListener('change', () => {
     }
 
     if (errors.discount) {
-        errorDiscount.innerHTML = 'Obligatorio (solo valores numéricos entre 0 y 100'
+        errorDiscount.innerHTML = 'Obligatorio (solo valores numéricos entre 0 y 100)'
         errorDiscount.style.display = 'block'
     } else {
         errorDiscount.style.display = 'none'

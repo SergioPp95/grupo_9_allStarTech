@@ -21,7 +21,6 @@ const controller = {
         }
       }
     })
-    console.log(results)
     res.render('./products/products', { products: results, user: req.session.userLogged })
   },
 
@@ -32,14 +31,17 @@ const controller = {
 
   store: async (req, res) => {
     const resultValidation = validationResult(req);
-
+    
     const categories = await db.Category.findAll()
 
     if (resultValidation.errors.length > 0) {
-      return res.render('./products/product-Create', {
+      req.files.image1 ? fs.unlinkSync(req.files.image1[0].path) : null
+      req.files.image2 ? fs.unlinkSync(req.files.image2[0].path) : null
+      res.render('./products/product-create', {
         errors: resultValidation.mapped(),
         oldData: req.body,
-        categories: categories
+        categories: categories,
+        user: req.session.userLogged
       });
     } else {
 
@@ -78,10 +80,13 @@ const controller = {
     const categories = await db.Category.findAll()
 
     if (resultValidation.errors.length > 0) {
+      req.files.image1 ? fs.unlinkSync(req.files.image1[0].path) : null
+      req.files.image2 ? fs.unlinkSync(req.files.image2[0].path) : null
       return res.render('./products/product-Create', {
         errors: resultValidation.mapped(),
         oldData: req.body,
-        categories: categories
+        categories: categories,
+        user: req.session.userLogged
       });
     } else {
       // Filtra producto a editar
@@ -90,8 +95,12 @@ const controller = {
       const defaultImg = "productDefault.png"
 
       // Elimina imagenes anteriores del producto
-      req.files.image1 ? product.img1 != defaultImg ? fs.unlinkSync(path.join(__dirname, "../../public/images/products", product.img1)) : null : null
-      req.files.image2 ? product.img1 != defaultImg ? fs.unlinkSync(path.join(__dirname, "../../public/images/products", product.img2)) : null : null
+      try {
+         req.files.image1 ? product.img1 != defaultImg ? fs.unlinkSync(path.join(__dirname, "../../public/images/products", product.img1)) : null : null
+         req.files.image2 ? product.img1 != defaultImg ? fs.unlinkSync(path.join(__dirname, "../../public/images/products", product.img2)) : null : null
+      } catch(err) {
+         console.error(err)
+      }
 
       // Asigna nuevos valores a cada atributo
       await db.Product.update({
