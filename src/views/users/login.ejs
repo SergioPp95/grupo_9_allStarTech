@@ -17,7 +17,7 @@
                <label for="email">Correo:</label>
                <input class="CampoTexto" type="email" name="email" id="email" placeholder="Ingresa tu correo">
                <% if (locals.errors && errors.email) { %>
-                  <div><label>
+                  <div class="errorLoginBack"><label>
                         <%= errors.email.msg %>
                      </label></div>
                   <% } %>
@@ -27,7 +27,7 @@
                      <input class="CampoTexto" type="password" name="contrasena" id="password"
                         placeholder="Ingresa tu contraseña">
                      <% if (locals.errors && errors.contrasena) { %>
-                        <div><label>
+                        <div class="errorLoginBack"><label>
                               <%= errors.contrasena.msg %>
                            </label></div>
                         <% } %>
