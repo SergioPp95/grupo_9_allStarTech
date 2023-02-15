@@ -138,6 +138,34 @@ nav {
    margin-right: 20px;
 }
 
+.burguer-menu.desactive {
+   transform: rotate(180deg);
+   transition: all 750ms;
+}
+
+.burguer-menu.rotate-back {
+   transform: rotate(0deg);
+   transition: all 750ms;
+}
+
+.hide-navbar {
+   display: flex;
+   animation: slide-in 1s forwards;
+}
+
+.hide-navbar.desactive {
+   display: none;
+}
+
+@keyframes slide-in {
+   0% {
+     transform: translateY(-10%);
+   }
+   100% {
+     transform: translateY(0);
+   }
+ }
+
 #shoping-car {
    margin-left: auto;
    margin-right: 20px;
