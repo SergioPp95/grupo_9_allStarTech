@@ -44,6 +44,10 @@ header {
    padding: 10px;
 }
 
+header a:visited{
+   color: var(--blanco);
+}
+
 nav {
    display: none;
    order: 1;
@@ -173,7 +177,10 @@ nav {
 
 .nav-profile2 {
    display: none;
+   text-decoration: none;
 }
+
+
 
 /** footer **/
 
@@ -1150,7 +1157,7 @@ form .button input {
    }
 
    nav {
-      display: block;
+      display: flex;
       order: 0;
       width: auto;
       border: none;
@@ -1158,6 +1165,10 @@ form .button input {
 
    nav ul li {
       padding: 10px;
+   }
+
+   .nav{
+      display: block;
    }
 
    .nav-bar {

@@ -2,12 +2,9 @@ let burger = document.querySelector('.burguer-menu')
 let nav = document.querySelector('nav')
 
 burger.addEventListener('click', () => {
-   if(burger.classList.contains('desactive')) {
-      burger.classList.add('rotate-back')
-      setTimeout( _ => {
-         burger.classList.remove('rotate-back')
-      }, 751)
+   if(nav.style.display != 'none'){
+      nav.style.display = 'none'
+   } else {
+      nav.style.display = 'flex'
    }
-   nav.classList.toggle('desactive')
-   burger.classList.toggle('desactive')
 })
