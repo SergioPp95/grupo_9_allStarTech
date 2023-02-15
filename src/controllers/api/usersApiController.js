@@ -7,7 +7,7 @@ const controller = {
       try {
 
          let users = await db.User.findAll({
-            attributes: ['id', 'mail', 'name', 'last_name']
+            attributes: ['id', 'mail', 'name', 'last_name', 'picture']
          })
          users = users.map(user => {
             return {
